@@ -1,0 +1,6 @@
+outs:
+- md5: 5d41663df1eeb4bb0919a7c0c7406487.dir
+  size: 375872954
+  nfiles: 10
+  hash: md5
+  path: bdg2
