@@ -125,5 +125,5 @@
   - nfiles: 3
 - **Validation:** `git status` showed only data/raw/.gitignore, data/raw/model1_cbecs2018.dvc and the work log. The CSV was not listed, confirming Git ignores the raw data.
 - **Limitation:** No DVC remote is configured in the repo yet, so the data exists only in my local DVC cache; `dvc push` is not yet possible. Data remains reproducible from the official EIA URL + SHA-256 checksums in Step 3.
-- **Git commit hash:** <fill in at start of next step>
+- **Git commit hash:** 5ebb4fc
 - **Next step:** Raw-data validation in Python (schema, true row count, missing values, key columns).

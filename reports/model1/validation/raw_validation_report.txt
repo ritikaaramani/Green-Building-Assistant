@@ -1,0 +1,81 @@
+============================================================
+MODEL 1 - RAW DATA VALIDATION (CBECS 2018)
+============================================================
+File: data/raw/model1_cbecs2018/cbecs2018_final_public.csv
+Size: 19.85 MB
+Rows (buildings): 6436
+Columns: 1249
+
+--- Column data types ---
+float64    637
+int64      612
+
+--- Duplicates ---
+Fully duplicated rows: 0
+Duplicated PUBID values: 0
+
+--- Key columns ---
+Missing key columns: none
+PUBID    | Building ID                                      | missing=    0 | min=1 max=6436 mean=3218
+PBA      | Principal building activity (building type code) | missing=    0 | min=1 max=91 mean=12.56
+PUBCLIM  | Climate zone group                               | missing=    0 | min=1 max=7 mean=3.647
+SQFT     | Floor area (square feet)                         | missing=    0 | min=1001 max=2.1e+06 mean=1.692e+05
+MFBTU    | Annual major fuel consumption (thousand Btu)     | missing=   79 | min=124 max=8.026e+08 mean=1.583e+07
+ELCNS    | Annual electricity consumption (kWh)             | missing=   79 | min=36 max=1.137e+08 mean=2.706e+06
+FINALWT  | Survey weight                                    | missing=    0 | min=1.73 max=1.903e+04 mean=919.5
+YRCONC   | Year of construction (category)                  | missing=    0 | min=2 max=9 mean=5.768
+WKHRS    | Weekly operating hours                           | missing=    0 | min=0 max=168 mean=82.83
+NWKER    | Number of workers                                | missing=    0 | min=0 max=7500 mean=199.9
+NFLOOR   | Number of floors                                 | missing=    0 | min=1 max=995 mean=87.67
+REGION   | Census region                                    | missing=    0 | min=1 max=4 mean=2.63
+
+--- Value counts: PBA ---
+PBA
+1      117
+2     1329
+4       69
+5      753
+6       91
+7      105
+8      217
+11      23
+12     271
+13     481
+14     936
+15     218
+16     276
+17     114
+18     418
+23     208
+24      35
+25     339
+26     350
+91      86
+
+--- Value counts: PUBCLIM ---
+PUBCLIM
+1     422
+2    1428
+3    1479
+4    1483
+5     772
+7     852
+
+--- Energy / area sanity checks ---
+MFBTU: missing=79, zero=0, negative=0
+SQFT: missing=0, zero=0, negative=0
+
+--- Negative values (all numeric columns) ---
+none
+Infinite values in dataset: 0
+
+--- Missingness overview ---
+Columns with no missing values: 764
+Columns >50% missing: 317
+Columns 100% missing: 22
+Note: in CBECS a blank often means 'not applicable' (e.g. no gas used), not an error.
+
+--- Possible leakage columns (energy consumption / expenditure) ---
+Count: 64
+WLCNS, RFCNS, WOEXP, MFBTU, MFEXP, ELBTU, ELCNS, ELEXP, NGBTU, NGCNS, NGEXP, FKBTU, FKCNS, FKEXP, DHBTU, DHEXP, MFHTBTU, MFCLBTU, MFVNBTU, MFWTBTU, MFLTBTU, MFCKBTU, MFRFBTU, MFOFBTU, MFPCBTU, MFOTBTU, ELHTBTU, ELCLBTU, ELVNBTU, ELWTBTU, ELLTBTU, ELCKBTU, ELRFBTU, ELOFBTU, ELPCBTU, ELOTBTU, NGHTBTU, NGCLBTU, NGWTBTU, NGCKBTU ...
+These must NOT be used as model inputs if labels come from energy use.
