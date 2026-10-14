@@ -1,0 +1,88 @@
+Building Data Genome 2 - Exploratory Data Analysis Report
+Generated: 2026-10-14T19:19:17.936927+00:00
+Cleaned data root: data\processed\bdg2
+Scope: descriptive EDA only; no feature engineering, imputation, splitting, or model training.
+
+1. Dataset overview
+Metadata dimensions: 1,636 rows x 32 columns.
+Unique buildings: 1,636; unique sites: 19.
+Metadata missing cells: 28,173.
+Metadata dtypes: building_id=object, site_id=object, building_id_kaggle=float64, site_id_kaggle=float64, primaryspaceusage=object, sub_primaryspaceusage=object, sqm=float64, sqft=float64, lat=float64, lng=float64, timezone=object, electricity=object, hotwater=object, chilledwater=object, steam=object, water=object, irrigation=object, solar=object, gas=object, industry=object, subindustry=object, heatingtype=object, yearbuilt=float64, date_opened=object, numberoffloors=float64, occupants=float64, energystarscore=object, eui=object, site_eui=object, source_eui=object, leed_level=object, rating=object
+Numerical metadata summary:
+  building_id_kaggle: count=1449, mean=724.000, std=418.435, min=0.000, max=1,448
+  site_id_kaggle: count=1599, mean=6.722, std=4.944, min=0.000, max=15.000
+  sqm: count=1636, mean=8,224, std=10,050, min=26.300, max=81,290
+  sqft: count=1636, mean=88,523, std=108,179, min=283.000, max=875,000
+  lat: count=1399, mean=39.997, std=7.404, min=28.518, max=53.350
+  lng: count=1399, mean=-73.780, std=36.795, min=-122.261, max=6.260
+  yearbuilt: count=817, mean=1,968, std=30.936, min=1,900, max=2,017
+  numberoffloors: count=441, mean=3.615, std=3.250, min=1.000, max=26.000
+  occupants: count=230, mean=263.217, std=401.643, min=0.000, max=2,380
+
+Meter overview:
+  chilledwater_cleaned: 17,544 timestamps, 555 buildings, missing readings=756,156 (7.77%), range=2016-01-01 00:00:00 to 2017-12-31 23:00:00
+  electricity_cleaned: 17,544 timestamps, 1,578 buildings, missing readings=2,471,853 (8.93%), range=2016-01-01 00:00:00 to 2017-12-31 23:00:00
+  gas_cleaned: 17,544 timestamps, 177 buildings, missing readings=148,124 (4.77%), range=2016-01-01 00:00:00 to 2017-12-31 23:00:00
+  hotwater_cleaned: 17,544 timestamps, 185 buildings, missing readings=240,979 (7.42%), range=2016-01-01 00:00:00 to 2017-12-31 23:00:00
+  irrigation_cleaned: 17,544 timestamps, 37 buildings, missing readings=77,190 (11.89%), range=2016-01-01 00:00:00 to 2017-12-31 23:00:00
+  solar_cleaned: 17,544 timestamps, 5 buildings, missing readings=19,055 (21.72%), range=2016-01-01 00:00:00 to 2017-12-31 23:00:00
+  steam_cleaned: 17,544 timestamps, 370 buildings, missing readings=790,774 (12.18%), range=2016-01-01 00:00:00 to 2017-12-31 23:00:00
+  water_cleaned: 17,544 timestamps, 146 buildings, missing readings=177,719 (6.94%), range=2016-01-01 00:00:00 to 2017-12-31 23:00:00
+
+2. Electricity consumption distribution
+Readings: 25,212,579 non-missing values across 1,578 buildings.
+Reading mean=143.087, median of building medians=56.207, minimum=0.000, maximum=221,228.
+Largest building maximum: 221,228; these high values were retained for domain review, not removed as outliers.
+Total missing values across all meter tables: 4,681,850; missingness is concentrated in meters not installed for every building.
+
+3. Temporal analysis
+Electricity covers 2016-01-01 00:00:00 through 2017-12-31 23:00:00 at the modal interval 0 days 01:00:00.
+Mean total electricity is lowest at hour 3 (177,082) and highest at hour 14 (237,188).
+Mean total electricity is lowest on weekday index 6 and highest on weekday index 2.
+Mean total electricity is lowest in month 3 and highest in month 9; these recurring differences support investigating calendar and seasonal variables later.
+
+4. Building-level analysis
+Highest mean electricity building: Hog_education_Janell (3,420); lowest non-empty mean: Lamb_education_Willetta (0.020).
+Mean electricity by primary space use, ordered high to low:
+  Healthcare: 300.893
+  Education: 189.514
+  Utility: 163.801
+  Technology/science: 152.207
+  Office: 147.270
+  Entertainment/public assembly: 100.483
+  Public services: 95.517
+  Services: 91.234
+  Lodging/residential: 88.543
+  Food sales and service: 82.751
+  Retail: 78.076
+  Manufacturing/industrial: 76.274
+  Other: 46.735
+  Parking: 42.951
+  Warehouse/storage: 38.828
+  Religious worship: 4.286
+Correlation between building mean electricity and available sqm: 0.652; this is an association, not evidence of causation.
+
+5. Correlations and relationships
+Weather rows available: 331,166; numeric weather columns: airTemperature, cloudCoverage, dewTemperature, precipDepth1HR, precipDepth6HR, seaLvlPressure, windDirection, windSpeed.
+The weather correlation figure compares hourly electricity totals with available weather variables and excludes identifiers.
+Correlation should not be interpreted as causation; site, timezone, occupancy, and missing meter coverage can confound these relationships.
+
+6. Data quality findings and limitations
+- Meter tables are wide and meter coverage differs by energy type; absence of a building column means that meter is unavailable, not necessarily zero.
+- Missing readings remain in the cleaned files and were not imputed in EDA.
+- Energy units are inherited from the source files and are reported as source units because no universal conversion was confirmed.
+- Metadata contains missing values in several fields, limiting type and area comparisons.
+- This analysis uses electricity as the primary consumption series; other meters are compared only through descriptive totals.
+
+7. Recommended next-phase investigations
+- Add calendar variables such as hour, weekday, month, and holiday indicators during feature engineering.
+- Investigate weather variables, building area, primary space use, and site/timezone context as candidate predictors.
+- Decide a missing-value strategy by meter coverage and prediction target; do not treat unavailable meter columns as zero without justification.
+- Review extreme readings with domain context before applying any outlier policy.
+
+Generated figures:
+- reports\figures\electricity_distribution.png
+- reports\figures\electricity_temporal_patterns.png
+- reports\figures\building_electricity_comparison.png
+- reports\figures\electricity_by_building_type.png
+- reports\figures\electricity_weather_correlation.png
