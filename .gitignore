@@ -8,3 +8,9 @@ __pycache__/
 # Virtual environments
 .venv/
 venv/
+
+# Local DVC virtual environment
+.dvc-venv/
+
+# Local DVC environment
+.dvc-venv/
