@@ -1,0 +1,6 @@
+outs:
+- md5: be531a35b19eeb724795cd1def4c053a.dir
+  size: 21597835
+  nfiles: 3
+  hash: md5
+  path: model1_cbecs2018
