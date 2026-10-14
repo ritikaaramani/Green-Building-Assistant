@@ -1,0 +1,44 @@
+================================================================
+  ENB2012 Energy Efficiency — Cleaning Report
+  Generated : 2026-10-14 04:23:34 UTC
+================================================================
+
+  Raw source  : dataset-sai/ENB2012_data.xlsx
+  Output file : data/processed/energy_efficiency_clean.csv
+
+  ┌─────────────────────────┬──────────┬──────────┐
+  │ Metric                  │  Before  │  After   │
+  ├─────────────────────────┼──────────┼──────────┤
+  │ Row count               │      768 │      768 │
+  │ Column count            │       10 │       10 │
+  │ Total missing values    │        0 │        0 │
+  │ Duplicate rows          │        0 │        0 │
+  └─────────────────────────┴──────────┴──────────┘
+
+  Cleaning decisions (documented):
+  ------------------------------------------------------------
+  1. Drop fully-empty rows
+     Rows affected: 0
+     Rationale:
+      Rows where every column is NaN carry no
+      information.  0 row(s) removed.
+
+  2. Remove exact structural duplicates
+     Rows affected: 0
+     Rationale:
+      Rows identical across all 10 columns are
+      redundant.  0 duplicate row(s) removed.  Near-
+      duplicates and statistical outliers are
+      intentionally kept — that analysis is deferred to
+      the EDA phase.
+
+  ------------------------------------------------------------
+  Total rows removed : 0
+  Total rows retained: 768
+
+  Columns kept (all 10 original columns retained):
+    Features : relative_compactness, surface_area, wall_area, roof_area, overall_height, orientation, glazing_area, glazing_area_distribution
+    Targets  : heating_load, cooling_load
+
+  ✓ Cleaned dataset written to processed/
+================================================================
