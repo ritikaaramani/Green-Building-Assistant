@@ -127,3 +127,78 @@
 - **Limitation:** No DVC remote is configured in the repo yet, so the data exists only in my local DVC cache; `dvc push` is not yet possible. Data remains reproducible from the official EIA URL + SHA-256 checksums in Step 3.
 - **Git commit hash:** 5ebb4fc
 - **Next step:** Raw-data validation in Python (schema, true row count, missing values, key columns).
+
+---
+
+## Step 5 — Raw-data validation
+
+- **Date:** 2026-10-14
+- **Status:** Done
+- **Objective:** Check the actual structure and quality of the raw CBECS 2018 CSV before any cleaning.
+- **Script:** src/green_building/data/model1_validate_raw.py (reads raw data only; never modifies it)
+- **Command executed:** python src/green_building/data/model1_validate_raw.py
+- **Libraries installed:** pandas 3.0.6, numpy 2.5.4, openpyxl 3.1.5 (Python 3.14, .venv)
+- **Outputs created:**
+  - reports/model1/validation/raw_validation_report.txt
+  - reports/model1/validation/raw_column_summary.csv
+- **Observed results:**
+  - 6,436 rows (buildings) × 1,249 columns; file 19.85 MB.
+  - Earlier `wc -l` = 6438 was a line-break count; pandas parsed exactly 6,436 records (matches EIA). Resolved.
+  - All columns numeric (637 float64, 612 int64); categorical variables are stored as numeric codes.
+  - Duplicate rows: 0. Duplicate PUBID: 0.
+  - All 12 key columns present: PUBID, PBA, PUBCLIM, SQFT, MFBTU, ELCNS, FINALWT, YRCONC, WKHRS, NWKER, NFLOOR, REGION.
+  - SQFT: 1,001 – 2.1M sq ft, no missing/zero/negative values; strongly right-skewed.
+  - MFBTU and ELCNS: 79 missing each; no zero or negative values.
+  - FINALWT mean 919.5 → 6,436 × 919.5 ≈ 5.92M buildings, consistent with EIA's stated population.
+  - PBA: 20 building-type codes; largest Office (2) = 1,329, Education (14) = 936; smallest Refrigerated warehouse (11) = 23, Enclosed mall (24) = 35; Vacant (1) = 117.
+  - PUBCLIM: codes 1,2,3,4,5,7 (no 6); code 7 = 852 buildings, likely "withheld for confidentiality" (to confirm in codebook).
+  - NFLOOR: max = 995, mean = 87.67 → contains special codes (e.g. 994/995), not real floor counts.
+  - WKHRS: 0–168 (168 = 24/7). NWKER: 0–7,500.
+  - Negative values: none. Infinite values: none.
+  - Missingness: 764 columns complete; 317 columns >50% missing; 22 columns 100% missing.
+  - Possible leakage columns flagged: 64 (energy consumption/expenditure).
+- **Issues found and planned handling:**
+  1. 79 buildings with missing MFBTU → exclude (target cannot be computed; target is never imputed).
+  2. Skip-pattern blanks ("not applicable") → keep as information with missing indicators; no zero/mean filling. Any imputation fitted on training data only.
+  3. 22 fully empty columns → drop.
+  4. Special codes (NFLOOR 994/995, possibly PUBCLIM 7) → recode using the codebook.
+  5. Small building-type groups (PBA 11, 24) → merge or handle during labelling; decide after EDA.
+  6. Vacant buildings (PBA 1) → candidate for exclusion; decide after EDA.
+  7. Non-feature columns (Z* imputation flags, FINALWT1–151 replicate weights) → not used as inputs. FINALWT kept only for weighted statistics.
+- **Correction:** The leakage check used name suffixes (CNS/BTU/EXP) and produced false positives: WLCNS (wall construction material) and RFCNS (roof construction material) are building characteristics, not energy use. The final leakage list will be built from the codebook, not name patterns.
+- **Git commit hash:** c446f73
+- **Next step:** Inspect the codebook to confirm code meanings (PBA, PUBCLIM, NFLOOR special codes) and build the exact leakage/non-feature column list.
+
+---
+
+## Step 6 — Codebook inspection
+
+- **Date:** 2026-10-14
+- **Status:** Done
+- **Objective:** Confirm the official meaning of codes in key columns before cleaning, instead of assuming.
+- **Script:** src/green_building/data/model1_inspect_codebook.py (read-only)
+- **Command executed:** python src/green_building/data/model1_inspect_codebook.py
+- **Output:** reports/model1/validation/codebook_lookup.txt
+- **Error encountered:** First run printed nothing — the script file had not been saved.
+- **Resolution:** Pasted code, saved the file (Cmd+S), re-ran successfully.
+- **Codebook structure:** 1 sheet ("2018 CBECS microdata codebook"), 1,252 rows × 6 columns (Variable order, Variable name, Variable type, Label, Values/Format codes, Question text).
+- **Confirmed meanings:**
+  - PBA: 20 building-activity codes (1=Vacant, 2=Office, 4=Laboratory, 5=Nonrefrigerated warehouse, 6=Food sales, 7=Public order and safety, 8=Outpatient health care, 11=Refrigerated warehouse, 12=Religious worship, 13=Public assembly, 14=Education, 15=Food service, 16=Inpatient health care, 17=Nursing, 18=Lodging, 23=Strip shopping center, 24=Enclosed mall, 25=Retail other than mall, 26=Service, 91=Other).
+  - PUBCLIM: ASHRAE climate zone (third-party data). 1=Cold/very cold, 2=Cool, 3=Mixed mild, 4=Warm, 5=Hot/very hot, 7=Withheld for confidentiality.
+  - NFLOOR: 1–9 = actual floors; 994 = 10–14 floors; 995 = 15 or more floors.
+  - YRCONC: 2=Before 1946, 3=1946–59, 4=1960–69, 5=1970–79, 6=1980–89, 7=1990–99, 8=2000–2012, 9=2013–2018.
+  - WKHRS: total hours open per week (0–168). NWKER: employees during main shift (0–7,500).
+  - SQFT: gross floor area (1,001–2,100,000), incl. basements, hallways, indoor parking.
+  - MFBTU: derived annual major fuels consumption, thousand Btu (kBtu); Missing = "Not applicable".
+  - ELCNS: annual electricity consumption (kWh); Missing = "Not applicable".
+  - FINALWT: nonresponse-adjusted survey weight.
+  - WLCNS: wall construction material. RFCNS: roof construction material.
+- **Key finding (units):** MFBTU (kBtu) ÷ SQFT (sq ft) = EUI in kBtu/sq ft/year — same unit as ENERGY STAR. No conversion needed.
+- **Decisions:**
+  1. PUBCLIM = 7 is "Withheld", not a climate zone → keep as a separate "unknown" category.
+  2. NFLOOR 994/995 → recode to ordered categories (1–9, 10–14, 15+).
+  3. WLCNS, RFCNS confirmed as building characteristics → valid features (corrects Step 5 suffix-based leakage flag).
+  4. Final leakage list will be built from codebook labels (consumption/expenditure), not name patterns.
+  5. 79 buildings with MFBTU = "Not applicable" → excluded (target cannot be computed).
+- **Git commit hash:** <fill in next step>
+- **Next step:** Exploratory Data Analysis (EDA).

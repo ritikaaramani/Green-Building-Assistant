@@ -1,0 +1,157 @@
+============================================================
+CBECS 2018 CODEBOOK - STRUCTURE
+============================================================
+
+Sheet '2018 CBECS microdata codebook': 1252 rows x 6 columns
+First 4 rows:
+  2018 Commercial Buildings Energy Consumption Survey  (CBECS) public use microdata file: variable and response codebook
+  Variable
+order | Variable
+name | Variable type | Label | Values/Format codes | Question text
+  1 | PUBID | Char | Public use file building identifier | 00001 – 06436
+  2 | REGION | Num | Census region | 1=Northeast
+2=Midwest
+3=South
+4=West
+
+============================================================
+LOOKUP OF KEY VARIABLES
+============================================================
+
+[PBA] (sheet '2018 CBECS microdata codebook')
+   4
+   PBA
+   Num
+   Principal building activity
+   1=Vacant
+   2=Office
+   4=Laboratory
+   5=Nonrefrigerated warehouse
+   6=Food sales
+   7=Public order and safety
+   8=Outpatient health care
+   11=Refrigerated warehouse
+   12=Religious worship
+   13=Public assembly
+   14=Education
+   15=Food service
+   16=Inpatient health care
+   17=Nursing
+   18=Lodging
+   23=Strip shopping center
+   24=Enclosed mall
+   25=Retail other than mall
+   26=Service
+   91=Other
+
+[PUBCLIM] (sheet '2018 CBECS microdata codebook')
+   5
+   PUBCLIM
+   NUM
+   Third-party data: ASHRAE climate zone
+   1=Cold or very cold
+   2=Cool
+   3=Mixed mild
+   4=Warm
+   5=Hot or very hot
+   7=Withheld for confidentiality
+
+[NFLOOR] (sheet '2018 CBECS microdata codebook')
+   14
+   NFLOOR
+   Num
+   Number of floors
+   1 – 9
+   994=10 to 14
+   995=15 or more
+   How many floors are in the tallest section of the building? Include basements, parking levels, or any other floors below ground level. Exclude attics, half-floors, mezzanines, balconies, and lofts. If you’re not sure, please provide your best estimate.
+
+[YRCONC] (sheet '2018 CBECS microdata codebook')
+   22
+   YRCONC
+   Num
+   Year of construction category
+   2=Before 1946
+   3=1946 to 1959
+   4=1960 to 1969
+   5=1970 to 1979
+   6=1980 to 1989
+   7=1990 to 1999
+   8=2000 to 2012
+   9=2013 to 2018
+   Which range best describes when this building was constructed?
+
+[WKHRS] (sheet '2018 CBECS microdata codebook')
+   77
+   WKHRS
+   Num
+   Total hours open per week
+   0 – 168
+   How many total hours per week is the building normally open? "Normally open" means the hours when the usual activities occur.
+
+[NWKER] (sheet '2018 CBECS microdata codebook')
+   79
+   NWKER
+   Num
+   Number of employees
+   0 – 7,500
+   How many employees work in the building during the main shift, that is, when most employees are present? Please note that this is not a total count of workers, but rather a count of workers who are present at the same time. Include any volunteer workers. Do not include employees who always work outside the building, such as drivers with delivery routes.
+
+[SQFT] (sheet '2018 CBECS microdata codebook')
+   6
+   SQFT
+   Num
+   Square footage
+   1,001 – 2,100,000
+   What is the gross or total square footage of all the space in this building, both finished and unfinished, including basements, hallways, lobbies, stairways, elevator shafts, and indoor parking levels?
+
+[MFBTU] (sheet '2018 CBECS microdata codebook')
+   565
+   MFBTU
+   Num
+   Derived variable: Annual major fuels consumption (thous Btu)
+   124 – 802,588,047
+   Missing=Not applicable
+
+[ELCNS] (sheet '2018 CBECS microdata codebook')
+   568
+   ELCNS
+   Num
+   Building/energy supplier variable: Annual electricity consumption (kWh)
+   36 – 113,727,053
+   Missing=Not applicable
+
+[FINALWT] (sheet '2018 CBECS microdata codebook')
+   621
+   FINALWT
+   Num
+   Nonresponse Adjusted Weight
+
+[WLCNS] (sheet '2018 CBECS microdata codebook')
+   8
+   WLCNS
+   Num
+   Wall construction material
+   1=Brick, stone, or stucco
+   2=Pre-cast concrete panels
+   3=Concrete block or poured concrete (above grade)
+   4=Aluminum, asbestos, plastic, or wood materials (siding, shingles, tiles,5=Sheet metal panels
+   6=Window or vision glass (glass that can be seen through)
+   7=Decorative or construction glass (glass that cannot be seen through)
+   8=Other
+   Which one of these categories best describes the predominant exterior wall construction material used on this building?
+
+[RFCNS] (sheet '2018 CBECS microdata codebook')
+   9
+   RFCNS
+   Num
+   Roof construction material
+   1=Built-up (tar, felts, or fiberglass and a ballast, such as stone)
+   2=Slate or tile shingles
+   3=Wood shingles, shakes, or other wooden materials
+   4=Asphalt, fiberglass, or other shingles
+   5=Metal surfacing
+   6=Plastic, rubber, or synthetic sheeting (single or multiple ply)
+   7=Concrete
+   8=Other
+   Which one of these categories best describes the building's predominant exterior roof surface?
