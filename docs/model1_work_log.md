@@ -590,4 +590,4 @@ Exploration on training buildings only (5-fold CV), run on a copy of the process
 **Dashboard:** `mlflow ui --backend-store-uri sqlite:///artifacts/mlflow/mlflow.db --port 5001` → http://127.0.0.1:5001 → switch to **Model training** view.
 - Port 5001 used because macOS AirPlay Receiver occupies port 5000 (gave HTTP 403).
 
-**Commit:** <fill in after committing>
+**Commit:** 4259172
