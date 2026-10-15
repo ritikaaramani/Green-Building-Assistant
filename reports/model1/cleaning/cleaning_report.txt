@@ -1,0 +1,56 @@
+============================================================
+MODEL 1 - DATA CLEANING (CBECS 2018)
+============================================================
+Start: 6436 rows x 1249 columns
+
+D1 removed 79 buildings with no MFBTU
+D2 removed 85 buildings (PBA=1)
+D4 removed 23 buildings (PBA=11)
+
+D6: 6 buildings with EUI < 1.0 kBtu/sqft/yr -> listed in low_eui_buildings.csv
+D6: kept for now (DROP_LOW_EUI = False) - review the list first
+
+Columns dropped: 712
+  replicate   : 151
+  imputation  : 477
+  LEAKAGE     : 49
+  100% empty  : 22
+  constant    : 13
+
+NFLOOR: recoded 549 special codes (994->10 '10-14 floors', 995->11 '15+ floors')
+Other columns with 99x special codes (handle in feature step): 19
+  BASEMNT, FLCEILHT, NELVTR, NESLTR, RWSEAT, PBSEAT, HCBED, NRSBED, LODGRM, NOCC, NOCCAT, XRAYN, RFGRSN, RFGCOMPN, SERVERN, LGOFFDEVN, SMOFFDEVN, WBOARDSN, TVVIDEON
+
+--- Validation checks ---
+  [PASS] no missing MFBTU
+  [PASS] no vacant / refrigerated warehouse
+  [PASS] SQFT > 0 everywhere
+  [PASS] PUBID unique
+  [PASS] no NFLOOR special codes
+  [PASS] no infinite values
+  [PASS] rows add up
+  [PASS] no leakage columns left
+
+End: 6249 rows x 537 columns
+Buildings per type after cleaning:
+PBA
+2     1329
+4       69
+5      712
+6       91
+7      105
+8      217
+12     271
+13     481
+14     936
+15     218
+16     276
+17     114
+18     418
+23     208
+24      35
+25     338
+26     349
+91      82
+
+Saved: data/interim/model1/cbecs2018_clean.csv

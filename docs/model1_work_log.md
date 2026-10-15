@@ -240,5 +240,43 @@
   - "Withheld" climate has high EUI → kept as its own category.
 - **Proposed cleaning decisions (to confirm in Step 8):**
   D1 exclude 79 buildings without MFBTU; D2 exclude Vacant buildings; D3 peer group = building type only; D4 exclude Refrigerated warehouse (n=23, too small, cannot be merged with non-refrigerated warehouse); D5 keep extreme high EUI; D6 inspect extremely low EUI.
-- **Git commit hash:** <fill in next step>
+- **Git commit hash:** c2aa65f
 - **Next step:** Data cleaning.
+
+---
+
+## Step 8 — Data cleaning
+
+- **Date:** 2026-10-15
+- **Status:** Done
+- **Objective:** Remove buildings and columns that cannot be used, fix special codes, and record every removal with its reason. Raw data unchanged.
+- **Script:** src/green_building/data/model1_clean.py
+- **Command executed:** python src/green_building/data/model1_clean.py
+- **Error encountered:** First run failed with "No such file or directory" — script file had not been created.
+- **Resolution:** Created file with `touch`, pasted code, saved, re-ran successfully.
+- **Input:** data/raw/model1_cbecs2018/cbecs2018_final_public.csv (6,436 rows × 1,249 columns)
+- **Output:** data/interim/model1/cbecs2018_clean.csv (6,249 rows × 537 columns) — to be versioned with DVC in Step 10, not committed to Git.
+- **Reports:** reports/model1/cleaning/
+  - cleaning_report.txt — full run log
+  - excluded_buildings.csv — every removed building + reason
+  - dropped_columns.csv — every removed column + reason + codebook label
+  - low_eui_buildings.csv — buildings with EUI < 1 kBtu/sq ft/yr
+- **Rows removed (187):**
+  - D1: 79 buildings with MFBTU missing ("Not applicable") — target cannot be computed; target never imputed.
+  - D2: 85 vacant buildings (PBA = 1) — efficiency not meaningful.
+  - D4: 23 refrigerated warehouses (PBA = 11) — too few to benchmark; EUI ~3.6× non-refrigerated warehouses, so not merged.
+- **D6 (EUI < 1):** 6 buildings found and listed; **kept**. They are 0.1% of the data and labels are rank-based within building type, so they cannot distort thresholds.
+- **Columns removed (712):**
+  - 151 replicate weights (FINALWT1–151) — survey error estimation only.
+  - 477 imputation flags (Z-prefixed) — metadata, not features.
+  - 49 leakage columns — identified from codebook labels (consumption, expenditure, thous Btu, kWh, cubic feet, gallons, cost).
+  - 22 fully empty columns.
+  - 13 constant columns.
+- **Kept on purpose:** MFBTU and SQFT (to compute the label in Step 9), FINALWT (weighted thresholds), PUBCLIM incl. code 7 = Withheld. None of these are model inputs except PUBCLIM.
+- **Special codes:** NFLOOR — 549 values recoded (994 → 10 "10–14 floors", 995 → 11 "15+ floors"). 19 other columns contain 99x codes (BASEMNT, FLCEILHT, NELVTR, NESLTR, RWSEAT, PBSEAT, HCBED, NRSBED, LODGRM, NOCC, NOCCAT, XRAYN, RFGRSN, RFGCOMPN, SERVERN, LGOFFDEVN, SMOFFDEVN, WBOARDSN, TVVIDEON) → handled in Step 9 for any used as features.
+- **Missing values:** NOT filled. Blanks are mostly survey skip patterns ("not applicable"); handled inside the model pipeline using training data only.
+- **Validation (all PASS):** no missing MFBTU; no vacant/refrigerated warehouse; SQFT > 0; PUBID unique; no NFLOOR special codes; no infinite values; rows add up (6,249 + 187 = 6,436); no leakage columns left.
+- **Buildings per type after cleaning (PBA: n):** 2:1329, 4:69, 5:712, 6:91, 7:105, 8:217, 12:271, 13:481, 14:936, 15:218, 16:276, 17:114, 18:418, 23:208, 24:35, 25:338, 26:349, 91:82. Smallest group = 35 (Enclosed mall).
+- **Pending check:** name-based scan for remaining *BTU/*CNS/*EXP columns will be enforced automatically in the Step 9 script (expected only WLCNS, RFCNS, MFBTU).
+- **Git commit hash:** <fill in next step>
+- **Next step:** Feature engineering and efficiency label definition.

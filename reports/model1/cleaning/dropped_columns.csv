@@ -1,0 +1,713 @@
+column,reason,codebook_label
+FINALWT1,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 1
+FINALWT2,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 2
+FINALWT3,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 3
+FINALWT4,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 4
+FINALWT5,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 5
+FINALWT6,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 6
+FINALWT7,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 7
+FINALWT8,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 8
+FINALWT9,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 9
+FINALWT10,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 10
+FINALWT11,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 11
+FINALWT12,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 12
+FINALWT13,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 13
+FINALWT14,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 14
+FINALWT15,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 15
+FINALWT16,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 16
+FINALWT17,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 17
+FINALWT18,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 18
+FINALWT19,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 19
+FINALWT20,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 20
+FINALWT21,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 21
+FINALWT22,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 22
+FINALWT23,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 23
+FINALWT24,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 24
+FINALWT25,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 25
+FINALWT26,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 26
+FINALWT27,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 27
+FINALWT28,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 28
+FINALWT29,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 29
+FINALWT30,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 30
+FINALWT31,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 31
+FINALWT32,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 32
+FINALWT33,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 33
+FINALWT34,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 34
+FINALWT35,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 35
+FINALWT36,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 36
+FINALWT37,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 37
+FINALWT38,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 38
+FINALWT39,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 39
+FINALWT40,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 40
+FINALWT41,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 41
+FINALWT42,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 42
+FINALWT43,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 43
+FINALWT44,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 44
+FINALWT45,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 45
+FINALWT46,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 46
+FINALWT47,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 47
+FINALWT48,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 48
+FINALWT49,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 49
+FINALWT50,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 50
+FINALWT51,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 51
+FINALWT52,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 52
+FINALWT53,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 53
+FINALWT54,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 54
+FINALWT55,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 55
+FINALWT56,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 56
+FINALWT57,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 57
+FINALWT58,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 58
+FINALWT59,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 59
+FINALWT60,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 60
+FINALWT61,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 61
+FINALWT62,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 62
+FINALWT63,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 63
+FINALWT64,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 64
+FINALWT65,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 65
+FINALWT66,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 66
+FINALWT67,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 67
+FINALWT68,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 68
+FINALWT69,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 69
+FINALWT70,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 70
+FINALWT71,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 71
+FINALWT72,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 72
+FINALWT73,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 73
+FINALWT74,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 74
+FINALWT75,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 75
+FINALWT76,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 76
+FINALWT77,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 77
+FINALWT78,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 78
+FINALWT79,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 79
+FINALWT80,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 80
+FINALWT81,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 81
+FINALWT82,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 82
+FINALWT83,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 83
+FINALWT84,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 84
+FINALWT85,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 85
+FINALWT86,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 86
+FINALWT87,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 87
+FINALWT88,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 88
+FINALWT89,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 89
+FINALWT90,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 90
+FINALWT91,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 91
+FINALWT92,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 92
+FINALWT93,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 93
+FINALWT94,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 94
+FINALWT95,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 95
+FINALWT96,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 96
+FINALWT97,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 97
+FINALWT98,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 98
+FINALWT99,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 99
+FINALWT100,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 100
+FINALWT101,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 101
+FINALWT102,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 102
+FINALWT103,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 103
+FINALWT104,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 104
+FINALWT105,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 105
+FINALWT106,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 106
+FINALWT107,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 107
+FINALWT108,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 108
+FINALWT109,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 109
+FINALWT110,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 110
+FINALWT111,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 111
+FINALWT112,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 112
+FINALWT113,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 113
+FINALWT114,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 114
+FINALWT115,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 115
+FINALWT116,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 116
+FINALWT117,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 117
+FINALWT118,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 118
+FINALWT119,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 119
+FINALWT120,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 120
+FINALWT121,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 121
+FINALWT122,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 122
+FINALWT123,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 123
+FINALWT124,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 124
+FINALWT125,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 125
+FINALWT126,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 126
+FINALWT127,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 127
+FINALWT128,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 128
+FINALWT129,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 129
+FINALWT130,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 130
+FINALWT131,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 131
+FINALWT132,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 132
+FINALWT133,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 133
+FINALWT134,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 134
+FINALWT135,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 135
+FINALWT136,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 136
+FINALWT137,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 137
+FINALWT138,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 138
+FINALWT139,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 139
+FINALWT140,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 140
+FINALWT141,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 141
+FINALWT142,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 142
+FINALWT143,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 143
+FINALWT144,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 144
+FINALWT145,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 145
+FINALWT146,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 146
+FINALWT147,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 147
+FINALWT148,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 148
+FINALWT149,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 149
+FINALWT150,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 150
+FINALWT151,replicate survey weight (not a building feature),Unknown Eligibility and Nonresponse Adjusted Replicate Weight 151
+ZSQFT,"imputation flag (metadata, not a feature)",Imputation flag: Square footage
+ZSQFTC,"imputation flag (metadata, not a feature)",Imputation flag: Square footage category
+ZWLCNS,"imputation flag (metadata, not a feature)",Imputation flag: Wall construction material
+ZRFCNS,"imputation flag (metadata, not a feature)",Imputation flag: Roof construction material
+ZRFCOOL,"imputation flag (metadata, not a feature)",Imputation flag: Cool roof
+ZRFTILT,"imputation flag (metadata, not a feature)",Imputation flag: Roof tilt
+ZBLDSHP,"imputation flag (metadata, not a feature)",Imputation flag: Building shape
+ZGLSSPC,"imputation flag (metadata, not a feature)",Imputation flag: Percent exterior glass
+ZNFLOOR,"imputation flag (metadata, not a feature)",Imputation flag: Number of floors
+ZBASEMNT,"imputation flag (metadata, not a feature)",Imputation flag: Number of underground floors
+ZFLCEILHT,"imputation flag (metadata, not a feature)",Imputation flag: Floor to ceiling height
+ZATTIC,"imputation flag (metadata, not a feature)",Imputation flag: Attic
+ZELEVTR,"imputation flag (metadata, not a feature)",Imputation flag: Elevators
+ZNELVTR,"imputation flag (metadata, not a feature)",Imputation flag: Number of elevators
+ZESCLTR,"imputation flag (metadata, not a feature)",Imputation flag: Escalators
+ZNESLTR,"imputation flag (metadata, not a feature)",Imputation flag: Number of escalators
+ZYRCONC,"imputation flag (metadata, not a feature)",Imputation flag: Year of construction category
+ZRENOV,"imputation flag (metadata, not a feature)",Imputation flag: Renovations
+ZRENCOS,"imputation flag (metadata, not a feature)",Imputation flag: Cosmetic improvements
+ZRENADD,"imputation flag (metadata, not a feature)",Imputation flag: Addition or annex
+ZRENRDC,"imputation flag (metadata, not a feature)",Imputation flag: Reduction of floorspace
+ZRENINT,"imputation flag (metadata, not a feature)",Imputation flag: Interior wall re-configuration
+ZRENRFF,"imputation flag (metadata, not a feature)",Imputation flag: Roof replacement
+ZRENWIN,"imputation flag (metadata, not a feature)",Imputation flag: Window replacement
+ZRENHVC,"imputation flag (metadata, not a feature)",Imputation flag: HVAC equipment upgrade
+ZRENLGT,"imputation flag (metadata, not a feature)",Imputation flag: Lighting upgrade
+ZRENPLB,"imputation flag (metadata, not a feature)",Imputation flag: Plumbing system upgrade
+ZRENELC,"imputation flag (metadata, not a feature)",Imputation flag: Electrical upgrade
+ZRENINS,"imputation flag (metadata, not a feature)",Imputation flag: Insulation upgrade
+ZRENSAF,"imputation flag (metadata, not a feature)","Imputation flag: Fire, safety, or security upgrade"
+ZRENSTR,"imputation flag (metadata, not a feature)",Imputation flag: Structural upgrade
+ZRENOTH,"imputation flag (metadata, not a feature)",Imputation flag: Other renovation
+ZDRYCL,"imputation flag (metadata, not a feature)",Imputation flag: Dry cleaning onsite
+ZRWSEAT,"imputation flag (metadata, not a feature)",Imputation flag: Religious worship seating capacity
+ZPBSEAT,"imputation flag (metadata, not a feature)",Imputation flag: Assembly seating capacity
+ZEDSEAT,"imputation flag (metadata, not a feature)",Imputation flag: Number of classroom seats
+ZFDSEAT,"imputation flag (metadata, not a feature)",Imputation flag: Food service seating capacity
+ZHCBED,"imputation flag (metadata, not a feature)",Imputation flag: Licensed inpatient beds
+ZNRSBED,"imputation flag (metadata, not a feature)",Imputation flag: Licensed nursing beds
+ZLODGRM,"imputation flag (metadata, not a feature)",Imputation flag: Number of guest rooms
+ZFACIL,"imputation flag (metadata, not a feature)",Imputation flag: On a multibuilding complex
+ZFEDFAC,"imputation flag (metadata, not a feature)",Imputation flag: Federal complex
+ZFACACT,"imputation flag (metadata, not a feature)",Imputation flag: Type of complex
+ZPLANT,"imputation flag (metadata, not a feature)",Imputation flag: Central physical plant
+ZFACDST,"imputation flag (metadata, not a feature)",Imputation flag: Plant produces district steam
+ZFACDHW,"imputation flag (metadata, not a feature)",Imputation flag: Plant produces district hot water
+ZFACDCW,"imputation flag (metadata, not a feature)",Imputation flag: Plant produces district chilled water
+ZFACELC,"imputation flag (metadata, not a feature)",Imputation flag: Plant produces electricity
+ZBLDPLT,"imputation flag (metadata, not a feature)",Imputation flag: Central plant in building
+ZGOVOWN,"imputation flag (metadata, not a feature)",Imputation flag: Government owned
+ZGOVTYP,"imputation flag (metadata, not a feature)",Imputation flag: Type of government
+ZOWNTYPE,"imputation flag (metadata, not a feature)",Imputation flag: Building owner
+ZNOCC,"imputation flag (metadata, not a feature)",Imputation flag: Number of businesses
+ZNOCCAT,"imputation flag (metadata, not a feature)",Imputation flag: Number of businesses category
+ZOWNOCC,"imputation flag (metadata, not a feature)",Imputation flag: Owner occupied or leased to tenant(s)
+ZOWNOPR,"imputation flag (metadata, not a feature)",Imputation flag: Owner operates
+ZOWNPPR,"imputation flag (metadata, not a feature)",Imputation flag: Owner has purchasing power
+ZNWNPPR,"imputation flag (metadata, not a feature)",Imputation flag: Nonowner with purchasing power
+ZNWNOPR,"imputation flag (metadata, not a feature)",Imputation flag: Nonowner operator
+ZWHOPPR,"imputation flag (metadata, not a feature)",Imputation flag: Who has purchasing power
+ZMONUSE,"imputation flag (metadata, not a feature)",Imputation flag: Months in use
+ZOCCUPYP,"imputation flag (metadata, not a feature)",Imputation flag: Percent occupancy
+ZLODOCCP,"imputation flag (metadata, not a feature)",Imputation flag: Lodging room percent occupancy
+ZOPEN24,"imputation flag (metadata, not a feature)",Imputation flag: Open 24 hours a day
+ZOPNMF,"imputation flag (metadata, not a feature)",Imputation flag: Open during week
+ZOPNWE,"imputation flag (metadata, not a feature)",Imputation flag: Open on weekend
+ZWKHRS,"imputation flag (metadata, not a feature)",Imputation flag: Total hours open per week
+ZWKHRSC,"imputation flag (metadata, not a feature)",Imputation flag: Weekly hours category
+ZNWKER,"imputation flag (metadata, not a feature)",Imputation flag: Number of employees
+ZNWKERC,"imputation flag (metadata, not a feature)",Imputation flag: Number of employees category
+ZHT1,"imputation flag (metadata, not a feature)",Imputation flag: Energy used for main heating
+ZHT2,"imputation flag (metadata, not a feature)",Imputation flag: Energy used for secondary heating
+ZCOOL,"imputation flag (metadata, not a feature)",Imputation flag: Energy used for cooling
+ZWATR,"imputation flag (metadata, not a feature)",Imputation flag: Energy used for water heating
+ZCOOK,"imputation flag (metadata, not a feature)",Imputation flag: Energy used for cooking
+ZMANU,"imputation flag (metadata, not a feature)",Imputation flag: Energy used for manufacturing
+ZELUSED,"imputation flag (metadata, not a feature)",Imputation flag: Electricity used
+ZNGUSED,"imputation flag (metadata, not a feature)",Imputation flag: Natural gas used
+ZFKUSED,"imputation flag (metadata, not a feature)",Imputation flag: Fuel oil/diesel/kerosene used
+ZPRUSED,"imputation flag (metadata, not a feature)",Imputation flag: Bottled gas/LPG/propane used
+ZSTUSED,"imputation flag (metadata, not a feature)",Imputation flag: District steam used
+ZHWUSED,"imputation flag (metadata, not a feature)",Imputation flag: District hot water used
+ZCWUSED,"imputation flag (metadata, not a feature)",Imputation flag: District chilled water used
+ZWOUSED,"imputation flag (metadata, not a feature)",Imputation flag: Wood used
+ZCOUSED,"imputation flag (metadata, not a feature)",Imputation flag: Coal used
+ZSOUSED,"imputation flag (metadata, not a feature)",Imputation flag: Solar used
+ZOTUSED,"imputation flag (metadata, not a feature)",Imputation flag: Other energy source used
+ZFKTYPE,"imputation flag (metadata, not a feature)","Imputation flag: Specify fuel oil, diesel, or kerosene"
+ZSOPANEL,"imputation flag (metadata, not a feature)",Imputation flag: Solar panels used to generate electricity
+ZHEATP,"imputation flag (metadata, not a feature)",Imputation flag: Percent heated
+ZHTLS50,"imputation flag (metadata, not a feature)",Imputation flag: Heated to less than 50 degrees
+ZELHT1,"imputation flag (metadata, not a feature)",Imputation flag: Electricity used for main heating
+ZNGHT1,"imputation flag (metadata, not a feature)",Imputation flag: Natural gas used for main heating
+ZFKHT1,"imputation flag (metadata, not a feature)",Imputation flag: Fuel oil used for main heating
+ZPRHT1,"imputation flag (metadata, not a feature)",Imputation flag: Propane used for main heating
+ZSTHT1,"imputation flag (metadata, not a feature)",Imputation flag: District steam used for main heating
+ZHWHT1,"imputation flag (metadata, not a feature)",Imputation flag: District hot water used for main heating
+ZWOHT1,"imputation flag (metadata, not a feature)",Imputation flag: Wood used for main heating
+ZCOHT1,"imputation flag (metadata, not a feature)",Imputation flag: Coal used for main heating
+ZSOHT1,"imputation flag (metadata, not a feature)",Imputation flag: Solar used for main heating
+ZOTHT1,"imputation flag (metadata, not a feature)",Imputation flag: Other source used for main heating
+ZELHT2,"imputation flag (metadata, not a feature)",Imputation flag: Electricity used for secondary heating
+ZNGHT2,"imputation flag (metadata, not a feature)",Imputation flag: Natural gas used for secondary heating
+ZFKHT2,"imputation flag (metadata, not a feature)",Imputation flag: Fuel oil used for secondary heating
+ZPRHT2,"imputation flag (metadata, not a feature)",Imputation flag: Propane used for secondary heating
+ZSTHT2,"imputation flag (metadata, not a feature)",Imputation flag: District steam used for secondary heating
+ZHWHT2,"imputation flag (metadata, not a feature)",Imputation flag: District hot water used for secondary heating
+ZWOHT2,"imputation flag (metadata, not a feature)",Imputation flag: Wood used for secondary heating
+ZCOHT2,"imputation flag (metadata, not a feature)",Imputation flag: Coal used for secondary heating
+ZSOHT2,"imputation flag (metadata, not a feature)",Imputation flag: Solar used for secondary heating
+ZOTHT2,"imputation flag (metadata, not a feature)",Imputation flag: Other source used for secondary heating
+ZPKGHT_EL,"imputation flag (metadata, not a feature)",Imputation flag: Packaged central units powered by electricity
+ZBOILER_EL,"imputation flag (metadata, not a feature)",Imputation flag: Boilers powered by electricity
+ZHTPMPH_EL,"imputation flag (metadata, not a feature)",Imputation flag: Heat pumps powered by electricity
+ZFURNAC_EL,"imputation flag (metadata, not a feature)",Imputation flag: Furnaces powered by electricity
+ZSLFCON_EL,"imputation flag (metadata, not a feature)",Imputation flag: Individual space heaters powered by electricity
+ZFIREPLC_EL,"imputation flag (metadata, not a feature)",Imputation flag: Fireplaces powered by electricity
+ZREHEAT_EL,"imputation flag (metadata, not a feature)",Imputation flag: Duct reheat powered by electricity
+ZOTHTEQ_EL,"imputation flag (metadata, not a feature)",Imputation flag: Other heating equipment powered by electricity
+ZPKGHT_NG,"imputation flag (metadata, not a feature)",Imputation flag: Packaged central units fueled by natural gas
+ZBOILER_NG,"imputation flag (metadata, not a feature)",Imputation flag: Boilers fueled by natural gas
+ZHTPMPH_NG,"imputation flag (metadata, not a feature)",Imputation flag: Heat pumps fueled by natural gas
+ZFURNAC_NG,"imputation flag (metadata, not a feature)",Imputation flag: Furnaces fueled by natural gas
+ZSLFCON_NG,"imputation flag (metadata, not a feature)",Imputation flag: Individual space heaters fueled by natural gas
+ZFIREPLC_NG,"imputation flag (metadata, not a feature)",Imputation flag: Fireplaces fueled by natural gas
+ZOTHTEQ_NG,"imputation flag (metadata, not a feature)",Imputation flag: Other heating equipment fueled by natural gas
+ZBOILER_FK,"imputation flag (metadata, not a feature)",Imputation flag: Boilers fueled by fuel oil
+ZFURNAC_FK,"imputation flag (metadata, not a feature)",Imputation flag: Furnaces fueled by fuel oil
+ZSLFCON_FK,"imputation flag (metadata, not a feature)",Imputation flag: Individual space heaters fueled by fuel oil
+ZOTHTEQ_FK,"imputation flag (metadata, not a feature)",Imputation flag: Other heating equipment fueled by fuel oil
+ZPKGHT_PR,"imputation flag (metadata, not a feature)",Imputation flag: Packaged central units fueled by propane
+ZBOILER_PR,"imputation flag (metadata, not a feature)",Imputation flag: Boilers fueled by propane
+ZHTPMPH_PR,"imputation flag (metadata, not a feature)",Imputation flag: Heat pumps fueled by propane
+ZFURNAC_PR,"imputation flag (metadata, not a feature)",Imputation flag: Furnaces fueled by propane
+ZSLFCON_PR,"imputation flag (metadata, not a feature)",Imputation flag: Individual space heaters fueled by propane
+ZFIREPLC_PR,"imputation flag (metadata, not a feature)",Imputation flag: Fireplaces fueled by propane
+ZOTHTEQ_PR,"imputation flag (metadata, not a feature)",Imputation flag: Other heating equipment fueled by propane
+ZDIST_ST,"imputation flag (metadata, not a feature)",Imputation flag: District steam system
+ZAIRHAND_ST,"imputation flag (metadata, not a feature)",Imputation flag: Central air handlers for steam distribution
+ZFANCOIL_ST,"imputation flag (metadata, not a feature)",Imputation flag: Fan coil or induction units for steam distribution
+ZREHEAT_ST,"imputation flag (metadata, not a feature)",Imputation flag: Duct reheat for steam distribution
+ZRADIATR_ST,"imputation flag (metadata, not a feature)",Imputation flag: Radiators for steam distribution
+ZRADFLR_ST,"imputation flag (metadata, not a feature)",Imputation flag: Radiant floor or ceiling panels for steam distribution
+ZWTLOOP_ST,"imputation flag (metadata, not a feature)",Imputation flag: Water loop heat pump for steam distribution
+ZOTDIST_ST,"imputation flag (metadata, not a feature)",Imputation flag: Other type of steam distribution
+ZDIST_HW,"imputation flag (metadata, not a feature)",Imputation flag: District hot water system
+ZAIRHAND_HW,"imputation flag (metadata, not a feature)",Imputation flag: Central air handlers for hot water distribution
+ZFANCOIL_HW,"imputation flag (metadata, not a feature)",Imputation flag: Fan coil or induction units for hot water distribution
+ZREHEAT_HW,"imputation flag (metadata, not a feature)",Imputation flag: Duct reheat for hot water distribution
+ZRADIATR_HW,"imputation flag (metadata, not a feature)",Imputation flag: Radiators for hot water distribution
+ZRADFLR_HW,"imputation flag (metadata, not a feature)",Imputation flag: Radiant floor or ceiling panels for hot water distribution
+ZWTLOOP_HW,"imputation flag (metadata, not a feature)",Imputation flag: Water loop heat pump for hot water distribution
+ZOTDIST_HW,"imputation flag (metadata, not a feature)",Imputation flag: Other type of hot water distribution
+ZFURNAC_WO,"imputation flag (metadata, not a feature)",Imputation flag: Furnaces fueled by wood
+ZSLFCON_WO,"imputation flag (metadata, not a feature)",Imputation flag: Individual space heaters fueled by wood
+ZFIREPLC_WO,"imputation flag (metadata, not a feature)",Imputation flag: Fireplaces fueled by wood
+ZOTHTEQ_WO,"imputation flag (metadata, not a feature)",Imputation flag: Other heating equipment fueled by wood
+ZBOILER_CO,"imputation flag (metadata, not a feature)",Imputation flag: Boilers fueled by coal
+ZFURNAC_CO,"imputation flag (metadata, not a feature)",Imputation flag: Furnaces fueled by coal
+ZOTHTEQ_CO,"imputation flag (metadata, not a feature)",Imputation flag: Other heating equipment fueled by coal
+ZSOTHERM_SO,"imputation flag (metadata, not a feature)",Imputation flag: Solar thermal heating equipment
+ZPKGHT_OT,"imputation flag (metadata, not a feature)",Imputation flag: Packaged central units fueled by other source
+ZBOILER_OT,"imputation flag (metadata, not a feature)",Imputation flag: Boilers fueled by other source
+ZFURNAC_OT,"imputation flag (metadata, not a feature)",Imputation flag: Furnaces fueled by other source
+ZSLFCON_OT,"imputation flag (metadata, not a feature)",Imputation flag: Individual space heaters fueled by other source
+ZOTHTEQ_OT,"imputation flag (metadata, not a feature)",Imputation flag: Other heating equipment fueled by other source
+ZBLRAIR,"imputation flag (metadata, not a feature)",Imputation flag: Central air handlers for boiler distribution
+ZBLRDUCT,"imputation flag (metadata, not a feature)",Imputation flag: Duct reheat for boiler distribution
+ZBLRFNCL,"imputation flag (metadata, not a feature)",Imputation flag: Fan coil or induction units for boiler distribution
+ZBLROTD,"imputation flag (metadata, not a feature)",Imputation flag: Other type of boiler distribution
+ZBLRRAD,"imputation flag (metadata, not a feature)",Imputation flag: Radiators for boiler distribution
+ZBLRRDFL,"imputation flag (metadata, not a feature)",Imputation flag: Radiant floor or ceiling panels for boiler distribution
+ZBLRWTLP,"imputation flag (metadata, not a feature)",Imputation flag: Water loop heat pump for boiler distribution
+ZHPHPTHP,"imputation flag (metadata, not a feature)",Imputation flag: Heat pumps are PTHPs
+ZHPHAIR,"imputation flag (metadata, not a feature)",Imputation flag: Air source heat pump
+ZHPHGRD,"imputation flag (metadata, not a feature)",Imputation flag: Geothermal heat pump
+ZHPHDUAL,"imputation flag (metadata, not a feature)",Imputation flag: Combination air source and geothermal heat pump
+ZHPHWTR,"imputation flag (metadata, not a feature)",Imputation flag: Water loop heat pump
+ZHPHVRF,"imputation flag (metadata, not a feature)",Imputation flag: VRF system
+ZFURNP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by electric furnace
+ZPKGHP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by electric packaged unit
+ZBOILP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by electric boiler
+ZHTPHP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by electric heat pump
+ZSLFCNP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by electric space heater
+ZFIREPLP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by electric fireplace
+ZREHEATP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by electric duct reheat
+ZOTHTP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by electric heating equipment
+ZFURNP_NG,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by natural gas furnace
+ZPKGHP_NG,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by natural gas packaged unit
+ZBOILP_NG,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by natural gas boiler
+ZHTPHP_NG,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by natural gas heat pump
+ZSLFCNP_NG,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by natural gas space heater
+ZFIREPLP_NG,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by natural gas fireplace
+ZOTHTP_NG,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by other natural gas heating equipment
+ZFURNP_FK,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by fuel oil furnace
+ZBOILP_FK,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by fuel oil boiler
+ZSLFCNP_FK,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by fuel oil space heater
+ZOTHTP_FK,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by other fuel oil heating equipment
+ZFURNP_PR,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by propane furnace
+ZPKGHP_PR,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by propane packaged unit
+ZBOILP_PR,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by propane boiler
+ZHTPHP_PR,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by propane heat pump
+ZSLFCNP_PR,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by propane space heater
+ZFIREPLP_PR,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by propane fireplace
+ZOTHTP_PR,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by propane heating equipment
+ZSTHWP_ST,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by district steam heating system
+ZSTHWP_HW,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by district hot water heating system
+ZFURNP_WO,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by wood furnace
+ZSLFCNP_WO,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by wood space heater
+ZFIREPLP_WO,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by wood fireplace
+ZOTHTP_WO,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by other wood heating equipment
+ZFURNP_CO,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by coal furnace
+ZBOILP_CO,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by coal boiler
+ZOTHTP_CO,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by other coal heating equipment
+ZSOTHERMP_SO,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by solar thermal heating
+ZFURNP_OT,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by other source furnace
+ZPKGHP_OT,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by other source packaged unit
+ZBOILP_OT,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by other source boiler
+ZSLFCNP_OT,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by other source space heater
+ZOTHTP_OT,"imputation flag (metadata, not a feature)",Imputation flag: Pct heated by other source other heating equipment
+ZMAINHT,"imputation flag (metadata, not a feature)",Imputation flag: Main heating equipment
+ZNWMNHT,"imputation flag (metadata, not a feature)",Imputation flag: Main heating replaced
+ZCOOLP,"imputation flag (metadata, not a feature)",Imputation flag: Percent cooled
+ZELCOOL,"imputation flag (metadata, not a feature)",Imputation flag: Electricity used for air conditioning
+ZNGCOOL,"imputation flag (metadata, not a feature)",Imputation flag: Natural gas used for air conditioning
+ZFKCOOL,"imputation flag (metadata, not a feature)",Imputation flag: Fuel oil used for air conditioning
+ZPRCOOL,"imputation flag (metadata, not a feature)",Imputation flag: Propane used for air conditioning
+ZSTCOOL,"imputation flag (metadata, not a feature)",Imputation flag: District steam used for air conditioning
+ZCWCOOL,"imputation flag (metadata, not a feature)",Imputation flag: District chilled water used for air conditioning
+ZOTCOOL,"imputation flag (metadata, not a feature)",Imputation flag: Other energy source used for air conditioning
+ZRCAC_EL,"imputation flag (metadata, not a feature)",Imputation flag: Residential-type split system electric A/C
+ZPKGCL_EL,"imputation flag (metadata, not a feature)",Imputation flag: Packaged electric A/C units (rooftop units)
+ZCHILLR_EL,"imputation flag (metadata, not a feature)",Imputation flag: Central chillers powered by electricity
+ZHTPMPC_EL,"imputation flag (metadata, not a feature)",Imputation flag: Heat pumps for A/C (electric)
+ZACWNWL_EL,"imputation flag (metadata, not a feature)",Imputation flag: Individual room or portable A/C (electric)
+ZEVAPCL_EL,"imputation flag (metadata, not a feature)",Imputation flag: Swamp or evaporative A/C (electric)
+ZOTCLEQ_EL,"imputation flag (metadata, not a feature)",Imputation flag: Other type of A/C powered by electricity
+ZHPCPTHP,"imputation flag (metadata, not a feature)",Imputation flag: Heat pumps (for A/C) are PTHPs
+ZHPCAIR,"imputation flag (metadata, not a feature)",Imputation flag: Air source heat pump for A/C
+ZHPCGRD,"imputation flag (metadata, not a feature)",Imputation flag: Geothermal heat pump for A/C
+ZHPCDUAL,"imputation flag (metadata, not a feature)",Imputation flag: Combination air source and geothermal heat pump for A/C
+ZHPCWTR,"imputation flag (metadata, not a feature)",Imputation flag: Water loop heat pump for A/C
+ZCHILLR_NG,"imputation flag (metadata, not a feature)",Imputation flag: Central chillers fueled by natural gas
+ZOTCLEQ_NG,"imputation flag (metadata, not a feature)",Imputation flag: Other type of A/C fueled by natural gas
+ZCHILLR_FK,"imputation flag (metadata, not a feature)",Imputation flag: Central chillers fueled by fuel oil
+ZOTCLEQ_FK,"imputation flag (metadata, not a feature)",Imputation flag: Other type of A/C fueled by fuel oil
+ZCHILLR_PR,"imputation flag (metadata, not a feature)",Imputation flag: Central chillers fueled by propane
+ZOTCLEQ_PR,"imputation flag (metadata, not a feature)",Imputation flag: Other type of A/C fueled by propane
+ZCHILLR_ST,"imputation flag (metadata, not a feature)",Imputation flag: Central chillers fueled by district steam
+ZOTCLEQ_ST,"imputation flag (metadata, not a feature)",Imputation flag: Other type of A/C fueled by district steam
+ZOTCLEQ_OT,"imputation flag (metadata, not a feature)",Imputation flag: Other type of A/C powered by other source
+ZDIST_CW,"imputation flag (metadata, not a feature)",Imputation flag: District chilled water system
+ZCWAIR,"imputation flag (metadata, not a feature)",Imputation flag: Central air handlers for chilled water distribution
+ZCWFNCL,"imputation flag (metadata, not a feature)",Imputation flag: Fan coil or induction units for chilled water distribution
+ZCWBEAM,"imputation flag (metadata, not a feature)",Imputation flag: Chilled beam for chilled water distribution
+ZCWWTLP,"imputation flag (metadata, not a feature)",Imputation flag: Water loop heat pump for chilled water distribution
+ZCWOTD,"imputation flag (metadata, not a feature)",Imputation flag: Other type of chilled water distribution
+ZCHLAIR,"imputation flag (metadata, not a feature)",Imputation flag: Central air handlers for central chiller distribution
+ZCHLFNCL,"imputation flag (metadata, not a feature)",Imputation flag: Fan coil or induction units for central chiller distribution
+ZCHLBEAM,"imputation flag (metadata, not a feature)",Imputation flag: Chilled beam for central chiller distribution
+ZCHLWTLP,"imputation flag (metadata, not a feature)",Imputation flag: Water loop heat pump for central chiller distribution
+ZCHLOTD,"imputation flag (metadata, not a feature)",Imputation flag: Other type of central chiller distribution
+ZCHLAIRCL,"imputation flag (metadata, not a feature)",Imputation flag: Air-cooled central chiller
+ZCHLWTRCL,"imputation flag (metadata, not a feature)",Imputation flag: Water-cooled central chiller
+ZCHLABSRP,"imputation flag (metadata, not a feature)",Imputation flag: Absorption central chiller
+ZRCACP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by electric residential-type split system A/C
+ZPKGCP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by electric packaged A/C units
+ZCHILP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by electric central chillers
+ZHTPCP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by electric heat pumps
+ZACWNWP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by electric individual A/C
+ZEVAPP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by electric swamp coolers
+ZOTCLP_EL,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by electric other type of A/C
+ZCHILP_NG,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by natural gas central chillers
+ZOTCLP_NG,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by natural gas other type of A/C
+ZCHILP_FK,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by fuel oil central chillers
+ZOTCLP_FK,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by fuel oil other type of A/C
+ZCHILP_PR,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by propane central chillers
+ZOTCLP_PR,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by propane other type of A/C
+ZCHILP_ST,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by district steam central chillers
+ZOTCLP_ST,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by district steam other type of A/C
+ZCHWTP_CW,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by district chilled water system
+ZOTCLP_OT,"imputation flag (metadata, not a feature)",Imputation flag: Pct cooled by other source A/C equipment
+ZMAINCL,"imputation flag (metadata, not a feature)",Imputation flag: Main air-conditioning equipment
+ZNWMNCL,"imputation flag (metadata, not a feature)",Imputation flag: Main cooling replaced
+ZEMCS,"imputation flag (metadata, not a feature)",Imputation flag: Building automation system (BAS)
+ZEMCSHT,"imputation flag (metadata, not a feature)",Imputation flag: BAS controls heating
+ZEMCSCL,"imputation flag (metadata, not a feature)",Imputation flag: BAS controls A/C
+ZEMCSLT,"imputation flag (metadata, not a feature)",Imputation flag: BAS controls lighting
+ZSMRTTHRM,"imputation flag (metadata, not a feature)",Imputation flag: Smart thermostats
+ZHWRDHT,"imputation flag (metadata, not a feature)",Imputation flag: How reduce heating
+ZHWRDCL,"imputation flag (metadata, not a feature)",Imputation flag: How reduce A/C
+ZVAV,"imputation flag (metadata, not a feature)",Imputation flag: Variable air volume (VAV) system
+ZDOAS,"imputation flag (metadata, not a feature)",Imputation flag: Dedicated outside air system (DOAS)
+ZDCV,"imputation flag (metadata, not a feature)",Imputation flag: Demand controlled ventilation (DCV)
+ZECN,"imputation flag (metadata, not a feature)",Imputation flag: Economizer cycle
+ZMAINT,"imputation flag (metadata, not a feature)",Imputation flag: Regular HVAC maintenance
+ZELWATR,"imputation flag (metadata, not a feature)",Imputation flag: Electricity used for water heating
+ZNGWATR,"imputation flag (metadata, not a feature)",Imputation flag: Natural gas used for water heating
+ZFKWATR,"imputation flag (metadata, not a feature)",Imputation flag: Fuel oil used for water heating
+ZPRWATR,"imputation flag (metadata, not a feature)",Imputation flag: Propane used for water heating
+ZSTWATR,"imputation flag (metadata, not a feature)",Imputation flag: District steam used for water heating
+ZHWWATR,"imputation flag (metadata, not a feature)",Imputation flag: District hot water used for water heating
+ZWOWATR,"imputation flag (metadata, not a feature)",Imputation flag: Wood used for water heating
+ZCOWATR,"imputation flag (metadata, not a feature)",Imputation flag: Coal used for water heating
+ZSOWATR,"imputation flag (metadata, not a feature)",Imputation flag: Solar thermal used for water heating
+ZOTWATR,"imputation flag (metadata, not a feature)",Imputation flag: Other energy source used for water heating
+ZWTHTEQ,"imputation flag (metadata, not a feature)",Imputation flag: Water heating equipment
+ZBOOSTWT,"imputation flag (metadata, not a feature)",Imputation flag: Booster water heaters
+ZELCOOK,"imputation flag (metadata, not a feature)",Imputation flag: Electricity used for cooking
+ZNGCOOK,"imputation flag (metadata, not a feature)",Imputation flag: Natural gas used for cooking
+ZFKCOOK,"imputation flag (metadata, not a feature)",Imputation flag: Fuel oil used for cooking
+ZPRCOOK,"imputation flag (metadata, not a feature)",Imputation flag: Propane used for cooking
+ZSTCOOK,"imputation flag (metadata, not a feature)",Imputation flag: District steam used for cooking
+ZHWCOOK,"imputation flag (metadata, not a feature)",Imputation flag: District hot water used for cooking
+ZWOCOOK,"imputation flag (metadata, not a feature)",Imputation flag: Wood used for cooking
+ZCOCOOK,"imputation flag (metadata, not a feature)",Imputation flag: Coal used for cooking
+ZOTCOOK,"imputation flag (metadata, not a feature)",Imputation flag: Other energy source used for cooking
+ZELMANU,"imputation flag (metadata, not a feature)",Imputation flag: Electricity used for manufacturing
+ZNGMANU,"imputation flag (metadata, not a feature)",Imputation flag: Natural gas used for manufacturing
+ZFKMANU,"imputation flag (metadata, not a feature)",Imputation flag: Fuel oil used for manufacturing
+ZPRMANU,"imputation flag (metadata, not a feature)",Imputation flag: Propane used for manufacturing
+ZSTMANU,"imputation flag (metadata, not a feature)",Imputation flag: District steam used for manufacturing
+ZHWMANU,"imputation flag (metadata, not a feature)",Imputation flag: District hot water used for manufacturing
+ZWOMANU,"imputation flag (metadata, not a feature)",Imputation flag: Wood used for manufacturing
+ZCOMANU,"imputation flag (metadata, not a feature)",Imputation flag: Coal used for manufacturing
+ZOTMANU,"imputation flag (metadata, not a feature)",Imputation flag: Other energy source used for manufacturing
+ZCAPGEN,"imputation flag (metadata, not a feature)",Imputation flag: Electricity generation capability
+ZPVC,"imputation flag (metadata, not a feature)",Imputation flag: Solar panels used to generate electricity
+ZENGINE,"imputation flag (metadata, not a feature)",Imputation flag: Reciprocating engine generator
+ZFUELCL,"imputation flag (metadata, not a feature)",Imputation flag: Fuel cells
+ZLRGTRB,"imputation flag (metadata, not a feature)",Imputation flag: Large turbines
+ZMCROTB,"imputation flag (metadata, not a feature)",Imputation flag: Microturbines
+ZOTGENTECH,"imputation flag (metadata, not a feature)",Imputation flag: Other type of generation technology
+ZCOGEN,"imputation flag (metadata, not a feature)",Imputation flag: Cogeneration system
+ZNGGENR,"imputation flag (metadata, not a feature)",Imputation flag: Natural gas used for electricity generation
+ZFKGENR,"imputation flag (metadata, not a feature)",Imputation flag: Fuel oil used for electricity generation
+ZPRGENR,"imputation flag (metadata, not a feature)",Imputation flag: Propane used for electricity generation
+ZWOGENR,"imputation flag (metadata, not a feature)",Imputation flag: Wood used for electricity generation
+ZCOGENR,"imputation flag (metadata, not a feature)",Imputation flag: Coal used for electricity generation
+ZSOGENR,"imputation flag (metadata, not a feature)",Imputation flag: Solar used for electricity generation
+ZOTGENR,"imputation flag (metadata, not a feature)",Imputation flag: Other energy source used for electricity generation
+ZGENUSE,"imputation flag (metadata, not a feature)",Imputation flag: Use of generated electricity
+ZPRAMTC,"imputation flag (metadata, not a feature)",Imputation flag: Propane amount
+ZPRUNIT,"imputation flag (metadata, not a feature)",Imputation flag: Propane units
+ZWOAMT,"imputation flag (metadata, not a feature)",Imputation flag: Amount wood burned
+ZWOSRC,"imputation flag (metadata, not a feature)",Imputation flag: How obtain wood
+ZWOEXP,"imputation flag (metadata, not a feature)",Imputation flag: Expenditures for wood
+ZWOEXPC,"imputation flag (metadata, not a feature)",Imputation flag: Wood expenditures category
+ZENRGYPLN,"imputation flag (metadata, not a feature)",Imputation flag: Energy management plan
+ZSNACK,"imputation flag (metadata, not a feature)","Imputation flag: Snack bar, concession stand, coffee shop, breakfast area"
+ZFASTFD,"imputation flag (metadata, not a feature)",Imputation flag: Fast food or small restaurant
+ZCAF,"imputation flag (metadata, not a feature)",Imputation flag: Cafeteria or large restaurant
+ZFDPREP,"imputation flag (metadata, not a feature)","Imputation flag: Large kitchen, commercial kitchen, other large food prep area"
+ZKITCHN,"imputation flag (metadata, not a feature)",Imputation flag: Small kitchen area
+ZBREAKRM,"imputation flag (metadata, not a feature)","Imputation flag: Employee lounge, break room, vending, pantry"
+ZOTFDRM,"imputation flag (metadata, not a feature)",Imputation flag: Other type of food preparation or serving area
+ZSNACKSF,"imputation flag (metadata, not a feature)",Imputation flag: Snack bar square footage
+ZFASTFDSF,"imputation flag (metadata, not a feature)",Imputation flag: Fast food square footage
+ZCAFSF,"imputation flag (metadata, not a feature)",Imputation flag: Cafeteria square footage
+ZFDPREPSF,"imputation flag (metadata, not a feature)",Imputation flag: Commercial kitchen square footage
+ZHWTRM,"imputation flag (metadata, not a feature)",Imputation flag: Large amounts of hot water
+ZLAUNDR,"imputation flag (metadata, not a feature)",Imputation flag: Laundry onsite
+ZCONFSP,"imputation flag (metadata, not a feature)",Imputation flag: Conference or event space
+ZCONFSPP,"imputation flag (metadata, not a feature)",Imputation flag: Percent conference or event space
+ZMEDEQP,"imputation flag (metadata, not a feature)",Imputation flag: Medical equipment
+ZXRAYN,"imputation flag (metadata, not a feature)",Imputation flag: Number of X-ray machines
+ZOUTSURG,"imputation flag (metadata, not a feature)",Imputation flag: Outpatient surgery
+ZLABEQP,"imputation flag (metadata, not a feature)",Imputation flag: Laboratory equipment
+ZMCHEQP,"imputation flag (metadata, not a feature)",Imputation flag: Machine equipment
+ZPOOL,"imputation flag (metadata, not a feature)",Imputation flag: Indoor pool
+ZHTPOOL,"imputation flag (metadata, not a feature)",Imputation flag: Heated pool
+ZPOOLSRC,"imputation flag (metadata, not a feature)",Imputation flag: Pool energy source
+ZSTRLZR,"imputation flag (metadata, not a feature)",Imputation flag: Sterilizers or autoclaves
+ZRFGEQP,"imputation flag (metadata, not a feature)",Imputation flag: Any refrigeration
+ZRFGRES,"imputation flag (metadata, not a feature)",Imputation flag: Full-size residential type refrigerators/freezers
+ZRFGCOMP,"imputation flag (metadata, not a feature)",Imputation flag: Half-size/compact refrigerators/freezers
+ZRFGWI,"imputation flag (metadata, not a feature)",Imputation flag: Walk-in refrigerators/freezers
+ZRFGOP,"imputation flag (metadata, not a feature)",Imputation flag: Open refrigerator/freezer cases or cabinets
+ZRFGCL,"imputation flag (metadata, not a feature)",Imputation flag: Closed refrigerator/freezer cases or cabinets
+ZRFGVEN,"imputation flag (metadata, not a feature)",Imputation flag: Refrigerated vending machines
+ZRFGICE,"imputation flag (metadata, not a feature)",Imputation flag: Commercial ice makers
+ZRFGSTO,"imputation flag (metadata, not a feature)",Imputation flag: Large cold storage areas
+ZRFGRSN,"imputation flag (metadata, not a feature)",Imputation flag: Number of residential refrigerators
+ZRFGCOMPN,"imputation flag (metadata, not a feature)",Imputation flag: Number of compact refrigerators
+ZRFGWIN,"imputation flag (metadata, not a feature)",Imputation flag: Number of walk-in units
+ZRFGOPN,"imputation flag (metadata, not a feature)",Imputation flag: Number of open refrigerated cases
+ZRFGCLN,"imputation flag (metadata, not a feature)",Imputation flag: Number of closed refrigerated cases
+ZRFGVNN,"imputation flag (metadata, not a feature)",Imputation flag: Number of vending machines
+ZRFGICN,"imputation flag (metadata, not a feature)",Imputation flag: Number of commercial ice makers
+ZRFGSTP,"imputation flag (metadata, not a feature)",Imputation flag: Percent cold storage
+ZWHRECOV,"imputation flag (metadata, not a feature)",Imputation flag: Waste heat recovery
+ZWHHT2,"imputation flag (metadata, not a feature)",Imputation flag: Waste heat used for space heating
+ZWHWT,"imputation flag (metadata, not a feature)",Imputation flag: Waste heat used for water heating
+ZWHOT,"imputation flag (metadata, not a feature)",Imputation flag: Waste heat used for some other use
+ZPCTERM,"imputation flag (metadata, not a feature)",Imputation flag: Desktop computers
+ZLAPTOP,"imputation flag (metadata, not a feature)",Imputation flag: Laptops
+ZTABLET,"imputation flag (metadata, not a feature)",Imputation flag: Tablets
+ZSERVER,"imputation flag (metadata, not a feature)",Imputation flag: Servers
+ZPCTERMN,"imputation flag (metadata, not a feature)",Imputation flag: Number of desktop computers
+ZPCTRMC,"imputation flag (metadata, not a feature)",Imputation flag: Desktop computers category
+ZLAPTPN,"imputation flag (metadata, not a feature)",Imputation flag: Number of laptops
+ZLAPTPC,"imputation flag (metadata, not a feature)",Imputation flag: Number of laptops category
+ZMLTMON,"imputation flag (metadata, not a feature)",Imputation flag: Multiple monitors
+ZMLTMNC,"imputation flag (metadata, not a feature)",Imputation flag: Multiple monitor category
+ZTABCHRG,"imputation flag (metadata, not a feature)",Imputation flag: Tablets charged in building
+ZTABLETN,"imputation flag (metadata, not a feature)",Imputation flag: Number of tablets
+ZSRVUNIT,"imputation flag (metadata, not a feature)",Imputation flag: Server units
+ZSERVERN,"imputation flag (metadata, not a feature)",Imputation flag: Number of servers or racks
+ZSERVERC,"imputation flag (metadata, not a feature)",Imputation flag: Number of servers or racks category
+ZSRVRCLST,"imputation flag (metadata, not a feature)",Imputation flag: Server closet
+ZDATACNTR,"imputation flag (metadata, not a feature)",Imputation flag: Data center
+ZTRNGRM,"imputation flag (metadata, not a feature)",Imputation flag: Computer-based training room
+ZSTDNRM,"imputation flag (metadata, not a feature)",Imputation flag: Student or public computer center
+ZLGOFFDEV,"imputation flag (metadata, not a feature)",Imputation flag: Large floor-standing office devices
+ZSMOFFDEV,"imputation flag (metadata, not a feature)",Imputation flag: Smaller desktop office devices
+ZWBOARDS,"imputation flag (metadata, not a feature)",Imputation flag: Interactive whiteboards
+ZTVVIDEO,"imputation flag (metadata, not a feature)",Imputation flag: Televisions or video displays
+ZRGSTR,"imputation flag (metadata, not a feature)",Imputation flag: Point-of-sales devices or cash register
+ZLGOFFDEVN,"imputation flag (metadata, not a feature)",Imputation flag: Number of large office devices
+ZSMOFFDEVN,"imputation flag (metadata, not a feature)",Imputation flag: Number of small office devices
+ZWBOARDSN,"imputation flag (metadata, not a feature)",Imputation flag: Number of interactive whiteboards
+ZTVVIDEON,"imputation flag (metadata, not a feature)",Imputation flag: Number of TV or video displays
+ZRGSTRN,"imputation flag (metadata, not a feature)",Imputation flag: Number of point-of-sales or cash registers
+ZATMN,"imputation flag (metadata, not a feature)",Imputation flag: Number of ATMs
+ZLTZHRP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit no hours
+ZLZHRPC,"imputation flag (metadata, not a feature)",Imputation flag: Lit no hours category
+ZLTOHRP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit when open
+ZLOHRPC,"imputation flag (metadata, not a feature)",Imputation flag: Lit when open category
+ZLTNR24,"imputation flag (metadata, not a feature)",Imputation flag: Lights off during 24 hours
+ZLTNHRP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit off hours
+ZLNHRPC,"imputation flag (metadata, not a feature)",Imputation flag: Lit off hours category
+ZFLUOR,"imputation flag (metadata, not a feature)",Imputation flag: Fluorescent lighting
+ZCFLR,"imputation flag (metadata, not a feature)",Imputation flag: Compact fluorescent (CFL) bulbs
+ZBULB,"imputation flag (metadata, not a feature)",Imputation flag: Incandescent light bulbs
+ZHALO,"imputation flag (metadata, not a feature)",Imputation flag: Halogen bulbs
+ZHID,"imputation flag (metadata, not a feature)",Imputation flag: High intensity discharge (HID) lighting
+ZLED,"imputation flag (metadata, not a feature)",Imputation flag: LED lighting
+ZOTLT,"imputation flag (metadata, not a feature)",Imputation flag: Other type of lighting
+ZFLUORP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit by fluorescent
+ZCFLRP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit by compact fluorescent
+ZBULBP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit by incandescent
+ZHALOP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit by halogen
+ZHIDP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit by HID
+ZLEDP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit by LED
+ZOTLTP,"imputation flag (metadata, not a feature)",Imputation flag: Percent lit by other lighting
+ZSCHED,"imputation flag (metadata, not a feature)",Imputation flag: Light scheduling
+ZOCSN,"imputation flag (metadata, not a feature)",Imputation flag: Occupancy sensors
+ZDIM,"imputation flag (metadata, not a feature)",Imputation flag: Multi-level lighting or dimming
+ZDAYHARV,"imputation flag (metadata, not a feature)",Imputation flag: Daylight harvesting
+ZTRIM,"imputation flag (metadata, not a feature)",Imputation flag: High-end trimming or light-level tuning
+ZPLGCTRL,"imputation flag (metadata, not a feature)",Imputation flag: Plug load control
+ZDRLGHT,"imputation flag (metadata, not a feature)",Imputation flag: Demand responsive lighting
+ZLTEXPC,"imputation flag (metadata, not a feature)",Imputation flag: Percent of exterior lighted
+ZPKLT,"imputation flag (metadata, not a feature)",Imputation flag: Lighted parking area
+ZPKLTINOUT,"imputation flag (metadata, not a feature)",Imputation flag: Indoor or outdoor lighted parking
+ZPKLTN,"imputation flag (metadata, not a feature)",Imputation flag: Vehicle parking capacity
+ZWINTYP,"imputation flag (metadata, not a feature)",Imputation flag: Window glass type
+ZTINT,"imputation flag (metadata, not a feature)",Imputation flag: Tinted window glass
+ZREFL,"imputation flag (metadata, not a feature)",Imputation flag: Reflective window glass
+ZAWN,"imputation flag (metadata, not a feature)",Imputation flag: External overhangs or awnings
+ZSKYLT,"imputation flag (metadata, not a feature)",Imputation flag: Skylights or atriums designed to provide light
+ZDAYLTP,"imputation flag (metadata, not a feature)",Imputation flag: Percent daylight
+ZCTSCAN,"imputation flag (metadata, not a feature)",Imputation flag: CT scan machines
+ZDCNTRSFC,"imputation flag (metadata, not a feature)",Imputation flag: Data center sqft category
+ZLINACC,"imputation flag (metadata, not a feature)",Imputation flag: Linear accelerators
+ZMRI,"imputation flag (metadata, not a feature)",Imputation flag: MRI machines
+ZOUTHOSPPCT,"imputation flag (metadata, not a feature)",Imputation flag: Percent of outpatient space in hospital
+ZMFBTU,"imputation flag (metadata, not a feature)",Imputation flag: Annual major fuels consumption (thous Btu)
+ZMFEXP,"imputation flag (metadata, not a feature)",Imputation flag: Annual major fuels expenditures ($)
+ZELCNS,"imputation flag (metadata, not a feature)",Imputation flag: Annual electricity consumption (kWh)
+ZELEXP,"imputation flag (metadata, not a feature)",Imputation flag: Annual electricity expenditures ($)
+ZNGCNS,"imputation flag (metadata, not a feature)",Imputation flag: Annual natural gas consumption (ccf)
+ZNGEXP,"imputation flag (metadata, not a feature)",Imputation flag: Annual natural gas expenditures ($)
+ZFKCNS,"imputation flag (metadata, not a feature)",Imputation flag: Annual fuel oil consumption (gallons)
+ZFKEXP,"imputation flag (metadata, not a feature)",Imputation flag: Annual fuel oil expenditures ($)
+ZDHBTU,"imputation flag (metadata, not a feature)",Imputation flag: Annual district heat consumption (thous Btu)
+ZDHEXP,"imputation flag (metadata, not a feature)",Imputation flag: Annual district heat expenditures ($)
+WOEXP,LEAKAGE: energy consumption/expenditure,Expenditures for wood
+WOEXPC,LEAKAGE: energy consumption/expenditure,Wood expenditures category
+MFEXP,LEAKAGE: energy consumption/expenditure,Derived variable: Annual major fuels expenditures ($)
+ELBTU,LEAKAGE: energy consumption/expenditure,Building/energy supplier variable: Annual electricity consumption (thous Btu)
+ELCNS,LEAKAGE: energy consumption/expenditure,Building/energy supplier variable: Annual electricity consumption (kWh)
+ELEXP,LEAKAGE: energy consumption/expenditure,Building/energy supplier variable: Annual electricity expenditures ($)
+NGBTU,LEAKAGE: energy consumption/expenditure,Building/energy supplier variable: Annual natural gas consumption (thous Btu)
+NGCNS,LEAKAGE: energy consumption/expenditure,Building/energy supplier variable: Annual natural gas consumption (ccf)
+NGEXP,LEAKAGE: energy consumption/expenditure,Building/energy supplier variable: Annual natural gas expenditures ($)
+FKBTU,LEAKAGE: energy consumption/expenditure,Building/energy supplier variable: Annual fuel oil consumption (thous Btu)
+FKCNS,LEAKAGE: energy consumption/expenditure,Building/energy supplier variable: Annual fuel oil consumption (gallons)
+FKEXP,LEAKAGE: energy consumption/expenditure,Building/energy supplier variable: Annual fuel oil expenditures ($)
+DHBTU,LEAKAGE: energy consumption/expenditure,Derived variable: Annual district heat consumption (thous Btu)
+DHEXP,LEAKAGE: energy consumption/expenditure,Derived variable: Annual district heat expenditures ($)
+MFHTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels heating use (thous Btu)
+MFCLBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels cooling use (thous Btu)
+MFVNBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels ventilation use (thous Btu)
+MFWTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels water heating use (thous Btu)
+MFLTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels lighting use (thous Btu)
+MFCKBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels cooking use (thous Btu)
+MFRFBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels refrigeration use (thous Btu)
+MFOFBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels office equipment use (thous Btu)
+MFPCBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels computing use (thous Btu)
+MFOTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Major fuels miscellaneous use (thous Btu)
+ELHTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity heating use (thous Btu)
+ELCLBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity cooling use (thous Btu)
+ELVNBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity ventilation use (thous Btu)
+ELWTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity water heating use (thous Btu)
+ELLTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity lighting use (thous Btu)
+ELCKBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity cooking use (thous Btu)
+ELRFBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity refrigeration use (thous Btu)
+ELOFBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity office equipment use (thous Btu)
+ELPCBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity computing use (thous Btu)
+ELOTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Electricity miscellaneous use (thous Btu)
+NGHTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Natural gas heating use (thous Btu)
+NGCLBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Natural gas cooling use (thous Btu)
+NGWTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Natural gas water heating use (thous Btu)
+NGCKBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Natural gas cooking use (thous Btu)
+NGOTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Natural gas miscellaneous use (thous Btu)
+FKHTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Fuel oil heating use (thous Btu)
+FKCLBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Fuel oil cooling use (thous Btu)
+FKWTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Fuel oil water heating use (thous Btu)
+FKCKBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Fuel oil cooking use (thous Btu)
+FKOTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: Fuel oil miscellaneous use (thous Btu)
+DHHTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: District heat heating use (thous Btu)
+DHCLBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: District heat cooling use (thous Btu)
+DHWTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: District heat water heating use (thous Btu)
+DHCKBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: District heat cooking use (thous Btu)
+DHOTBTU,LEAKAGE: energy consumption/expenditure,Modeled variable: District heat miscellaneous use (thous Btu)
+BLRAIR_CO2,100% empty,Central air handlers for coal boiler distribution
+BLRFNCL_CO2,100% empty,Fan coil or induction units for coal boiler distribution
+BLRDUCT_CO2,100% empty,Duct reheat for coal boiler distribution
+BLRRAD_CO2,100% empty,Radiators for coal boiler distribution
+BLRRDFL_CO2,100% empty,Radiant floor or ceiling panels for coal boiler distribution
+BLRWTLP_CO2,100% empty,Water loop heat pump for coal boiler distribution
+BLROTD_CO2,100% empty,Other type of coal boiler distribution
+BLRFNCL_OT2,100% empty,Fan coil or induction units for other source boiler distribution
+BLRDUCT_OT2,100% empty,Duct reheat for other source boiler distribution
+BLRRAD_OT2,100% empty,Radiators for other source boiler distribution
+BLRRDFL_OT2,100% empty,Radiant floor or ceiling panels for other source boiler distribution
+BLRWTLP_OT2,100% empty,Water loop heat pump for other source boiler distribution
+BLROTD_OT2,100% empty,Other type of other source boiler distribution
+OTHTP_FK,100% empty,Derived variable: Pct heated by other fuel oil heating equipment
+OTHTP_PR,100% empty,Derived variable: Pct heated by propane heating equipment
+BOILP_CO,100% empty,Derived variable: Pct heated by coal boiler
+OTHTP_CO,100% empty,Derived variable: Pct heated by other coal heating equipment
+PKGHP_OT,100% empty,Derived variable: Pct heated by other source packaged unit
+OTCLP_NG,100% empty,Derived variable: Pct cooled by natural gas other type of A/C
+OTCLP_FK,100% empty,Derived variable: Pct cooled by fuel oil other type of A/C
+OTCLP_PR,100% empty,Derived variable: Pct cooled by propane other type of A/C
+OTCLP_ST,100% empty,Derived variable: Pct cooled by district steam other type of A/C
+EGYUSED,constant (single value),Derived variable: Energy used in building
+ELUSED,constant (single value),Electricity used
+SOHT1,constant (single value),Solar used for main heating
+COHT2,constant (single value),Coal used for secondary heating
+COWATR,constant (single value),Coal used for water heating
+COCOOK,constant (single value),Coal used for cooking
+OTCOOK,constant (single value),Other energy source used for cooking
+HWMANU,constant (single value),District hot water used for manufacturing
+OTMANU,constant (single value),Other energy source used for manufacturing
+WOOTH,constant (single value),Wood used for some other use
+SOOTH,constant (single value),Solar used for some other use
+OTOTH,constant (single value),Other energy source used for some other use
+MFUSED,constant (single value),Derived variable: Any major fuel used
