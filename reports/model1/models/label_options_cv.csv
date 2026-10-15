@@ -1,0 +1,7 @@
+option,classes,buildings,majority_floor,cv_accuracy,cv_acc_std,cv_macro_f1
+"0  current (3 cls, within type)",3,4999,0.414,0.545,0.01,0.535
+"B  within type, 2 classes",2,4999,0.595,0.728,0.014,0.72
+"C  within type, High vs Low only",2,3253,0.636,0.788,0.019,0.773
+"A  absolute, 3 classes",3,4999,0.462,0.659,0.009,0.646
+"AB absolute, 2 classes",2,4999,0.66,0.792,0.005,0.773
+"AC absolute, lowest vs highest third",2,3294,0.701,0.882,0.007,0.861

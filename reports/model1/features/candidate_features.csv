@@ -1,0 +1,535 @@
+column,in_model_v1,label,missing_pct,n_unique,mutual_info,spearman_EUI
+MAINHT,yes,Derived variable: Main heating equipment,4.9,34,0.0596,0.193
+WKHRS,yes,Total hours open per week,0.0,138,0.0415,0.458
+LTNHRP,,Percent lit off hours,3.2,69,0.0329,0.369
+PBAPLUS,,Derived variable: More specific building activity,0.0,49,0.0326,0.184
+NWKER,yes,Number of employees,0.0,340,0.0311,0.273
+NGUSED,,Natural gas used,0.0,2,0.0305,-0.299
+RFGOPN,,Number of open refrigerated cases,82.3,32,0.0285,0.184
+NWKERC,,Number of employees category,0.0,12,0.0276,0.273
+WKHRSC,,Weekly hours category,0.0,7,0.0276,0.449
+HDD65,,Third-party data: Heating degree days (base 65),0.0,3701,0.0275,0.122
+FLCEILHT,yes,Floor to ceiling height,0.0,41,0.0271,-0.1
+PCTRMC,,Desktop computers category,12.1,10,0.0253,0.215
+FDPREPSF,,Commercial kitchen square footage,79.1,204,0.0251,0.19
+LAPTPN,,Number of laptops,24.8,166,0.0251,0.17
+NGHT1,,Natural gas used for main heating,0.0,2,0.0244,-0.16
+PBA,yes,Principal building activity,0.0,18,0.0236,0.204
+MAINCL,yes,Derived variable: Main air-conditioning equipment,5.7,12,0.0234,0.128
+BOILER_NG,,Boilers fueled by natural gas,39.8,2,0.0234,-0.167
+EMCS,,Building automation system (BAS),2.3,2,0.0222,-0.238
+LAPTPC,,Number of laptops category,24.8,9,0.0221,0.172
+FURNAC_NG,,Furnaces fueled by natural gas,39.8,2,0.0217,0.063
+PKGHT_NG,,Packaged central units fueled by natural gas,39.8,2,0.021,-0.042
+FIREPLC_NG,,Fireplaces fueled by natural gas,39.8,2,0.021,-0.063
+SLFCON_NG,,Individual space heaters fueled by natural gas,39.8,2,0.0209,0.053
+PKLTN,,Vehicle parking capacity,33.2,151,0.0207,0.211
+RGSTRN,,Number of point-of-sales or cash registers,57.8,52,0.0207,0.188
+OTHTEQ_NG,,Other heating equipment fueled by natural gas,39.8,2,0.0207,0.0
+HTPMPH_NG,,Heat pumps fueled by natural gas,39.8,2,0.0206,-0.011
+PCTERMN,,Number of desktop computers,12.1,240,0.0194,0.209
+RFGWIN,,Number of walk-in units,62.3,20,0.0193,0.24
+MAINT,,Regular HVAC maintenance,2.3,2,0.0187,-0.175
+RFGVNN,,Number of vending machines,51.0,30,0.0183,0.144
+LNHRPC,,Lit off hours category,3.2,5,0.018,-0.011
+VAV,,Variable air volume (VAV) system,4.7,2,0.0178,-0.167
+LOHRPC,,Lit when open category,0.5,5,0.0177,0.234
+BOILER,,Derived variable: Boilers used for heating,4.9,2,0.0176,-0.171
+NGWATR,,Natural gas used for water heating,0.0,2,0.0175,-0.286
+EMCSHT,,BAS controls heating,51.1,2,0.0175,-0.04
+ELHT1,,Electricity used for main heating,0.0,2,0.0174,0.149
+EMCSCL,,BAS controls A/C,50.7,2,0.0172,-0.036
+LTOHRP,yes,Percent lit when open,0.5,67,0.017,0.157
+EMCSLT,,BAS controls lighting,50.3,2,0.0169,0.032
+SQFT,yes,Square footage,0.0,407,0.0167,0.129
+CENDIV,yes,Census division,0.0,9,0.0164,-0.116
+NOCC,,Number of businesses,0.0,62,0.0164,0.064
+STHW,,Derived variable: District steam or hot water heating system used for heating,4.9,2,0.0162,-0.202
+HEATP,yes,Percent heated,4.9,82,0.0158,0.164
+RFGVEN,,Refrigerated vending machines,14.2,2,0.0151,-0.155
+SQFTC,,Square footage category,0.0,9,0.0151,0.138
+BOILP_NG,,Derived variable: Pct heated by natural gas boiler,72.4,74,0.0147,-0.053
+RFCNS,yes,Roof construction material,0.0,8,0.0145,0.073
+FURNP_EL,,Derived variable: Pct heated by electric furnace,96.1,43,0.0143,-0.459
+NGCOOK,,Natural gas used for cooking,0.0,2,0.0141,-0.355
+BULBP,,Percent lit by incandescent,77.3,45,0.0139,-0.169
+PKGHP_NG,,Derived variable: Pct heated by natural gas packaged unit,68.4,93,0.0139,-0.079
+DCV,,Demand controlled ventilation (DCV),4.7,2,0.0138,-0.044
+ECN,,Economizer cycle,9.7,2,0.0133,-0.182
+RFGICN,,Number of commercial ice makers,57.6,47,0.0133,0.241
+DOAS,,Dedicated outside air system (DOAS),4.7,2,0.0132,-0.104
+CHILLR,,Derived variable: Central chillers used for cooling,5.7,2,0.0127,-0.182
+FACACT,,Type of complex,60.2,15,0.0125,-0.012
+PUBCLIM,yes,Third-party data: ASHRAE climate zone,0.0,6,0.0124,0.053
+MLTMON,,Multiple monitors,8.1,2,0.0121,-0.137
+RFTILT,,Roof tilt,0.0,3,0.012,-0.211
+OWNTYPE,yes,Derived variable: Building owner,0.0,11,0.0119,0.017
+PRHT1,,Propane used for main heating,0.0,2,0.0119,0.154
+BLRFNCL,,Derived variable: Fan coil or induction units for boiler distribution,67.3,2,0.0119,-0.108
+BLRRAD,,Derived variable: Radiators for boiler distribution,67.3,2,0.0119,-0.05
+MONUSE,,Months in use,0.0,12,0.0119,0.124
+SLFCON_PR,,Individual space heaters fueled by propane,96.5,2,0.0118,-0.152
+FURNAC_PR,,Furnaces fueled by propane,96.5,2,0.0118,0.197
+LEDP,,Percent lit by LED,32.2,96,0.0117,-0.065
+BLRDUCT,,Derived variable: Duct reheat for boiler distribution,67.3,2,0.0117,-0.208
+REGION,yes,Census region,0.0,4,0.0116,-0.11
+BLRAIR,,Derived variable: Central air handlers for boiler distribution,67.3,2,0.0115,-0.115
+HTPMPH_PR,,Heat pumps fueled by propane,96.5,2,0.0114,0.012
+WTHTEQ,,Water heating equipment,5.7,3,0.0114,0.025
+RFGWI,,Walk-in refrigerators/freezers,14.2,2,0.0114,-0.382
+CDD65,,Third-party data: Cooling degree days (base 65),0.0,2579,0.0114,-0.058
+FURNAC,,Derived variable: Furnaces used for heating,4.9,2,0.0113,0.056
+ENRGYPLN,,Energy management plan,2.3,2,0.0113,-0.104
+PKGHT_PR,,Packaged central units fueled by propane,96.5,2,0.0113,-0.014
+BOILER_PR,,Boilers fueled by propane,96.5,2,0.0112,-0.069
+HWTRM,,Large amounts of hot water,5.7,2,0.0112,-0.273
+FIREPLC_PR,,Fireplaces fueled by propane,96.5,2,0.0112,-0.199
+OTHTEQ_PR,,Other heating equipment fueled by propane,96.5,1,0.0111,
+BLRRDFL,,Derived variable: Radiant floor or ceiling panels for boiler distribution,67.3,2,0.0111,-0.043
+BLROTD,,Derived variable: Other type of boiler distribution,67.3,2,0.011,-0.001
+HTPMPH,,Derived variable: Heat pumps used for heating,4.9,2,0.0109,0.013
+BLRWTLP,,Derived variable: Water loop heat pump for boiler distribution,67.3,2,0.0109,-0.039
+CONFSPP,,Percent conference or event space,96.4,21,0.0108,0.343
+SLFCON,,Derived variable: Individual space heaters used for heating,4.9,2,0.0104,0.062
+RFGICE,,Commercial ice makers,14.2,2,0.0104,-0.305
+FURNP_PR,,Derived variable: Pct heated by propane furnace,98.6,13,0.0104,-0.215
+RFGOP,,Open refrigerator/freezer cases or cabinets,14.2,2,0.0103,-0.26
+SMRTTHRM,,Smart thermostats,52.1,2,0.0103,-0.024
+CHLABSRP,,Absorption central chiller,75.8,2,0.0102,-0.137
+FIREPLC,,Derived variable: Fireplaces used for heating,4.9,2,0.0101,-0.057
+RFGCL,,Closed refrigerator/freezer cases or cabinets,14.2,2,0.0099,-0.306
+CHLWTRCL,,Water-cooled central chiller,75.8,2,0.0099,-0.041
+CHLFNCL,,Fan coil or induction units for central chiller distribution,75.8,2,0.0099,-0.118
+REHEAT,,Derived variable: Duct reheat used for heating,4.9,2,0.0099,-0.05
+PRAMTC,,Propane amount,90.6,4,0.0099,-0.109
+PKGHT,,Derived variable: Packaged central units used for heating,4.9,2,0.0098,-0.03
+CHLAIRCL,,Air-cooled central chiller,75.8,2,0.0097,0.014
+COOLP,yes,Percent cooled,5.7,85,0.0097,0.244
+OTHTEQ,,Derived variable: Other type of equipment used for heating,4.9,2,0.0096,-0.087
+HT1,,Energy used for main heating,0.0,2,0.0095,-0.177
+FASTFD,,Fast food or small restaurant,51.5,2,0.0095,-0.171
+OCSN,,Occupancy sensors,0.4,2,0.0095,-0.141
+WLCNS,yes,Wall construction material,0.0,8,0.0094,-0.128
+CHLWTLP,,Water loop heat pump for central chiller distribution,75.8,2,0.0094,-0.018
+CHLAIR,,Central air handlers for central chiller distribution,75.8,2,0.0093,-0.057
+CHLOTD,,Other type of central chiller distribution,75.8,2,0.0092,-0.005
+WATR,,Energy used for water heating,0.0,2,0.0092,-0.229
+CHLBEAM,,Chilled beam for central chiller distribution,75.8,2,0.0091,0.024
+CHILLR_EL,,Central chillers powered by electricity,10.1,2,0.009,-0.195
+BREAKRM,,"Employee lounge, break room, vending, pantry",51.5,2,0.009,-0.185
+OPNMF,,Open during week,0.0,3,0.0089,-0.217
+PRUNIT,,Propane units,90.6,2,0.0089,0.099
+HTPHP_EL,,Derived variable: Pct heated by electric heat pump,84.6,65,0.0089,-0.27
+LGOFFDEV,,Large floor-standing office devices,0.0,2,0.0087,-0.126
+SERVERC,,Number of servers or racks category,42.7,4,0.0087,0.171
+GENUSE,,Use of generated electricity,67.4,3,0.0087,0.094
+SCHED,,Light scheduling,0.4,2,0.0086,-0.185
+LABEQP,,Laboratory equipment,32.3,2,0.0086,-0.335
+CFLR,,Compact fluorescent (CFL) bulbs,0.4,2,0.0086,-0.225
+SRVRCLST,,Server closet,8.1,2,0.0084,-0.095
+ENGINE,,Reciprocating engine generator,64.1,2,0.0084,-0.109
+MCROTB,,Microturbines,64.1,2,0.0084,-0.011
+BLRFNCL_HT1,,Fan coil or induction units for boiler distribution,85.2,1,0.0083,
+FUELCL,,Fuel cells,64.1,2,0.0083,-0.038
+PVC,,Solar panels used to generate electricity,64.1,2,0.0083,0.125
+OTGENTECH,,Other type of generation technology,64.1,2,0.0083,0.046
+LRGTRB,,Large turbines,64.1,2,0.0082,-0.06
+HWRDCL,,How reduce A/C,60.4,4,0.0081,0.022
+CAPGEN,,Electricity generation capability,0.0,2,0.0081,-0.235
+REHEAT_EL,,Duct reheat powered by electricity,51.7,2,0.008,-0.113
+MLTMNC,,Multiple monitor category,47.2,4,0.0079,0.024
+LAUNDR,,Laundry onsite,87.3,3,0.0079,0.457
+DHUSED,,Derived variable: District heat (steam or hot water) used,0.0,2,0.0079,-0.209
+SERVERN,,Number of servers or racks,42.7,75,0.0078,0.196
+KITCHN,,Small kitchen area,51.5,2,0.0077,0.153
+TABCHRG,,Tablets charged in building,42.7,2,0.0077,-0.106
+ELEVTR,,Elevators,40.2,2,0.0077,-0.21
+LGOFFDEVN,,Number of large office devices,39.7,68,0.0077,0.181
+SRVUNIT,,Server units,42.7,2,0.0077,0.093
+SMOFFDEVN,,Number of small office devices,19.7,90,0.0076,0.199
+COGEN,,Cogeneration system,66.9,2,0.0076,-0.107
+BLRAIR_HT1,,Central air handlers for boiler distribution,83.4,1,0.0076,
+DHHT1,,Derived variable: District heat used for main heating,0.0,2,0.0075,-0.2
+PRUSED,,Bottled gas/LPG/propane used,0.0,2,0.0074,0.13
+LED,,LED lighting,0.4,2,0.0073,-0.176
+RFGRSN,,Number of residential refrigerators,38.5,47,0.0073,0.303
+HTPHP_NG,,Derived variable: Pct heated by natural gas heat pump,96.1,43,0.0073,-0.142
+PBSEAT,,Assembly seating capacity,92.3,49,0.0073,0.163
+HTPMPC,,Derived variable: Heat pumps used for cooling,5.7,2,0.0072,0.022
+TVVIDEO,,Televisions or video displays,0.0,2,0.0071,-0.215
+LAPTOP,,Laptops,0.0,2,0.007,-0.108
+TABLET,,Tablets,0.0,2,0.007,-0.171
+DATACNTR,,Data center,8.1,2,0.0069,-0.146
+PKGCL,,Derived variable: Packaged central units used for cooling,5.7,2,0.0069,-0.062
+AIRHAND_ST,,Central air handlers for steam distribution,93.1,2,0.0068,-0.186
+NRSBED,,Licensed nursing beds,98.5,17,0.0068,0.123
+PKLTINOUT,,Indoor or outdoor lighted parking,33.2,3,0.0068,0.023
+RADFLR_ST,,Radiant floor or ceiling panels for steam distribution,93.1,2,0.0067,-0.15
+SERVER,,Servers,0.0,2,0.0067,-0.146
+GOVTYP,,Type of government,74.7,4,0.0067,-0.043
+TABLETN,,Number of tablets,45.1,101,0.0066,0.041
+OTDIST_ST,,Other type of steam distribution,93.1,2,0.0066,-0.114
+CHWT,,Derived variable: District chilled water system used for cooling,5.7,2,0.0065,-0.126
+WTLOOP_ST,,Water loop heat pump for steam distribution,93.1,2,0.0065,-0.143
+STUSED,,District steam used,0.0,2,0.0065,-0.209
+NGGENR,,Natural gas used for electricity generation,0.0,2,0.0065,-0.136
+PCTERM,,Desktop computers,0.0,2,0.0065,-0.143
+RFGRES,,Full-size residential type refrigerators/freezers,14.2,2,0.0064,0.078
+OTHTEQ_EL,,Other heating equipment powered by electricity,51.7,2,0.0064,-0.136
+REHEAT_ST,,Duct reheat for steam distribution,93.1,2,0.0064,-0.22
+RADIATR_ST,,Radiators for steam distribution,93.1,2,0.0064,0.009
+GLSSPC,yes,Percent exterior glass,0.0,6,0.0064,0.248
+PKLT,,Lighted parking area,0.0,2,0.0064,-0.136
+FANCOIL_ST,,Fan coil or induction units for steam distribution,93.1,2,0.0064,-0.052
+HWRDHT,,How reduce heating,59.2,4,0.0064,-0.036
+FIREPLC_EL,,Fireplaces powered by electricity,51.7,2,0.0063,-0.04
+DIST_ST,,Derived variable: District steam system,93.1,1,0.0063,
+HTPMPH_EL,,Heat pumps powered by electricity,51.7,2,0.0062,-0.023
+BOILER_EL,,Boilers powered by electricity,51.7,2,0.0062,-0.042
+RGSTR,,Point-of-sales devices or cash register,0.0,2,0.0062,-0.338
+STDNRM,,Student or public computer center,8.1,2,0.0062,-0.053
+ACWNWL,,Derived variable: Individual room or portable A/C used for cooling,5.7,2,0.0062,-0.038
+FURNAC_EL,,Furnaces powered by electricity,51.7,2,0.0061,-0.037
+PKGHT_EL,,Packaged central units powered by electricity,51.7,2,0.0061,-0.073
+RFGCOMP,,Half-size/compact refrigerators/freezers,14.2,2,0.0061,-0.119
+SLFCON_EL,,Individual space heaters powered by electricity,51.7,2,0.0061,-0.006
+FDPREP,,"Large kitchen, commercial kitchen, other large food prep area",51.5,2,0.0061,-0.221
+HID,,High intensity discharge (HID) lighting,0.4,2,0.0061,-0.095
+CAF,,Cafeteria or large restaurant,51.5,2,0.006,-0.022
+RFGSTO,,Large cold storage areas,14.2,2,0.006,-0.108
+OTFDRM,,Other type of food preparation or serving area,51.5,2,0.006,-0.016
+WINTYP,,Window glass type,0.0,4,0.0059,0.064
+RFGCLN,,Number of closed refrigerated cases,68.6,57,0.0059,0.208
+STHT1,,District steam used for main heating,0.0,2,0.0059,-0.195
+RENOTH,,Other renovation,43.4,2,0.0059,-0.061
+OTCLEQ,,Derived variable: Other type of equipment used for cooling,5.7,2,0.0058,-0.036
+RFGEQP,,Any refrigeration,0.0,2,0.0058,-0.243
+RFGSTP,,Percent cold storage,96.6,25,0.0058,-0.079
+TRNGRM,,Computer-based training room,8.1,2,0.0057,-0.117
+SNACK,,"Snack bar, concession stand, coffee shop, breakfast area",51.5,2,0.0056,-0.094
+RCAC,,Derived variable: Residential-type split system used for cooling,5.7,2,0.0055,0.011
+NFLOOR,yes,Number of floors,0.0,11,0.0054,0.183
+EVAPCL,,Derived variable: Swamp or evaporative A/C used for cooling,5.7,2,0.0053,-0.0
+COOL,,Energy used for cooling,0.0,2,0.0053,-0.204
+DCNTRSFC,,Derived variable: Data center sqft category,85.9,5,0.0053,-0.039
+POOLSRC,,Pool energy source,96.1,5,0.0052,-0.12
+WBOARDS,,Interactive whiteboards,0.0,2,0.0052,-0.05
+PKGHP_PR,,Derived variable: Pct heated by propane packaged unit,99.2,12,0.0051,-0.507
+DHWATR,,Derived variable: District heat used for water heating,0.0,2,0.0051,-0.161
+POOL,,Indoor pool,70.2,2,0.0051,-0.195
+GENGT1MW,,1MW generator capacity,76.6,3,0.005,-0.16
+BASEMNT,yes,Number of underground floors,40.2,6,0.005,0.136
+BLRRAD_HT1,,Radiators for boiler distribution,90.7,1,0.005,
+BLRDUCT_HT1,,Duct reheat for boiler distribution,90.9,1,0.0049,
+STWATR,,District steam used for water heating,0.0,2,0.0049,-0.162
+STHWP_HW,,Derived variable: Pct heated by district hot water heating system,98.3,18,0.0048,-0.059
+OPNWE,,Open on weekend,0.0,2,0.0047,-0.274
+SKYLT,,Skylights or atriums designed to provide light,3.6,2,0.0047,-0.047
+FKTYPE,,"Specify fuel oil, diesel, or kerosene",73.4,6,0.0047,0.019
+HCBED,,Licensed inpatient beds,95.5,17,0.0046,-0.094
+TINT,,Tinted window glass,3.6,2,0.0046,-0.096
+COOK,,Energy used for cooking,0.0,2,0.0045,-0.318
+XRAYN,,Number of X-ray machines,88.6,19,0.0045,0.302
+FASTFDSF,,Fast food square footage,88.7,172,0.0044,-0.025
+PRWATR,,Propane used for water heating,0.0,2,0.0043,0.05
+HIDP,,Percent lit by HID,86.9,39,0.0043,-0.237
+LODOCCP,,Lodging room percent occupancy,94.7,50,0.0042,0.124
+LTEXPC,,Percent of exterior lighted,0.0,4,0.0042,0.1
+SMOFFDEV,,Smaller desktop office devices,0.0,2,0.0042,-0.115
+PKGCL_EL,,Packaged electric A/C units (rooftop units),10.1,2,0.0041,-0.094
+REFL,,Reflective window glass,3.6,2,0.0041,-0.103
+HTPCP_EL,,Derived variable: Pct cooled by electric heat pumps,87.4,61,0.0041,-0.364
+TVVIDEON,,Number of TV or video displays,29.0,108,0.0041,0.236
+BLDPLT,,Central plant in building,88.8,2,0.004,-0.072
+PLANT,,Central physical plant,60.2,2,0.004,-0.283
+PKGHPH,,Heat pump in packaged unit,83.0,3,0.0039,-0.033
+BULB,,Incandescent light bulbs,0.4,2,0.0039,-0.125
+OTHTP_EL,,Derived variable: Pct heated by electric heating equipment,99.4,20,0.0038,0.146
+DRYCL,,Dry cleaning onsite,99.1,2,0.0038,-0.18
+HTPOOL,,Heated pool,96.0,2,0.0038,-0.046
+RWSEAT,,Religious worship seating capacity,95.5,30,0.0037,0.191
+DIM,,Multi-level lighting or dimming,0.4,2,0.0037,-0.133
+FKUSED,,Fuel oil/diesel/kerosene used,0.0,2,0.0037,-0.192
+NESLTR,,Number of escalators,96.8,10,0.0037,0.023
+AWN,,External overhangs or awnings,3.6,2,0.0036,-0.114
+MCHEQP,,Machine equipment,57.9,2,0.0036,-0.019
+ELWATR,,Electricity used for water heating,0.0,2,0.0036,0.123
+CONFSP,,Conference or event space,95.1,2,0.0036,-0.174
+ESCLTR,,Escalators,40.2,2,0.0035,-0.035
+FACELC,,Plant produces electricity,88.8,2,0.0035,-0.037
+FACDCW,,Plant produces district chilled water,88.8,2,0.0035,-0.078
+FACDHW,,Plant produces district hot water,88.8,2,0.0035,-0.038
+RENLGT,,Lighting upgrade,43.4,2,0.0034,-0.051
+FIREPLP_NG,,Derived variable: Pct heated by natural gas fireplace,98.3,16,0.0034,0.05
+LTZHRP,,Percent lit no hours,99.5,11,0.0034,0.06
+DAYLTP,,Percent daylight,3.6,50,0.0034,-0.05
+ELHT2,,Electricity used for secondary heating,0.0,2,0.0033,-0.126
+RENSTR,,Structural upgrade,43.4,2,0.0033,-0.039
+FACDST,,Plant produces district steam,88.8,2,0.0033,-0.313
+RENADD,,Addition or annex,43.4,2,0.0032,-0.111
+BOILP_PR,,Derived variable: Pct heated by propane boiler,99.4,10,0.0032,-0.122
+RENRFF,,Roof replacement,43.4,2,0.0032,0.013
+REHEATP_EL,,Derived variable: Pct heated by electric duct reheat,91.2,48,0.0032,-0.424
+SLFCNP_FK,,Derived variable: Pct heated by fuel oil space heater,99.5,14,0.0032,-0.347
+DAYHARV,,Daylight harvesting,0.4,2,0.0031,-0.08
+FKGENR,,Fuel oil used for electricity generation,0.0,2,0.0031,-0.205
+RENHVC,,HVAC equipment upgrade,43.4,2,0.003,-0.065
+LTNR24,,Lights off during 24 hours,77.0,2,0.003,0.002
+HTPMPC_EL,,Heat pumps for A/C (electric),10.1,2,0.003,0.014
+RENSAF,,"Fire, safety, or security upgrade",43.4,2,0.0029,-0.058
+SPHTPTHP,,Space heaters are PTHPs,87.5,4,0.0029,-0.028
+FLUORP,,Percent lit by fluorescent,23.3,100,0.0029,-0.161
+RENCOS,,Cosmetic improvements,43.4,2,0.0029,-0.08
+RENWIN,,Window replacement,43.4,2,0.0028,-0.022
+RENRDC,,Reduction of floorspace,43.4,2,0.0028,-0.027
+RENPLB,,Plumbing system upgrade,43.4,2,0.0028,-0.059
+GOVOWN,,Government owned,0.0,2,0.0028,-0.013
+RENINS,,Insulation upgrade,43.4,2,0.0028,-0.027
+RENELC,,Electrical upgrade,43.4,2,0.0027,-0.074
+ATTIC,,Attic,0.0,2,0.0027,0.024
+FIREPLP_EL,,Derived variable: Pct heated by electric fireplace,99.4,11,0.0027,0.471
+OPEN24,,Open 24 hours a day,0.0,2,0.0027,-0.334
+PRCOOK,,Propane used for cooking,0.0,2,0.0027,-0.013
+HALO,,Halogen bulbs,0.4,2,0.0027,-0.122
+RENOV,yes,Renovations,6.3,2,0.0027,-0.128
+RENINT,,Interior wall re-configuration,43.4,2,0.0027,-0.011
+OTLT,,Other type of lighting,0.4,2,0.0026,-0.034
+STRLZR,,Sterilizers or autoclaves,27.6,2,0.0026,-0.305
+DRLGHT,,Demand responsive lighting,0.4,2,0.0026,-0.029
+LZHRPC,,Lit no hours category,99.5,5,0.0024,-0.213
+FLUOR,,Fluorescent lighting,0.4,2,0.0024,-0.043
+RADFLR_HW,,Radiant floor or ceiling panels for hot water distribution,98.3,2,0.0024,-0.04
+FURNP_FK,,Derived variable: Pct heated by fuel oil furnace,99.3,13,0.0024,0.307
+HPHPTHP,,Heat pumps are PTHPs,84.6,3,0.0024,0.061
+WOAMT,,Amount wood burned,99.3,4,0.0024,0.623
+SLFCNP_WO,,Derived variable: Pct heated by wood space heater,99.7,7,0.0024,-0.362
+BLDSHP,yes,Building shape,0.0,11,0.0024,0.067
+WOSRC,,How obtain wood,99.3,3,0.0024,-0.527
+CHILP_NG,,Derived variable: Pct cooled by natural gas central chillers,99.5,10,0.0023,0.066
+BOOSTWT,,Booster water heaters,91.9,2,0.0023,0.001
+OUTSURG,,Outpatient surgery,96.6,2,0.0023,-0.344
+ACVRF,,VRF system,80.0,3,0.0022,-0.15
+ELCOOK,,Electricity used for cooking,0.0,2,0.0022,-0.212
+PLGCTRL,,Plug load control,0.4,2,0.0022,-0.026
+TRIM,,High-end trimming or light-level tuning,0.4,2,0.0022,-0.043
+PKGHP_EL,,Derived variable: Pct heated by electric packaged unit,74.9,89,0.0022,-0.205
+LIT,,Derived variable: Lighting used in building,0.0,2,0.0022,-0.089
+AIRHAND_HW,,Central air handlers for hot water distribution,98.3,2,0.0021,-0.301
+BLRWTLP_HT1,,Water loop heat pump for boiler distribution,93.5,1,0.0021,
+ACWNWL_EL,,Individual room or portable A/C (electric),10.1,2,0.0021,-0.048
+DRVTHRU,,Drive-thru window,97.0,3,0.0021,-0.315
+NOCCAT,,Number of businesses category,0.0,8,0.0021,0.06
+SLFCON_WO,,Individual space heaters fueled by wood,99.6,2,0.002,0.182
+FIREPLC_WO,,Fireplaces fueled by wood,99.6,2,0.002,-0.064
+OTDIST_HW,,Other type of hot water distribution,98.3,2,0.0019,-0.165
+WTLOOP_HW,,Water loop heat pump for hot water distribution,98.3,2,0.0019,-0.073
+HPHWTR,,Water loop heat pump,85.9,2,0.0019,-0.096
+WBOARDSN,,Number of interactive whiteboards,79.3,71,0.0019,-0.084
+FURNAC_WO,,Furnaces fueled by wood,99.6,2,0.0019,-0.017
+OTCLEQ_EL,,Other type of A/C powered by electricity,10.1,2,0.0018,-0.038
+HTPHP_PR,,Derived variable: Pct heated by propane heat pump,99.8,6,0.0018,0.013
+OTHTEQ_WO,,Other heating equipment fueled by wood,99.6,2,0.0018,-0.199
+RADIATR_HW,,Radiators for hot water distribution,98.3,2,0.0017,-0.162
+CHILP_ST,,Derived variable: Pct cooled by district steam central chillers,99.7,5,0.0017,-0.463
+FANCOIL_HW,,Fan coil or induction units for hot water distribution,98.3,2,0.0017,0.184
+WOHT1,,Wood used for main heating,0.0,2,0.0017,0.064
+NWNOPR,,Nonowner operator,84.5,7,0.0017,0.044
+CWWTLP,,Water loop heat pump for chilled water distribution,94.0,2,0.0017,-0.092
+REHEAT_HW,,Duct reheat for hot water distribution,98.3,2,0.0016,-0.061
+DHCOOL,,Derived variable: District heat used for cooling,0.0,2,0.0016,-0.056
+OTCLEQ_ST,,Other type of A/C fueled by district steam,99.7,1,0.0016,
+DIST_HW,,Derived variable: District hot water system,98.3,1,0.0016,
+STCOOL,,District steam used for air conditioning,0.0,2,0.0016,-0.056
+WHRECOV,,Waste heat recovery,88.4,2,0.0016,-0.045
+FDSEAT,,Food service seating capacity,96.5,28,0.0016,0.122
+CHILLR_ST,,Central chillers fueled by district steam,99.7,1,0.0016,
+SLFCNP_OT,,Derived variable: Pct heated by other source space heater,99.8,5,0.0015,-0.403
+CWBEAM,,Chilled beam for chilled water distribution,94.0,2,0.0015,0.038
+CWOTD,,Other type of chilled water distribution,94.0,2,0.0015,-0.026
+CHWTP_CW,,Derived variable: Pct cooled by district chilled water system,94.0,30,0.0015,-0.097
+DIST_CW,,Derived variable: District chilled water system,94.0,1,0.0015,
+HWUSED,,District hot water used,0.0,2,0.0015,-0.061
+CWUSED,,District chilled water used,0.0,2,0.0015,-0.133
+RCAC_EL,,Residential-type split system electric A/C,10.1,2,0.0015,0.001
+CWCOOL,,District chilled water used for air conditioning,0.0,2,0.0015,-0.133
+NWMNHT,,Main heating replaced,36.9,2,0.0015,0.003
+CWAIR,,Central air handlers for chilled water distribution,94.0,2,0.0015,-0.081
+CWFNCL,,Fan coil or induction units for chilled water distribution,94.0,2,0.0015,-0.119
+OTLTP,,Percent lit by other lighting,99.9,7,0.0014,0.393
+HWHT1,,District hot water used for main heating,0.0,2,0.0014,-0.05
+NWNPPR,,Nonowner with purchasing power,98.7,7,0.0014,-0.127
+YRCONC,yes,Year of construction category,0.0,8,0.0014,0.029
+OTCLP_EL,,Derived variable: Pct cooled by electric other type of A/C,99.8,6,0.0014,0.221
+OUTHOSPPCT,,Derived variable: Percent of outpatient space in hospital,95.5,3,0.0013,-0.008
+EVAPCL_EL,,Swamp or evaporative A/C (electric),10.1,2,0.0013,-0.004
+HPHGRD,,Geothermal heat pump,85.9,2,0.0013,0.075
+NGHT2,,Natural gas used for secondary heating,0.0,2,0.0013,-0.046
+ELCOOL,,Electricity used for air conditioning,0.0,2,0.0013,-0.089
+RMACPTHP,,Individual A/Cs are PTHPs,86.3,4,0.0013,-0.089
+FIREPLP_WO,,Derived variable: Pct heated by wood fireplace,99.9,5,0.0012,-0.812
+ATMN,,Number of ATMs,99.3,4,0.0012,0.369
+PRHT2,,Propane used for secondary heating,0.0,2,0.0011,0.013
+SLFCON_FK,,Individual space heaters fueled by fuel oil,95.5,2,0.0011,0.254
+HPHDUAL,,Combination air source and geothermal heat pump,85.9,2,0.0011,-0.016
+SLFCNP_NG,,Derived variable: Pct heated by natural gas space heater,93.3,60,0.001,-0.297
+OTHT1,,Other source used for main heating,0.0,2,0.001,0.035
+FIREPLP_PR,,Derived variable: Pct heated by propane fireplace,99.8,4,0.001,0.062
+BOILER_FK,,Boilers fueled by fuel oil,95.5,2,0.001,-0.288
+HT2,,Energy used for secondary heating,0.0,2,0.001,-0.138
+HPCWTR,,Water loop heat pump for A/C,92.2,2,0.001,-0.079
+SLFCNP_EL,,Derived variable: Pct heated by electric space heater,85.8,48,0.0009,-0.163
+NWMNCL,,Main cooling replaced,57.6,2,0.0009,0.018
+DHHT2,,Derived variable: District heat used for secondary heating,0.0,2,0.0009,-0.056
+HPHVRF,,VRF system,85.9,2,0.0008,-0.06
+FEDFAC,,Federal complex,60.2,2,0.0008,-0.039
+OTHTEQ_FK,,Other heating equipment fueled by fuel oil,95.5,1,0.0008,
+WOUSED,,Wood used,0.0,2,0.0008,0.027
+HPHAIR,,Air source heat pump,85.9,2,0.0008,0.018
+FURNAC_FK,,Furnaces fueled by fuel oil,95.5,2,0.0008,0.15
+FKHT2,,Fuel oil used for secondary heating,0.0,2,0.0008,-0.073
+FKHT1,,Fuel oil used for main heating,0.0,2,0.0007,0.001
+NGMANU,,Natural gas used for manufacturing,0.0,2,0.0007,-0.021
+FURNP_OT,,Derived variable: Pct heated by other source furnace,99.9,3,0.0007,0.5
+SOTHERMP_SO,,Derived variable: Pct heated by solar thermal heating,99.9,2,0.0007,0.354
+NGOTH,,Natural gas used for some other use,0.0,2,0.0007,-0.064
+STHT2,,District steam used for secondary heating,0.0,2,0.0007,-0.05
+BLRAIR_EL2,,Central air handlers for electric boiler distribution,99.6,1,0.0007,
+HPCGRD,,Geothermal heat pump for A/C,92.2,2,0.0006,0.054
+HPCDUAL,,Combination air source and geothermal heat pump for A/C,92.2,2,0.0006,0.05
+BLRRAD_PR2,,Radiators for propane boiler distribution,99.9,1,0.0006,
+FACIL,,On a multibuilding complex,0.0,2,0.0006,-0.037
+HWWATR,,District hot water used for water heating,0.0,2,0.0006,-0.038
+BLRDUCT_EL2,,Duct reheat for electric boiler distribution,99.8,1,0.0006,
+WOHT2,,Wood used for secondary heating,0.0,2,0.0006,0.028
+BLRAIR_FK2,,Central air handlers for fuel oil boiler distribution,99.0,1,0.0006,
+CHILP_PR,,Derived variable: Pct cooled by propane central chillers,100.0,2,0.0005,-1.0
+RFCOOL,,Derived variable: Cool roof,0.0,2,0.0005,-0.043
+BOILP_OT,,Derived variable: Pct heated by other source boiler,100.0,2,0.0005,-1.0
+OTHTP_OT,,Derived variable: Pct heated by other source other heating equipment,100.0,2,0.0005,-1.0
+BLROTD_HT1,,Other type of boiler distribution,98.9,1,0.0005,
+COUSED,,Coal used,0.0,2,0.0005,-0.004
+SOTHERM_SO,,Derived variable: Solar thermal heating equipment,96.3,2,0.0005,0.219
+BLRDUCT_FK2,,Duct reheat for fuel oil boiler distribution,99.3,1,0.0005,
+BLRRAD_EL2,,Radiators for electric boiler distribution,99.8,1,0.0005,
+HPCAIR,,Air source heat pump for A/C,92.2,2,0.0005,-0.02
+BLROTD_EL2,,Other type of electric boiler distribution,99.9,1,0.0005,
+OTHTEQ_OT,,Other heating equipment fueled by other source,99.7,2,0.0005,-0.559
+FURNAC_OT,,Furnaces fueled by other source,99.7,2,0.0005,0.094
+MANIND,,Manufacturing industrial,99.3,2,0.0005,0.155
+SLFCON_OT,,Individual space heaters fueled by other source,99.7,2,0.0005,0.132
+BLRDUCT_NG2,,Duct reheat for nat gas boiler distribution,99.4,1,0.0004,
+BLRFNCL_EL2,,Fan coil or induction units for electric boiler distribution,99.7,1,0.0004,
+BLRRDFL_EL2,,Radiant floor or ceiling panels for electric boiler distribution,100.0,1,0.0004,
+BLRWTLP_EL2,,Water loop heat pump for electric boiler distribution,99.7,1,0.0004,
+OTCLP_OT,,Derived variable: Pct cooled by other source A/C equipment,100.0,1,0.0004,
+OTHTEQ_CO,,Other heating equipment fueled by coal,100.0,1,0.0004,
+CHILP_FK,,Derived variable: Pct cooled by fuel oil central chillers,100.0,1,0.0004,
+BLRRAD_NG2,,Radiators for nat gas boiler distribution,99.4,1,0.0004,
+FURNAC_CO,,Furnaces fueled by coal,100.0,1,0.0004,
+BLRFNCL_PR2,,Fan coil or induction units for propane boiler distribution,99.9,1,0.0004,
+BLRAIR_PR2,,Central air handlers for propane boiler distribution,100.0,1,0.0004,
+BLRWTLP_NG2,,Water loop heat pump for nat gas boiler distribution,99.1,1,0.0004,
+BOILER_CO,,Boilers fueled by coal,100.0,1,0.0004,
+BOILER_OT,,Boilers fueled by other source,99.7,2,0.0004,0.037
+SOHT2,,Solar used for secondary heating,0.0,2,0.0004,0.0
+WHHT2,,Waste heat used for space heating,99.3,2,0.0004,-0.146
+OTCLEQ_FK,,Other type of A/C fueled by fuel oil,100.0,1,0.0004,
+VACANT,,Completely vacant,100.0,1,0.0004,
+MEDEQP,,Medical equipment,83.8,2,0.0004,-0.393
+ELMANU,,Electricity used for manufacturing,0.0,2,0.0004,0.062
+FKOTH,,Fuel oil used for some other use,0.0,2,0.0004,-0.001
+FKCOOL,,Fuel oil used for air conditioning,0.0,2,0.0004,-0.016
+NGCOOL,,Natural gas used for air conditioning,0.0,2,0.0004,-0.044
+FURNP_CO,,Derived variable: Pct heated by coal furnace,100.0,2,0.0004,-1.0
+OTCOOL,,Other energy source used for air conditioning,0.0,2,0.0004,-0.008
+COHT1,,Coal used for main heating,0.0,2,0.0004,-0.03
+OTCLEQ_OT,,Derived variable: Other type of A/C powered by other source,100.0,1,0.0004,
+WHOPPR,,Who has purchasing power,84.5,4,0.0004,-0.008
+CHILLR_FK,,Central chillers fueled by fuel oil,100.0,1,0.0004,
+CHILLR_NG,,Central chillers fueled by natural gas,99.5,1,0.0004,
+OTCLEQ_NG,,Other type of A/C fueled by natural gas,99.5,1,0.0004,
+COMANU,,Coal used for manufacturing,0.0,2,0.0003,0.02
+WOGENR,,Wood used for electricity generation,0.0,2,0.0003,0.024
+PRGENR,,Propane used for electricity generation,0.0,2,0.0003,0.03
+MANU,,Energy used for manufacturing,0.0,2,0.0003,0.055
+WOMANU,,Wood used for manufacturing,0.0,2,0.0003,0.02
+SOPANEL,,Solar panels used to generate electricity,95.3,2,0.0003,0.0
+HPCPTHP,,Heat pumps (for A/C) are PTHPs,95.8,3,0.0003,-0.023
+FKMANU,,Fuel oil used for manufacturing,0.0,2,0.0003,0.013
+BLRRAD_FK2,,Radiators for fuel oil boiler distribution,99.2,1,0.0003,
+BLRFNCL_FK2,,Fan coil or induction units for fuel oil boiler distribution,99.1,1,0.0003,
+OTHTP_NG,,Derived variable: Pct heated by other natural gas heating equipment,99.9,2,0.0003,0.866
+PKGHT_OT,,Packaged central units fueled by other source,99.7,1,0.0003,
+SOTHERM,,Solar thermal energy used,92.9,2,0.0003,0.058
+HWCOOK,,District hot water used for cooking,0.0,2,0.0003,-0.026
+FURNP_WO,,Derived variable: Pct heated by wood furnace,100.0,1,0.0003,
+FKCOOK,,Fuel oil used for cooking,0.0,2,0.0003,-0.056
+OTWATR,,Other energy source used for water heating,0.0,2,0.0003,-0.013
+WOWATR,,Wood used for water heating,0.0,2,0.0003,0.017
+LODGRM,,Number of guest rooms,93.3,43,0.0003,0.152
+OWNPPR,,Owner has purchasing power,15.5,2,0.0002,0.009
+BLRRDFL_HT1,,Radiant floor or ceiling panels for boiler distribution,98.1,1,0.0002,
+COURT,,Food court,99.5,2,0.0002,0.065
+DHMANU,,Derived variable: District heat used for manufacturing,0.0,2,0.0002,-0.018
+HWHT2,,District hot water used for secondary heating,0.0,2,0.0002,-0.026
+DHOTH,,Derived variable: District heat used for some other use,0.0,2,0.0002,-0.029
+COOTH,,Coal used for some other use,0.0,2,0.0002,0.015
+SOGENR,,Derived variable: Solar used for electricity generation,0.0,2,0.0002,-0.005
+PRCOOL,,Propane used for air conditioning,0.0,2,0.0002,0.016
+BLRFNCL_NG2,,Fan coil or induction units for nat gas boiler distribution,99.2,1,0.0002,
+CWOTH,,District chilled water used for some other use,0.0,2,0.0002,-0.001
+HWOTH,,District hot water used for some other use,0.0,2,0.0002,0.003
+PROTH,,Propane used for some other use,0.0,2,0.0002,0.083
+SOWATR,,Solar thermal used for water heating,0.0,2,0.0002,0.004
+BLRRDFL_PR2,,Radiant floor or ceiling panels for propane boiler distribution,100.0,1,0.0002,
+OTGENR,,Other energy source used for electricity generation,0.0,2,0.0002,-0.01
+BLRDUCT_PR2,,Duct reheat for propane boiler distribution,99.9,1,0.0002,
+COGENR,,Coal used for electricity generation,0.0,2,0.0002,-0.022
+WOCOOK,,Wood used for cooking,0.0,2,0.0002,-0.057
+CHILLR_PR,,Central chillers fueled by propane,100.0,1,0.0002,
+WHWT,,Waste heat used for water heating,99.3,2,0.0002,0.034
+WHOT,,Waste heat used for some other use,99.3,2,0.0002,0.166
+OTCLEQ_PR,,Other type of A/C fueled by propane,100.0,1,0.0002,
+STMANU,,District steam used for manufacturing,0.0,2,0.0002,-0.018
+OTHTP_WO,,Derived variable: Pct heated by other wood heating equipment,100.0,1,0.0002,
+STOTH,,District steam used for some other use,0.0,2,0.0001,-0.033
+SOUSED,,Solar used,0.0,2,0.0001,-0.004
+OTUSED,,Other energy source used,0.0,2,0.0001,0.005
+HTLS50,,Heated to less than 50 degrees,99.7,1,0.0001,
+SNACKSF,,Snack bar square footage,86.9,145,0.0001,-0.004
+CTSCAN,,Derived variable: CT scan machines,88.6,2,0.0001,-0.488
+OWNOCC,,Derived variable: Owner occupied or leased to tenant(s),0.0,2,0.0001,-0.009
+FKWATR,,Fuel oil used for water heating,0.0,2,0.0001,-0.065
+BLROTD_NG2,,Other type of nat gas boiler distribution,99.8,1,0.0001,
+BLRRDFL_FK2,,Radiant floor or ceiling panels for fuel oil boiler distribution,99.8,1,0.0001,
+BLRWTLP_FK2,,Water loop heat pump for fuel oil boiler distribution,99.6,1,0.0001,
+BLROTD_FK2,,Other type of fuel oil boiler distribution,100.0,1,0.0001,
+BLRWTLP_PR2,,Water loop heat pump for propane boiler distribution,99.9,1,0.0001,
+MRI,,Derived variable: MRI machines,88.6,2,0.0001,-0.469
+OTHT2,,Other source used for secondary heating,0.0,2,0.0001,0.009
+LINACC,,Derived variable: Linear accelerators,88.6,2,0.0001,-0.205
+PRMANU,,Propane used for manufacturing,0.0,2,0.0001,0.034
+NELVTR,yes,Number of elevators,54.4,29,0.0,0.262
+CHILP_EL,,Derived variable: Pct cooled by electric central chillers,76.3,56,0.0,-0.072
+ACWNWP_EL,,Derived variable: Pct cooled by electric individual A/C,84.7,53,0.0,-0.269
+PKGCP_EL,,Derived variable: Pct cooled by electric packaged A/C units,41.6,80,0.0,-0.146
+DHCOOK,,Derived variable: District heat used for cooking,0.0,2,0.0,-0.086
+EDSEAT,,Number of classroom seats,85.0,43,0.0,0.162
+STCOOK,,District steam used for cooking,0.0,2,0.0,-0.084
+RCACP_EL,,Derived variable: Pct cooled by electric residential-type split system A/C,80.6,60,0.0,-0.382
+EVAPP_EL,,Derived variable: Pct cooled by electric swamp coolers,97.5,33,0.0,-0.051
+BLRAIR_NG2,,Central air handlers for nat gas boiler distribution,98.9,1,0.0,
+OWNOPR,,Owner operates,0.0,2,0.0,0.011
+OCCUPYP,,Percent occupancy,71.3,65,0.0,0.091
+HALOP,,Percent lit by halogen,83.2,50,0.0,-0.165
+CFLRP,,Percent lit by compact fluorescent,59.8,59,0.0,-0.101
+CAFSF,,Cafeteria square footage,81.7,188,0.0,-0.041
+STHWP_ST,,Derived variable: Pct heated by district steam heating system,93.1,26,0.0,0.0
+SLFCNP_PR,,Derived variable: Pct heated by propane space heater,99.1,21,0.0,-0.457
+BOILP_FK,,Derived variable: Pct heated by fuel oil boiler,96.5,22,0.0,-0.084
+FURNP_NG,,Derived variable: Pct heated by natural gas furnace,89.1,66,0.0,-0.281
+BOILP_EL,,Derived variable: Pct heated by electric boiler,96.7,37,0.0,-0.165
+BLROTD_PR2,,Other type of propane boiler distribution,100.0,0,0.0,
+RFGCOMPN,,Number of compact refrigerators,62.2,50,0.0,0.251
+BLRRDFL_NG2,,Radiant floor or ceiling panels for nat gas boiler distribution,99.9,1,0.0,
+BLRAIR_OT2,,Central air handlers for other source boiler distribution,100.0,0,0.0,

@@ -1,6 +1,8 @@
 """
 Model 1 - Building Efficiency Assessment
 Step 9: Feature engineering + efficiency labels.
+Step 12c (Experiment 2): extra features chosen from the screening in Step 12b.
+Option C: binary target = clearly High vs clearly Low efficiency (within building type).
 
 Input  : data/interim/model1/cbecs2018_clean.csv
 Outputs: data/processed/model1/model1_dataset.csv   (model-ready)
@@ -8,19 +10,19 @@ Outputs: data/processed/model1/model1_dataset.csv   (model-ready)
          reports/model1/features/                   (thresholds, class balance, report)
          docs/model1_data_dictionary.md             (every feature + target explained)
 
-LABEL (target):
+LABEL:
   EUI = MFBTU (kBtu) / SQFT (sq ft)  ->  kBtu per sq ft per year
   Within each building type (PBA), buildings are split into thirds by EUI,
-  using survey weights (FINALWT) so the cut-offs represent U.S. buildings:
-     0 = High efficiency      (lowest third of EUI for its type)
-     1 = Moderate efficiency  (middle third)
-     2 = Low efficiency       (highest third)
+  using survey weights (FINALWT):
+     EFFICIENCY_CLASS: 0 = High, 1 = Moderate, 2 = Low efficiency (kept for reference)
+  OPTION C target (EFFICIENCY_BINARY):
+     0 = High efficiency (lowest third), 1 = Low efficiency (highest third),
+     blank = Moderate (middle third) -> excluded from training and testing.
   This is a RELATIVE ranking against similar CBECS 2018 buildings,
   NOT an official certification or ENERGY STAR score.
 
 FEATURES: building characteristics only. No energy use or cost column is
-allowed as a feature (checked automatically), so the model cannot simply
-recompute EUI.
+allowed as a feature (checked automatically).
 
 Run from the repo root:
     python src/green_building/features/model1_build_features.py
@@ -40,14 +42,21 @@ REPORT_DIR = REPO_ROOT / "reports" / "model1" / "features"
 DICT_MD = REPO_ROOT / "docs" / "model1_data_dictionary.md"
 
 LABEL_NAMES = {0: "High efficiency", 1: "Moderate efficiency", 2: "Low efficiency"}
+BINARY_NAMES = {0: "High efficiency", 1: "Low efficiency"}          # OPTION C
 
 # Candidate features (building characteristics). Any not found is reported and skipped.
 CATEGORICAL = ["PBA", "PUBCLIM", "REGION", "CENDIV", "WLCNS", "RFCNS", "BLDSHP",
-               "OWNTYPE", "MAINHT", "MAINCL", "RENOV"]
+               "OWNTYPE", "MAINHT", "MAINCL", "RENOV",
+               # Exp 2: detailed type, fuels, controls/maintenance
+               "PBAPLUS", "NGUSED", "NGWATR", "EMCS", "MAINT", "VAV"]
 NUMERIC = ["SQFT", "NFLOOR", "YRCONC", "WKHRS", "NWKER", "GLSSPC", "FLCEILHT",
-           "NELVTR", "BASEMNT", "HEATP", "COOLP", "LTOHRP"]
+           "NELVTR", "BASEMNT", "HEATP", "COOLP", "LTOHRP",
+           # Exp 2: off-hours lighting, climate, equipment
+           "LTNHRP", "HDD65", "CDD65", "PCTERMN", "LAPTPN",
+           "RFGOPN", "RFGWIN", "RFGVNN", "FDPREPSF"]
 # Engineered features created below
-ENGINEERED = ["LOG_SQFT", "WORKERS_PER_1000SQFT", "OPEN_24_7"]
+ENGINEERED = ["LOG_SQFT", "WORKERS_PER_1000SQFT", "OPEN_24_7",
+              "PCS_PER_1000SQFT", "KITCHEN_SHARE"]
 
 # Names that signal energy use/cost -> must never be features
 ALLOWED_LOOKALIKES = {"WLCNS", "RFCNS"}   # wall/roof construction material (codebook)
@@ -98,15 +107,13 @@ def main():
     labels, values = codebook_info()
 
     report("=" * 60)
-    report("MODEL 1 - FEATURES + LABELS")
+    report("MODEL 1 - FEATURES + LABELS  (Experiment 2 features, Option C target)")
     report("=" * 60)
     report(f"Input: {len(df)} buildings x {df.shape[1]} columns")
 
-    # ---- Pending check from Step 8: any energy-looking columns left? ----
     leftover = [c for c in df.columns if looks_like_energy(c) and c != "MFBTU"]
     report(f"\nEnergy-looking columns still in clean data (besides MFBTU): {leftover or 'none'}")
 
-    # Keep only the columns this step needs (smaller, faster, no pandas warnings)
     needed = ["PUBID", "PBA", "SQFT", "MFBTU", "FINALWT"] + [
         c for c in CATEGORICAL + NUMERIC if c in df.columns]
     df = df[list(dict.fromkeys(needed))].copy()
@@ -123,6 +130,8 @@ def main():
         thresholds.append({"PBA": pba, "n": len(g), "high_if_EUI_at_most": round(t1, 2),
                            "low_if_EUI_above": round(t2, 2)})
     df["EFFICIENCY_LABEL"] = df["EFFICIENCY_CLASS"].map(LABEL_NAMES)
+    # OPTION C: 0 = High, 1 = Low, blank (NaN) = Moderate -> left out of train/test
+    df["EFFICIENCY_BINARY"] = df["EFFICIENCY_CLASS"].map({0: 0, 2: 1})
     thr = pd.DataFrame(thresholds)
     thr.to_csv(REPORT_DIR / "label_thresholds_by_type.csv", index=False)
     report("\n--- Label thresholds per building type (kBtu/sqft/yr, weighted tertiles) ---")
@@ -135,8 +144,7 @@ def main():
     report(f"\nCandidate features not found in data (skipped): {missing or 'none'}")
 
     # 99x special codes -> top-coded category (max real value + 1).
-    # ONLY for columns whose codebook actually lists 99x codes
-    # (e.g. NWKER goes up to 7,500 real workers - those are NOT codes).
+    # ONLY for columns whose codebook actually lists 99x codes.
     for c in num:
         if not has_special_codes(values.get(c, "")):
             continue
@@ -146,44 +154,62 @@ def main():
             report(f"  {c}: {codes.sum()} special-code values (>=994) -> top-coded as {top}")
             df.loc[codes, c] = top
 
-    # Engineered features
     df["LOG_SQFT"] = np.log10(df["SQFT"])
     df["WORKERS_PER_1000SQFT"] = df["NWKER"] / df["SQFT"] * 1000
     df["OPEN_24_7"] = (df["WKHRS"] >= 168).astype(int)
+    # Exp 2: computer density and kitchen share of floor area
+    df["PCS_PER_1000SQFT"] = (df[["PCTERMN", "LAPTPN"]].sum(axis=1, min_count=1)
+                              / df["SQFT"] * 1000)
+    df["KITCHEN_SHARE"] = df["FDPREPSF"] / df["SQFT"]
     num = num + ENGINEERED
     features = cat + num
 
     # ---------- 3. LEAKAGE GUARDS ----------
-    forbidden = {"MFBTU", "EUI", "EFFICIENCY_CLASS", "EFFICIENCY_LABEL", "FINALWT"}
+    forbidden = {"MFBTU", "EUI", "EFFICIENCY_CLASS", "EFFICIENCY_LABEL",
+                 "EFFICIENCY_BINARY", "FINALWT"}                       # OPTION C: + binary
     bad = [f for f in features if f in forbidden or looks_like_energy(f)]
     if bad:
         raise SystemExit(f"LEAKAGE: these features are not allowed: {bad}")
     report("\nLeakage guard: PASS (no energy use/cost, EUI, label or weight in features)")
 
     # ---------- 4. SAVE ----------
-    keep = ["PUBID", "FINALWT", "EUI", "EFFICIENCY_CLASS", "EFFICIENCY_LABEL"] + features
+    keep = ["PUBID", "FINALWT", "EUI", "EFFICIENCY_CLASS", "EFFICIENCY_LABEL",
+            "EFFICIENCY_BINARY"] + features                              # OPTION C
     out = df[keep]
     out.to_csv(OUT_DIR / "model1_dataset.csv", index=False)
-    spec = {"id": "PUBID", "weight": "FINALWT", "target": "EFFICIENCY_CLASS",
-            "target_names": LABEL_NAMES, "categorical_features": cat,
-            "numeric_features": num, "not_features": ["EUI", "EFFICIENCY_LABEL", "FINALWT", "PUBID"],
-            "label_method": "weighted EUI tertiles within building type (PBA), CBECS 2018"}
+    spec = {"id": "PUBID", "weight": "FINALWT",
+            "target": "EFFICIENCY_BINARY",                               # OPTION C
+            "target_names": BINARY_NAMES,                                # OPTION C
+            "categorical_features": cat, "numeric_features": num,
+            "not_features": ["EUI", "EFFICIENCY_CLASS", "EFFICIENCY_LABEL",
+                             "EFFICIENCY_BINARY", "FINALWT", "PUBID"],
+            "label_method": "Option C: weighted EUI tertiles within building type (PBA); "
+                            "lowest third = High (0), highest third = Low (1), "
+                            "middle third (Moderate) excluded",
+            "feature_set": "experiment_2"}
     (OUT_DIR / "feature_spec.json").write_text(json.dumps(spec, indent=2))
 
     # ---------- 5. CHECKS + CLASS BALANCE ----------
-    report("\n--- Class distribution (count of buildings) ---")
+    report("\n--- 3-class distribution (reference) ---")
     dist = out["EFFICIENCY_LABEL"].value_counts()
     report((dist.astype(str) + "  (" + (dist / len(out) * 100).round(1).astype(str) + "%)").to_string())
-    wdist = out.groupby("EFFICIENCY_LABEL")["FINALWT"].sum() / out["FINALWT"].sum() * 100
-    report("\nWeighted share (represents all U.S. buildings, should be ~33% each):")
-    report(wdist.round(1).astype(str).add("%").to_string())
+    report("\n--- OPTION C target (buildings used for training/testing) ---")
+    bdist = out["EFFICIENCY_BINARY"].map(BINARY_NAMES).value_counts()
+    report(bdist.to_string())
+    report(f"Moderate buildings excluded: {out['EFFICIENCY_BINARY'].isna().sum()}")
     report("\n--- Missing values in features (%, blanks = 'not applicable') ---")
     miss = (out[features].isna().mean() * 100).round(1)
     report(miss[miss > 0].sort_values(ascending=False).to_string() if (miss > 0).any() else "none")
 
+    report("\n--- Numeric feature ranges (check for odd codes) ---")
+    report(out[num].describe().T[["count", "min", "50%", "max"]].round(2).to_string())
+
     checks = {
         "every building labelled": (out["EFFICIENCY_CLASS"] >= 0).all(),
         "3 classes present": out["EFFICIENCY_CLASS"].nunique() == 3,
+        "binary target has 2 classes": out["EFFICIENCY_BINARY"].nunique() == 2,     # OPTION C
+        "binary blank only for Moderate": (out["EFFICIENCY_BINARY"].isna()
+                                           == (out["EFFICIENCY_CLASS"] == 1)).all(),  # OPTION C
         "no infinite values": not np.isinf(out.select_dtypes("number")).any().any(),
         "row count unchanged": len(out) == len(df),
     }
@@ -196,10 +222,15 @@ def main():
     # ---------- 6. DATA DICTIONARY ----------
     eng_desc = {"LOG_SQFT": "log10 of floor area (reduces skew)",
                 "WORKERS_PER_1000SQFT": "employees on main shift per 1,000 sq ft (occupancy density)",
-                "OPEN_24_7": "1 if open 168 hours/week, else 0"}
+                "OPEN_24_7": "1 if open 168 hours/week, else 0",
+                "PCS_PER_1000SQFT": "desktop + laptop computers per 1,000 sq ft",
+                "KITCHEN_SHARE": "commercial kitchen area / total floor area"}
+    moderate_pct = round(out["EFFICIENCY_BINARY"].isna().mean() * 100, 1)
     rows = ["| Column | Role | Type | Meaning | Missing % |", "|---|---|---|---|---|"]
-    rows.append("| EFFICIENCY_CLASS | **Target** | categorical | 0 = High, 1 = Moderate, 2 = Low efficiency "
-                "(weighted EUI tertile within building type) | 0 |")
+    rows.append(f"| EFFICIENCY_BINARY | **Target (Option C)** | binary | 0 = High efficiency, "
+                f"1 = Low efficiency; blank = Moderate (excluded) | {moderate_pct} |")
+    rows.append("| EFFICIENCY_CLASS | Label source only (NOT a feature) | categorical | 0 = High, "
+                "1 = Moderate, 2 = Low (weighted EUI tertile within building type) | 0 |")
     rows.append("| EUI | Label source only (NOT a feature) | numeric | MFBTU / SQFT, kBtu/sq ft/yr | 0 |")
     rows.append("| FINALWT | Weight only (NOT a feature) | numeric | CBECS survey weight | 0 |")
     for f in features:
@@ -207,7 +238,8 @@ def main():
         rows.append(f"| {f} | Feature | {'categorical' if f in cat else 'numeric'} | {meaning} | {miss[f]} |")
     DICT_MD.write_text("# Model 1 — Data Dictionary\n\n"
                        "Source: U.S. EIA, 2018 CBECS public-use microdata (Dec 2022 release).\n"
-                       "Dataset: data/processed/model1/model1_dataset.csv\n\n" + "\n".join(rows) + "\n")
+                       "Dataset: data/processed/model1/model1_dataset.csv "
+                       "(Experiment 2 features, Option C target)\n\n" + "\n".join(rows) + "\n")
 
     report(f"\nFeatures: {len(features)} ({len(cat)} categorical, {len(num)} numeric)")
     report(f"Saved: data/processed/model1/model1_dataset.csv ({out.shape[0]} x {out.shape[1]})")

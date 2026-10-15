@@ -1,5 +1,5 @@
 ============================================================
-MODEL 1 - FEATURES + LABELS
+MODEL 1 - FEATURES + LABELS  (Experiment 2 features, Option C target)
 ============================================================
 Input: 6249 buildings x 537 columns
 
@@ -33,35 +33,78 @@ Candidate features not found in data (skipped): none
 
 Leakage guard: PASS (no energy use/cost, EUI, label or weight in features)
 
---- Class distribution (count of buildings) ---
+--- 3-class distribution (reference) ---
 EFFICIENCY_LABEL
 Low efficiency         2588  (41.4%)
 Moderate efficiency    2182  (34.9%)
 High efficiency        1479  (23.7%)
 
-Weighted share (represents all U.S. buildings, should be ~33% each):
-EFFICIENCY_LABEL
-High efficiency        33.3%
-Low efficiency         33.4%
-Moderate efficiency    33.4%
+--- OPTION C target (buildings used for training/testing) ---
+EFFICIENCY_BINARY
+Low efficiency     2588
+High efficiency    1479
+Moderate buildings excluded: 2182
 
 --- Missing values in features (%, blanks = 'not applicable') ---
-NELVTR     53.9
-BASEMNT    39.7
-RENOV       6.3
-MAINCL      5.6
-COOLP       5.6
-MAINHT      5.1
-HEATP       5.1
-LTOHRP      0.5
+RFGOPN              82.4
+KITCHEN_SHARE       79.0
+FDPREPSF            79.0
+RFGWIN              62.3
+NELVTR              53.9
+RFGVNN              50.8
+BASEMNT             39.7
+LAPTPN              24.5
+PCTERMN             12.1
+PCS_PER_1000SQFT     8.1
+RENOV                6.3
+COOLP                5.6
+MAINCL               5.6
+MAINHT               5.1
+HEATP                5.1
+VAV                  4.8
+LTNHRP               3.2
+MAINT                2.4
+EMCS                 2.4
+LTOHRP               0.5
+
+--- Numeric feature ranges (check for odd codes) ---
+                       count     min       50%         max
+SQFT                  6249.0  1001.0  73000.00  2100000.00
+NFLOOR                6249.0     1.0      2.00       11.00
+YRCONC                6249.0     2.0      6.00        9.00
+WKHRS                 6249.0     0.0     60.00      168.00
+NWKER                 6249.0     0.0     40.00     7500.00
+GLSSPC                6249.0     1.0      3.00        6.00
+FLCEILHT              6249.0     7.0     10.00       51.00
+NELVTR                2883.0     1.0      3.00       31.00
+BASEMNT               3768.0     0.0      1.00        5.00
+HEATP                 5930.0     0.0    100.00      100.00
+COOLP                 5901.0     1.0    100.00      100.00
+LTOHRP                6215.0     0.0     95.00      100.00
+LTNHRP                6051.0     0.0     10.00      100.00
+HDD65                 6249.0   402.0   4472.00    10790.00
+CDD65                 6249.0    10.0   1469.00     5643.00
+PCTERMN               5493.0     1.0     30.00     3615.00
+LAPTPN                4719.0     1.0     25.00     1480.00
+RFGOPN                1102.0     1.0      2.00       54.00
+RFGWIN                2353.0     1.0      2.00       22.00
+RFGVNN                3073.0     1.0      3.00       50.00
+FDPREPSF              1314.0    50.0   3000.00   180000.00
+LOG_SQFT              6249.0     3.0      4.86        6.32
+WORKERS_PER_1000SQFT  6249.0     0.0      0.73       10.00
+OPEN_24_7             6249.0     0.0      0.00        1.00
+PCS_PER_1000SQFT      5744.0     0.0      0.86       30.00
+KITCHEN_SHARE         1314.0     0.0      0.02        0.53
 
 --- Validation ---
   [PASS] every building labelled
   [PASS] 3 classes present
+  [PASS] binary target has 2 classes
+  [PASS] binary blank only for Moderate
   [PASS] no infinite values
   [PASS] row count unchanged
 
-Features: 26 (11 categorical, 15 numeric)
-Saved: data/processed/model1/model1_dataset.csv (6249 x 31)
+Features: 43 (17 categorical, 26 numeric)
+Saved: data/processed/model1/model1_dataset.csv (6249 x 49)
 Saved: data/processed/model1/feature_spec.json
 Saved: docs/model1_data_dictionary.md
