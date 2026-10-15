@@ -319,3 +319,73 @@
 - **Validation (all PASS):** every building labelled; 3 classes present; no infinite values; row count unchanged.
 - **Git commit hash:** 23bc65a 
 - **Next step:** Version the interim and processed datasets with DVC.
+
+---
+
+## Step 10 — Version interim and processed data with DVC
+
+- **Date:** 2026-10-15
+- **Status:** Done
+- **Objective:** Version the cleaned and model-ready datasets separately from raw data, so every model can be traced to the exact data it was trained on.
+- **Commands executed:**
+  dvc add data/interim/model1
+  dvc add data/processed/model1
+- **Files created/modified:**
+  - data/interim/model1.dvc (new pointer file)
+  - data/interim/.gitignore (new — makes Git ignore the data folder)
+  - data/processed/model1.dvc (new pointer file)
+  - data/processed/.gitignore (modified — one line `/model1` appended; teammate's existing entry untouched)
+- **Observed:**
+  - Interim: md5 <md5>, size <size>, nfiles <n>
+  - Processed: md5 <md5>, size <size>, nfiles <n>
+- **Data lineage:**
+  raw (Step 4) → model1_clean.py → interim (this step) → model1_build_features.py → processed (this step)
+- **Limitation:** No DVC remote configured yet — data is in my local DVC cache only. All datasets can be regenerated from the official EIA download (Step 3 checksums) by running the scripts in order.
+- **Git commit hash:** 4de5426 
+- **Next step:** Train the baseline model (Logistic Regression).
+
+---
+
+## Step 11 — Baseline model (Logistic Regression)
+
+- **Date:** 2026-10-15
+- **Status:** Done
+- **Objective:** Train a simple, interpretable baseline that XGBoost must beat, using the same split and metrics.
+- **Scripts:**
+  - src/green_building/models/efficiency/model1_common.py (shared: data loading, split, metrics, confusion plot)
+  - src/green_building/models/efficiency/model1_train_baseline.py
+- **Commands executed:**
+  pip install scikit-learn
+  python src/green_building/models/efficiency/model1_train_baseline.py
+- **Data:** data/processed/model1/model1_dataset.csv (6,249 buildings, 26 features)
+- **Split:** 80/20 stratified, random_state = 42 → Train 4,999 / Test 1,250. One row = one building (PUBID unique), so test buildings are unseen. Split saved to reports/model1/models/train_test_split.csv and re-used for XGBoost.
+- **Pipeline:**
+  - Numeric: median imputation + missing-value indicator → StandardScaler
+  - Categorical: constant imputation (-1 = not applicable) → One-hot encoding
+  - All preprocessing fitted on training data only (inside the pipeline) → no test-set leakage.
+  - LogisticRegression(max_iter=3000, class_weight="balanced", random_state=42)
+- **Evaluation strategy:** 5-fold stratified CV on train (macro-F1) + single held-out test set. Main metric: macro-F1 (classes are imbalanced in the sample).
+- **Results (test set, 1,250 buildings):**
+
+  | Model | Accuracy | Balanced acc. | Macro-F1 |
+  |---|---|---|---|
+  | Majority-class floor | 0.414 | — | 0.195 |
+  | Logistic Regression | 0.541 | 0.538 | 0.528 |
+
+  - 5-fold CV macro-F1 (train): 0.519 ± 0.009
+  - Per class (precision / recall / F1): High 0.435 / 0.578 / 0.496 (n=296); Moderate 0.474 / 0.390 / 0.428 (n=436); Low 0.673 / 0.647 / 0.659 (n=518)
+  - Confusion matrix (rows actual High/Moderate/Low; cols predicted): [171, 83, 42], [145, 170, 121], [77, 106, 335]
+- **Observations:**
+  - Clearly above majority-class floor (0.195) and random guessing (~0.33) → building characteristics carry real signal about efficiency tier.
+  - CV ≈ test and small std → stable, not over-fitted.
+  - Low efficiency easiest (F1 0.659); Moderate hardest (F1 0.428) — it borders both other classes.
+  - Most errors are adjacent-class; severe High↔Low errors = 119/1,250 (9.5%).
+  - Limitation: ~46% of buildings misclassified — many drivers of energy use (equipment condition, behaviour, maintenance) are not in CBECS.
+- **Outputs:**
+  - artifacts/models/model1/baseline_logreg.joblib (model — versioned with DVC in Step 13)
+  - reports/model1/models/baseline_metrics.json
+  - reports/model1/models/baseline_classification_report.txt
+  - reports/model1/models/train_test_split.csv
+  - reports/model1/figures/fig7_confusion_baseline.png
+- **Git commit hash:** <fill in next step>
+- **Next step:** Train XGBoost Classifier on the same split; target to beat = macro-F1 0.528.
