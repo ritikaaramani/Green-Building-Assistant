@@ -13,3 +13,13 @@ venv/
 .dvc/config.backup
 .dvc/config.local.backup
 .dvc/config.local.save
+
+# Model 3 generated artifacts
+artifacts/models/anomaly/
+data/processed/anomaly/
+reports/figures/model3/
+
+# Local datasets (track DVC pointer files separately)
+data/raw/bdg2/
+dataset-sai/*.csv
+dataset-sai/*.txt
