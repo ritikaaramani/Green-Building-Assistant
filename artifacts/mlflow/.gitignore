@@ -1,0 +1,3 @@
+# MLflow tracking data is local (not in Git)
+*
+!.gitignore
