@@ -278,5 +278,44 @@
 - **Validation (all PASS):** no missing MFBTU; no vacant/refrigerated warehouse; SQFT > 0; PUBID unique; no NFLOOR special codes; no infinite values; rows add up (6,249 + 187 = 6,436); no leakage columns left.
 - **Buildings per type after cleaning (PBA: n):** 2:1329, 4:69, 5:712, 6:91, 7:105, 8:217, 12:271, 13:481, 14:936, 15:218, 16:276, 17:114, 18:418, 23:208, 24:35, 25:338, 26:349, 91:82. Smallest group = 35 (Enclosed mall).
 - **Pending check:** name-based scan for remaining *BTU/*CNS/*EXP columns will be enforced automatically in the Step 9 script (expected only WLCNS, RFCNS, MFBTU).
-- **Git commit hash:** <fill in next step>
+- **Git commit hash:** a264a29 
 - **Next step:** Feature engineering and efficiency label definition.
+
+---
+
+## Step 9 — Feature engineering and efficiency labels
+
+- **Date:** 2026-10-15
+- **Status:** Done
+- **Objective:** Define the efficiency target defensibly, select building-characteristic features, and create the model-ready dataset without target leakage.
+- **Script:** src/green_building/features/model1_build_features.py
+- **Command executed:** python src/green_building/features/model1_build_features.py
+- **Input:** data/interim/model1/cbecs2018_clean.csv (6,249 × 537)
+- **Outputs:**
+  - data/processed/model1/model1_dataset.csv (6,249 × 31) — versioned with DVC in Step 10
+  - data/processed/model1/feature_spec.json — lists features, target, id, weight
+  - reports/model1/features/label_thresholds_by_type.csv
+  - reports/model1/features/features_report.txt
+  - docs/model1_data_dictionary.md
+- **Target definition:**
+  - EUI = MFBTU (kBtu) / SQFT (sq ft) → kBtu/sq ft/year (same unit as ENERGY STAR; no conversion).
+  - Within each building type (PBA), weighted EUI tertiles using FINALWT:
+    0 = High efficiency (lowest third), 1 = Moderate, 2 = Low efficiency (highest third).
+  - Benchmark source: CBECS 2018 itself (relative peer comparison, ENERGY STAR-style principle).
+  - Limitation: relative ranking against CBECS 2018 peers of the same type — NOT an official certification or ENERGY STAR score. EUI does not adjust for occupancy, climate or operating hours; those are model inputs instead.
+- **Example thresholds (kBtu/sq ft/yr):** Office (PBA 2): High ≤ 41.42, Low > 65.51; Warehouse (5): ≤ 13.21 / > 32.39; Education (14): ≤ 36.99 / > 64.58; Food service (15): ≤ 174.44 / > 322.59. Full table in label_thresholds_by_type.csv.
+- **Features (26):**
+  - Categorical (11): PBA, PUBCLIM, REGION, CENDIV, WLCNS, RFCNS, BLDSHP, OWNTYPE, MAINHT, MAINCL, RENOV
+  - Numeric (12): SQFT, NFLOOR, YRCONC, WKHRS, NWKER, GLSSPC, FLCEILHT, NELVTR, BASEMNT, HEATP, COOLP, LTOHRP
+  - Engineered (3): LOG_SQFT, WORKERS_PER_1000SQFT, OPEN_24_7
+- **Special codes:** top-coded only where the codebook documents 99x codes — FLCEILHT (14 values → 51), NELVTR (38 → 31), BASEMNT (25 → 5).
+- **Error found and fixed:** First version treated every value ≥ 994 as a special code, which wrongly capped 308 NWKER values (real worker counts up to 7,500) at 991. Fixed so only codebook-documented 99x variables are recoded. Also removed pandas PerformanceWarnings by keeping only needed columns.
+- **Leakage prevention:** Automatic guard confirms no energy consumption/expenditure column, MFBTU, EUI, label or FINALWT is a feature. Check for remaining *BTU/*CNS/*EXP columns in clean data: none (closes Step 8 pending check). SQFT is kept as a feature — it is a building characteristic and cannot reveal EUI without energy data.
+- **Class distribution:**
+  - Sample counts: Low 2,588 (41.4%), Moderate 2,182 (34.9%), High 1,479 (23.7%)
+  - Weighted share (U.S. buildings): High 33.3%, Moderate 33.4%, Low 33.4% — confirms correct tertiles.
+  - Reason for sample imbalance: survey over-samples large buildings, which tend to have higher EUI. Handled in training with class weights and macro-F1.
+- **Missing values in features:** NELVTR 53.9%, BASEMNT 39.7%, RENOV 6.3%, MAINCL 5.6%, COOLP 5.6%, MAINHT 5.1%, HEATP 5.1%, LTOHRP 0.5%. Mostly "not applicable" skip patterns → handled in the model pipeline (imputation + missing indicator, fitted on training data only).
+- **Validation (all PASS):** every building labelled; 3 classes present; no infinite values; row count unchanged.
+- **Git commit hash:** <fill in next step>
+- **Next step:** Version the interim and processed datasets with DVC.

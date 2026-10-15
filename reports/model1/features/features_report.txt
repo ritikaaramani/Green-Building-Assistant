@@ -1,0 +1,67 @@
+============================================================
+MODEL 1 - FEATURES + LABELS
+============================================================
+Input: 6249 buildings x 537 columns
+
+Energy-looking columns still in clean data (besides MFBTU): none
+
+--- Label thresholds per building type (kBtu/sqft/yr, weighted tertiles) ---
+ PBA    n  high_if_EUI_at_most  low_if_EUI_above
+   2 1329                41.42             65.51
+   4   69                48.41            105.01
+   5  712                13.21             32.39
+   6   91               174.33            275.47
+   7  105                57.50             84.40
+   8  217                47.13             81.80
+  12  271                22.50             41.49
+  13  481                34.04             75.28
+  14  936                36.99             64.58
+  15  218               174.44            322.59
+  16  276               158.44            227.66
+  17  114                86.18            162.82
+  18  418                54.55            106.14
+  23  208                86.75            134.30
+  24   35                35.52             55.97
+  25  338                31.69             59.97
+  26  349                26.06             51.37
+  91   82                30.95             67.98
+
+Candidate features not found in data (skipped): none
+  FLCEILHT: 14 special-code values (>=994) -> top-coded as 51
+  NELVTR: 38 special-code values (>=994) -> top-coded as 31.0
+  BASEMNT: 25 special-code values (>=994) -> top-coded as 5.0
+
+Leakage guard: PASS (no energy use/cost, EUI, label or weight in features)
+
+--- Class distribution (count of buildings) ---
+EFFICIENCY_LABEL
+Low efficiency         2588  (41.4%)
+Moderate efficiency    2182  (34.9%)
+High efficiency        1479  (23.7%)
+
+Weighted share (represents all U.S. buildings, should be ~33% each):
+EFFICIENCY_LABEL
+High efficiency        33.3%
+Low efficiency         33.4%
+Moderate efficiency    33.4%
+
+--- Missing values in features (%, blanks = 'not applicable') ---
+NELVTR     53.9
+BASEMNT    39.7
+RENOV       6.3
+MAINCL      5.6
+COOLP       5.6
+MAINHT      5.1
+HEATP       5.1
+LTOHRP      0.5
+
+--- Validation ---
+  [PASS] every building labelled
+  [PASS] 3 classes present
+  [PASS] no infinite values
+  [PASS] row count unchanged
+
+Features: 26 (11 categorical, 15 numeric)
+Saved: data/processed/model1/model1_dataset.csv (6249 x 31)
+Saved: data/processed/model1/feature_spec.json
+Saved: docs/model1_data_dictionary.md
