@@ -317,5 +317,5 @@
   - Reason for sample imbalance: survey over-samples large buildings, which tend to have higher EUI. Handled in training with class weights and macro-F1.
 - **Missing values in features:** NELVTR 53.9%, BASEMNT 39.7%, RENOV 6.3%, MAINCL 5.6%, COOLP 5.6%, MAINHT 5.1%, HEATP 5.1%, LTOHRP 0.5%. Mostly "not applicable" skip patterns → handled in the model pipeline (imputation + missing indicator, fitted on training data only).
 - **Validation (all PASS):** every building labelled; 3 classes present; no infinite values; row count unchanged.
-- **Git commit hash:** <fill in next step>
+- **Git commit hash:** 23bc65a 
 - **Next step:** Version the interim and processed datasets with DVC.
