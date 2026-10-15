@@ -1,0 +1,7 @@
+[core]
+    remote = dagshub
+['remote "dagshub"']
+    url = s3://dvc
+    endpointurl = https://dagshub.com/ritikaaramani/Green-Building-Assistant.s3
+['remote "origin"']
+    url = https://dagshub.com/ritikaaramani/Green-Building-Assistant.dvc

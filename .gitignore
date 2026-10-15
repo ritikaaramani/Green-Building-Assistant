@@ -1,0 +1,15 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# macOS files
+.DS_Store
+
+# Virtual environments
+.venv/
+venv/
+
+# Local DVC configuration backups
+.dvc/config.backup
+.dvc/config.local.backup
+.dvc/config.local.save
