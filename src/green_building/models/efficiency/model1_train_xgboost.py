@@ -54,8 +54,8 @@ def build_pipeline(cat, num):
         ("onehot", OneHotEncoder(handle_unknown="ignore")),
     ])
     pre = ColumnTransformer([("num", "passthrough", num), ("cat", categorical, cat)])
-    model = XGBClassifier(objective="multi:softprob", eval_metric="mlogloss",
-                          tree_method="hist", random_state=RANDOM_STATE, n_jobs=-1)
+    # Objective chosen automatically: binary:logistic for 2 classes, multi:softprob for 3+
+    model = XGBClassifier(tree_method="hist", random_state=RANDOM_STATE, n_jobs=-1)
     return Pipeline([("prep", pre), ("model", model)])
 
 

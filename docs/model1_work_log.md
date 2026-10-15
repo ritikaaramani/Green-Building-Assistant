@@ -431,3 +431,118 @@ Top features (permutation importance): PBA 0.060, WKHRS 0.050, MAINHT 0.040, WOR
 **Outputs:** `reports/model1/models/xgboost_metrics.json`, `xgboost_classification_report.txt`, `xgboost_feature_importance.csv`, `reports/model1/figures/fig8_confusion_xgboost.png`, `fig9_xgboost_feature_importance.png`. Model saved at `artifacts/models/model1/xgboost.joblib` (not in Git; versioned with DVC in Step 13).
 
 **Commit:** ded6942
+
+## Step 12b — Screening of unused columns (to improve Experiment 1)
+**Date:** 2026-10-15
+**Script:** `src/green_building/features/model1_screen_features.py`
+**Output:** `reports/model1/features/candidate_features.csv`
+
+**Why:** Experiment 1 (26 features) reached only macro-F1 ≈ 0.53 for both models. The cleaned data still had ~534 numeric building-characteristic columns that were never tried.
+
+**Method**
+- Training buildings only (4,999, same saved split) so the test set stays untouched.
+- Energy use/cost columns excluded again by codebook label words.
+- Score 1: mutual information with the efficiency class (missing = -1 for scoring only).
+- Score 2: Spearman correlation with EUI (direction of the effect).
+
+**Results**
+- 6 of the top 40 columns were already in the model (MAINHT, WKHRS, NWKER, FLCEILHT, PBA, MAINCL).
+- Highest mutual information only 0.06 (maximum ≈ 1.1 for 3 balanced classes): no single column is a strong predictor.
+- Effects match domain knowledge: building automation (EMCS, −0.24) and regular HVAC maintenance (MAINT, −0.18) go with lower EUI; lights on when closed (LTNHRP, +0.37) and open refrigerated cases (RFGOPN, +0.18) go with higher EUI.
+- `ConstantInputWarning`: some columns are constant within the training set (harmless).
+
+**Selected:** LTNHRP, PBAPLUS, HDD65, CDD65, NGUSED, NGWATR, EMCS, MAINT, VAV, PCTERMN, LAPTPN, RFGOPN, RFGWIN, RFGVNN, FDPREPSF + engineered PCS_PER_1000SQFT, KITCHEN_SHARE.
+
+**Rejected:** category duplicates (NWKERC, WKHRSC, PCTRMC, LAPTPC, LNHRPC, LOHRPC); *_NG equipment flags (repeat NGUSED); NGHT1, ELHT1, BOILER (repeat MAINHT); EMCSHT, EMCSCL (sub-parts of EMCS, 51% missing); PKLTN, RGSTRN (weak link, many blanks).
+
+**Leakage check:** all selected columns describe type, equipment, controls, fuels or climate — not energy used or paid for.
+
+## Step 12c — Experiment 2 dataset: new features + Option C target
+**Date:** 2026-10-15
+**Script:** `src/green_building/features/model1_build_features.py`
+
+- Added the 15 columns from Step 12b + engineered PCS_PER_1000SQFT, KITCHEN_SHARE → 43 features (17 categorical, 26 numeric).
+- New target **EFFICIENCY_BINARY (Option C):** 0 = High efficiency (lowest EUI third of its building type), 1 = Low efficiency (highest third); Moderate (middle third) left blank and excluded. 3-class thresholds unchanged.
+- Counts: Low 2,588, High 1,479, Moderate excluded 2,182 (of 6,249).
+- Special codes top-coded: FLCEILHT (14), NELVTR (38), BASEMNT (25). Numeric ranges checked, no leftover codes.
+- Leakage guard PASS; 6/6 validation checks PASS. Output 6,249 × 49; re-versioned with DVC.
+- Shared split unchanged; `get_split` removes Moderate buildings from both sides after the split (train 4,999 → 3,253, test 1,250 → 814).
+
+## Step 12e — Label design comparison (training CV only)
+**Date:** 2026-10-15
+**Script:** `src/green_building/models/efficiency/model1_label_options.py`
+**Output:** `reports/model1/models/label_options_cv.csv`
+
+5-fold CV on the 4,999 training buildings, same XGBoost settings, test set not used.
+
+| Option | Classes | Majority floor | CV accuracy | CV macro-F1 |
+|---|---|---|---|---|
+| 0 current (3 classes within type) | 3 | 0.414 | 0.545 | 0.535 |
+| B within type, 2 classes | 2 | 0.595 | 0.728 | 0.720 |
+| **C within type, High vs Low** | 2 | 0.636 | **0.788** | **0.773** |
+| A absolute, 3 classes | 3 | 0.462 | 0.659 | 0.646 |
+| AB absolute, 2 classes | 2 | 0.660 | 0.792 | 0.773 |
+| AC absolute, lowest vs highest third | 2 | 0.701 | 0.882 | 0.861 |
+
+**Decision:** Option C — keeps the meaning "efficient compared with similar buildings". AC scores higher but predicts energy intensity, not efficiency vs peers. New features alone barely moved the 3-class label (0.535) → the label design was the main lever.
+
+## Step 12d — Baseline + XGBoost retrained on Option C (Experiment 2)
+**Date:** 2026-10-15
+- Experiment 1 results archived in `reports/model1/experiments/exp1/`.
+- XGBoost script: objective now chosen automatically (binary for 2 classes).
+
+| Model (test, 814 buildings) | Accuracy | Balanced acc. | Macro-F1 | CV macro-F1 |
+|---|---|---|---|---|
+| Majority floor | 0.636 | 0.500 | 0.389 | — |
+| Logistic Regression | 0.794 | 0.784 | 0.780 | 0.783 ± 0.010 |
+| XGBoost | 0.794 | 0.776 | 0.776 | 0.781 ± 0.018 |
+
+- Confusion (rows actual High/Low): LogReg [221, 75], [93, 425]; XGBoost [210, 86], [82, 436].
+- XGBoost best: max_depth 6, n_estimators 500, learning_rate 0.03, subsample 0.85, colsample_bytree 0.8, min_child_weight 5, reg_lambda 10.
+- Top permutation importance: PBA 0.047, NGUSED 0.028, WKHRS 0.027, SQFT 0.014, MAINHT 0.009.
+- XGBoost ties the baseline again → the limit is the information in the data, not the algorithm.
+
+## Step 12f — Improvement methods (training CV only)
+**Date:** 2026-10-15
+Exploration on training buildings only (5-fold CV), run on a copy of the processed dataset.
+
+| Method | CV accuracy | CV balanced | CV macro-F1 |
+|---|---|---|---|
+| LogReg (balanced) | 0.794 | 0.792 | 0.783 |
+| XGBoost (balanced) | 0.791 | 0.781 | 0.777 |
+| LogReg, no class balancing | 0.804 | 0.779 | 0.784 |
+| LogReg + peer-relative features | 0.797 | 0.795 | 0.786 |
+| XGBoost shallower / HistGradientBoosting | 0.790 | 0.772–0.784 | 0.772–0.778 |
+| Ensemble LogReg + XGBoost | 0.800 | 0.796 | 0.788 |
+| **Ensemble + peer-relative features** | **0.804** | **0.800** | **0.793** |
+| XGBoost / Ensemble on all 539 building columns | 0.800–0.802 | 0.796–0.797 | 0.789–0.790 |
+
+- Peer-relative feature = log(1 + value) − log(1 + median of the same building type); medians learned on training data only.
+- All 539 non-leaky columns did not beat the 43 selected features → ≈ 0.80 is the CBECS ceiling for Option C.
+- Selective prediction (answer only when confident), out-of-fold: threshold 0.65 → 79% coverage, 0.861 accuracy; 0.70 → 72%, 0.877; 0.75 → 63%, 0.903.
+- "No class balancing" rejected: higher accuracy only by favouring the larger class (balanced accuracy drops).
+- **Decision:** Ensemble (LogReg + XGBoost) + peer-relative features, confidence threshold 0.65.
+
+## Step 12g — FINAL model
+**Date:** 2026-10-16
+**Script:** `src/green_building/models/efficiency/model1_train_final.py`
+**Outputs:** `reports/model1/models/final_metrics.json`, `final_classification_report.txt`, `final_confidence_table_cv.csv`; figures `fig11_confusion_final.png`, `fig12_confidence_coverage.png`; model `artifacts/models/model1/final_ensemble.joblib` (versioned with DVC in Step 13).
+
+- Soft-vote ensemble of Logistic Regression + XGBoost, 43 features + 15 peer-relative features, Option C label, confidence threshold 0.65. All choices made on training CV; test set used once.
+- CV on train: accuracy 0.808 ± 0.010, balanced 0.803, macro-F1 0.796 ± 0.009.
+
+| Test set (814 clear-case buildings) | Accuracy | Balanced acc. | Macro-F1 |
+|---|---|---|---|
+| Majority floor | 0.636 | 0.500 | 0.389 |
+| Baseline LogReg | 0.794 | 0.784 | 0.780 |
+| **Final ensemble** | **0.808** | **0.792** | **0.793** |
+| **Final, confident only (≥ 0.65)** | **0.873** | 0.859 | 0.861 |
+
+- Confident mode: verdict for 632 / 814 buildings (77.6%); 182 marked "Uncertain".
+- Confusion (all, rows actual High/Low): [217, 79], [77, 441].
+- Sanity check: truly borderline (Moderate) test buildings are marked "Uncertain" 34.2% of the time vs 22.4% for clear cases → the uncertainty output behaves sensibly.
+- Test results match CV (0.808 vs 0.808; 0.873 vs 0.861) → no overfitting.
+
+**Rejected:** two scripts generated by an AI coding agent (`model1_train_exp2.py`, `model1_train_exp3.py`) dropped 9 features based on permutation importance measured on the **test set** and compared models on the test set (test-set leakage). Exp2 still scored lower (balanced 0.778, macro-F1 0.785). Not committed, not used.
+
+**Commits:** <fill in after committing>

@@ -1,0 +1,64 @@
+{
+  "baseline": {
+    "model": "logistic_regression",
+    "accuracy": 0.5408,
+    "balanced_accuracy": 0.5381097021005278,
+    "macro_precision": 0.5271142904419425,
+    "macro_recall": 0.5381097021005278,
+    "macro_f1": 0.5278311092826024,
+    "per_class_f1": {
+      "High efficiency": 0.4964,
+      "Moderate efficiency": 0.4277,
+      "Low efficiency": 0.6594
+    },
+    "confusion_matrix": [
+      [
+        171,
+        83,
+        42
+      ],
+      [
+        145,
+        170,
+        121
+      ],
+      [
+        77,
+        106,
+        335
+      ]
+    ],
+    "cv_macro_f1_mean": 0.519191148273249,
+    "cv_macro_f1_std": 0.008801434923282551
+  },
+  "majority_class": {
+    "model": "majority_class",
+    "accuracy": 0.4144,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_precision": 0.13813333333333333,
+    "macro_recall": 0.3333333333333333,
+    "macro_f1": 0.19532428355957768,
+    "per_class_f1": {
+      "High efficiency": 0.0,
+      "Moderate efficiency": 0.0,
+      "Low efficiency": 0.586
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        296
+      ],
+      [
+        0,
+        0,
+        436
+      ],
+      [
+        0,
+        0,
+        518
+      ]
+    ]
+  }
+}

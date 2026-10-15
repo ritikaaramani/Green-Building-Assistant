@@ -1,61 +1,45 @@
 {
   "baseline": {
     "model": "logistic_regression",
-    "accuracy": 0.5408,
-    "balanced_accuracy": 0.5381097021005278,
-    "macro_precision": 0.5271142904419425,
-    "macro_recall": 0.5381097021005278,
-    "macro_f1": 0.5278311092826024,
+    "accuracy": 0.7936117936117936,
+    "balanced_accuracy": 0.783542471042471,
+    "macro_precision": 0.7769108280254777,
+    "macro_recall": 0.783542471042471,
+    "macro_f1": 0.7797803471931464,
     "per_class_f1": {
-      "High efficiency": 0.4964,
-      "Moderate efficiency": 0.4277,
-      "Low efficiency": 0.6594
+      "High efficiency": 0.7246,
+      "Low efficiency": 0.835
     },
     "confusion_matrix": [
       [
-        171,
-        83,
-        42
+        221,
+        75
       ],
       [
-        145,
-        170,
-        121
-      ],
-      [
-        77,
-        106,
-        335
+        93,
+        425
       ]
     ],
-    "cv_macro_f1_mean": 0.519191148273249,
-    "cv_macro_f1_std": 0.008801434923282551
+    "cv_macro_f1_mean": 0.7830123255284412,
+    "cv_macro_f1_std": 0.010025458495226087
   },
   "majority_class": {
     "model": "majority_class",
-    "accuracy": 0.4144,
-    "balanced_accuracy": 0.3333333333333333,
-    "macro_precision": 0.13813333333333333,
-    "macro_recall": 0.3333333333333333,
-    "macro_f1": 0.19532428355957768,
+    "accuracy": 0.6363636363636364,
+    "balanced_accuracy": 0.5,
+    "macro_precision": 0.3181818181818182,
+    "macro_recall": 0.5,
+    "macro_f1": 0.3888888888888889,
     "per_class_f1": {
       "High efficiency": 0.0,
-      "Moderate efficiency": 0.0,
-      "Low efficiency": 0.586
+      "Low efficiency": 0.7778
     },
     "confusion_matrix": [
       [
-        0,
         0,
         296
       ],
       [
-        0,
-        0,
-        436
-      ],
-      [
-        0,
         0,
         518
       ]

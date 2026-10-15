@@ -1,41 +1,33 @@
 {
   "model": "xgboost",
-  "accuracy": 0.5432,
-  "balanced_accuracy": 0.5341335765647693,
-  "macro_precision": 0.5282067942886656,
-  "macro_recall": 0.5341335765647693,
-  "macro_f1": 0.5296824595507744,
+  "accuracy": 0.7936117936117936,
+  "balanced_accuracy": 0.7755791505791505,
+  "macro_precision": 0.7772135621686873,
+  "macro_recall": 0.7755791505791505,
+  "macro_f1": 0.7763736263736264,
   "per_class_f1": {
-    "High efficiency": 0.4791,
-    "Moderate efficiency": 0.44,
-    "Low efficiency": 0.67
+    "High efficiency": 0.7143,
+    "Low efficiency": 0.8385
   },
   "confusion_matrix": [
     [
-      155,
-      99,
-      42
+      210,
+      86
     ],
     [
-      138,
-      185,
-      113
-    ],
-    [
-      58,
-      121,
-      339
+      82,
+      436
     ]
   ],
-  "cv_macro_f1_mean": 0.5260321330090723,
-  "cv_macro_f1_std": 0.013628545660115971,
+  "cv_macro_f1_mean": 0.7813424776662863,
+  "cv_macro_f1_std": 0.018140574677093648,
   "best_params": {
-    "subsample": 0.7,
-    "reg_lambda": 1,
+    "subsample": 0.85,
+    "reg_lambda": 10,
     "n_estimators": 500,
-    "min_child_weight": 1,
-    "max_depth": 3,
-    "learning_rate": 0.1,
+    "min_child_weight": 5,
+    "max_depth": 6,
+    "learning_rate": 0.03,
     "colsample_bytree": 0.8
   }
 }

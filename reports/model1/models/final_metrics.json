@@ -1,0 +1,54 @@
+{
+  "label": "Option C: weighted EUI tertiles within building type (PBA); lowest third = High (0), highest third = Low (1), middle third (Moderate) excluded",
+  "model": "soft-vote LogisticRegression + XGBoost, peer-relative features",
+  "xgb_params": {
+    "n_estimators": 500,
+    "max_depth": 6,
+    "learning_rate": 0.03,
+    "subsample": 0.85,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5,
+    "reg_lambda": 10
+  },
+  "confidence_threshold": 0.65,
+  "cv_train": {
+    "accuracy_mean": 0.8078681318681319,
+    "accuracy_std": 0.00950395431725197,
+    "balanced_accuracy_mean": 0.8030275375792758,
+    "macro_f1_mean": 0.7964405487303919,
+    "macro_f1_std": 0.009419965175536574
+  },
+  "test_all_buildings": {
+    "model": "final_ensemble",
+    "accuracy": 0.8083538083538083,
+    "balanced_accuracy": 0.7922297297297297,
+    "macro_precision": 0.7930860805860807,
+    "macro_recall": 0.7922297297297297,
+    "macro_f1": 0.7926521014989713,
+    "per_class_f1": {
+      "High efficiency": 0.7356,
+      "Low efficiency": 0.8497
+    },
+    "confusion_matrix": [
+      [
+        217,
+        79
+      ],
+      [
+        77,
+        441
+      ]
+    ]
+  },
+  "test_confident_only": {
+    "threshold": 0.65,
+    "coverage": 0.7764127764127764,
+    "answered": 632,
+    "uncertain": 182,
+    "accuracy": 0.8734177215189873,
+    "balanced_accuracy": 0.8586747198879552,
+    "macro_f1": 0.8608404619568208
+  },
+  "moderate_test_buildings_marked_uncertain": 0.34174311926605505,
+  "clear_test_buildings_marked_uncertain": 0.2235872235872236
+}
