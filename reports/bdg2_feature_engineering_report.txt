@@ -1,0 +1,37 @@
+Building Data Genome 2 - Feature Engineering Report
+Generated: 2026-10-15T13:05:48.998695+00:00
+Input root: data\processed\bdg2
+Output root: data\processed\bdg2\features
+
+Prediction task:
+- Target: electricity consumption for the same building one hour after prediction_timestamp.
+- Prediction horizon: one hour ahead.
+- Each output row is keyed by building_id and prediction_timestamp.
+
+Features created:
+- Calendar: hour, day_of_week, month, is_weekend.
+- Historical electricity: electricity_lag_1h (reading at prediction time), electricity_lag_24h (reading 24 hours before target).
+- Past-only rolling statistics: 24-hour mean and standard deviation over readings before prediction_timestamp.
+- Metadata: sqm and primaryspaceusage, joined by building_id.
+- Weather: available site-hour variables joined at prediction_timestamp and building site.
+
+Leakage and missing-value decisions:
+- Target is shifted by -1 within each building; no target value is used as an input feature.
+- Rolling windows use shift(1), so the current observation and all future observations are excluded.
+- Rows with missing one-hour-ahead targets are excluded from model-ready outputs; targets are never imputed.
+- Missing lag, rolling, metadata, and weather values remain missing; no zero-filling or invented values is performed.
+- primaryspaceusage remains categorical text for a later model preprocessing step.
+
+Validation summary:
+- Feature rows written: 25,211,315; feature columns: 20.
+- Target rows written: 25,211,315; target columns: 3.
+- Buildings: 1,578; time range: 2016-01-01 00:00:00 to 2017-12-31 22:00:00.
+- Missing target rows excluded: 2,473,117.
+- Missing feature cells retained: 48,163,466.
+- Invalid timestamps observed: 0.
+- Key alignment mismatches: 0.
+
+Limitations:
+- Source energy units are not converted because the dataset does not provide a confirmed common unit here.
+- Weather availability and metadata completeness vary; downstream model preprocessing must handle missing values and categorical encoding.
+- No train/validation/test split or model training is performed in this phase.
