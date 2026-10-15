@@ -617,4 +617,4 @@ Exploration on training buildings only (5-fold CV), run on a copy of the process
 
 **Pending (needs the owner's accounts):** `git push`, `dvc push` of Model 1 data/models to the team's DagsHub remote (collaborator access + token), Pull Request into `main`.
 
-**Commit:** <fill in after committing>
+**Commit:** fb28aa6
