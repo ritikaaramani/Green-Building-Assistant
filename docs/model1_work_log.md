@@ -571,4 +571,4 @@ Exploration on training buildings only (5-fold CV), run on a copy of the process
 
 **Model versioning:** `dvc add artifacts/models/model1` → `artifacts/models/model1.dvc` (3 files, 2.2 MB: `baseline_logreg.joblib`, `xgboost.joblib`, `final_ensemble.joblib`). Model files are in the DVC cache, not in Git. No DVC remote configured yet (to decide with the team).
 
-**Commit:** <fill in after committing>
+**Commit:** 5f220b8
