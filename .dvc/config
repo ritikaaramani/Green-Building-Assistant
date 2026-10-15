@@ -2,3 +2,5 @@
     remote = dagshub
 ['remote "dagshub"']
     url = https://dagshub.com/ritikaaramani/Green-Building-Assistant.dvc
+['remote "origin"']
+    url = https://dagshub.com/ritikaaramani/Green-Building-Assistant.dvc

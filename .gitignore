@@ -12,5 +12,8 @@ venv/
 # Local DVC virtual environment
 .dvc-venv/
 
+# Local MLflow tracking store
+mlruns/
+
 # Local DVC environment
 .dvc-venv/

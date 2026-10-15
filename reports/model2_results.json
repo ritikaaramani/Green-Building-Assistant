@@ -1,0 +1,75 @@
+{
+  "generated": "2026-10-15T13:53:04.274957+00:00",
+  "features": "data\\processed\\bdg2\\features\\features.parquet",
+  "target": "data\\processed\\bdg2\\features\\target.parquet",
+  "dropped_features": [
+    "precipDepth6HR"
+  ],
+  "numeric_features": [
+    "hour",
+    "day_of_week",
+    "month",
+    "is_weekend",
+    "electricity_lag_1h",
+    "electricity_lag_24h",
+    "electricity_rolling_mean_24h",
+    "electricity_rolling_std_24h",
+    "sqm",
+    "airTemperature",
+    "cloudCoverage",
+    "dewTemperature",
+    "precipDepth1HR",
+    "seaLvlPressure",
+    "windDirection",
+    "windSpeed"
+  ],
+  "categorical_features": [
+    "primaryspaceusage"
+  ],
+  "preprocessing": "numeric NaNs preserved for XGBoost; primaryspaceusage missing values encoded as Missing; encoder fit on training data only",
+  "max_train_rows": 1000000,
+  "training": {
+    "train_rows": 1000000,
+    "missing_train_targets": 0
+  },
+  "parameters": {
+    "n_estimators": 300,
+    "max_depth": 8,
+    "learning_rate": 0.08,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "models": {
+    "dummy": {
+      "validation": {
+        "rows": 6327178,
+        "mae": 148.66336059570312,
+        "rmse": 258.7500150966179,
+        "r2": -0.002335190773010254
+      },
+      "test": {
+        "rows": 6457408,
+        "mae": 149.41969299316406,
+        "rmse": 276.9903258689733,
+        "r2": -0.0018124580383300781
+      }
+    },
+    "xgboost": {
+      "validation": {
+        "rows": 6327178,
+        "mae": 24.906089782714844,
+        "rmse": 140.05616200519347,
+        "r2": 0.7063319683074951
+      },
+      "test": {
+        "rows": 6457408,
+        "mae": 23.78852653503418,
+        "rmse": 152.92735331073052,
+        "r2": 0.6946291923522949
+      }
+    }
+  },
+  "mlflow": "not configured: mlflow is not installed"
+}

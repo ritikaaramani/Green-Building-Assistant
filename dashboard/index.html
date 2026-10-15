@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Green Building Assistant | Model 2 Evaluation</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <style>
+    :root { --ink:#17211f; --muted:#6c7974; --paper:#f4f6f1; --panel:#fff; --line:#dce4dc; --green:#176b53; --green-soft:#dcefe7; --gold:#e4a83a; --coral:#d96c4f; --shadow:0 18px 50px rgba(23,33,31,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif; }
+    .shell { max-width:1240px; margin:auto; padding:34px 28px 60px; }
+    .hero { display:flex; justify-content:space-between; gap:24px; align-items:flex-end; margin-bottom:30px; }
+    .eyebrow { margin:0 0 11px; color:var(--green); font-size:12px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
+    h1 { margin:0; max-width:740px; font-family:Georgia, serif; font-size:clamp(38px,5vw,66px); font-weight:500; line-height:.98; letter-spacing:-.035em; }
+    .hero-copy { margin:18px 0 0; max-width:690px; color:var(--muted); font-size:16px; line-height:1.6; }
+    .status { min-width:195px; padding:17px; background:var(--green); color:#fff; border-radius:16px; box-shadow:var(--shadow); }
+    .status small { display:block; opacity:.72; font-size:11px; text-transform:uppercase; letter-spacing:.11em; }
+    .status strong { display:block; margin-top:8px; font-size:18px; }
+    .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:16px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); }
+    .metric { grid-column:span 3; padding:20px; min-height:128px; }
+    .metric .label { color:var(--muted); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+    .metric .value { margin:12px 0 3px; font-size:31px; font-weight:800; letter-spacing:-.04em; }
+    .metric .detail { color:var(--muted); font-size:13px; }
+    .section { grid-column:span 12; padding:23px; }
+    .section-head { display:flex; justify-content:space-between; align-items:baseline; gap:20px; margin-bottom:18px; }
+    h2 { margin:0; font-size:20px; letter-spacing:-.02em; }
+    .section-head p { margin:0; color:var(--muted); font-size:13px; }
+    .chart-wrap { position:relative; height:330px; }
+    .chart-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .chart-grid .card { padding:20px; }
+    .chart-title { margin:0 0 15px; font-size:14px; }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { padding:13px 12px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+    .best { color:var(--green); font-weight:800; }
+    .note { display:flex; gap:13px; align-items:flex-start; padding:16px; border-left:4px solid var(--gold); background:#fff8e9; color:#66512a; font-size:13px; line-height:1.5; }
+    .note b { color:#4c3b1d; }
+    .split { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+    .split div { padding:14px; background:var(--green-soft); border-radius:10px; }
+    .split b { display:block; color:var(--green); font-size:12px; text-transform:uppercase; letter-spacing:.07em; }
+    .split span { display:block; margin-top:6px; font-size:14px; }
+    .conclusion { background:var(--ink); color:#fff; border:0; }
+    .conclusion p { max-width:850px; color:#d4dfd9; line-height:1.65; }
+    .prediction-controls { display:grid; grid-template-columns:1fr 1fr auto; gap:12px; align-items:end; }
+    .prediction-controls label { display:block; color:var(--muted); font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+    .prediction-controls select, .prediction-controls button { width:100%; min-height:44px; margin-top:7px; padding:0 12px; border:1px solid var(--line); border-radius:9px; background:#fff; color:var(--ink); font:inherit; }
+    .prediction-controls button { background:var(--green); color:#fff; border-color:var(--green); font-weight:800; cursor:pointer; }
+    .prediction-controls button:disabled { opacity:.5; cursor:wait; }
+    .prediction-result { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:18px; }
+    .prediction-result div { padding:15px; border-radius:10px; background:var(--green-soft); }
+    .prediction-result b { display:block; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.07em; }
+    .prediction-result strong { display:block; margin-top:7px; font-size:21px; }
+    .prediction-status { min-height:20px; margin:13px 0 0; color:var(--muted); font-size:13px; }
+    footer { margin-top:22px; color:var(--muted); font-size:12px; text-align:center; }
+    @media (max-width:800px) { .shell { padding:24px 16px 42px; } .hero { display:block; } .status { margin-top:22px; } .metric { grid-column:span 6; } .chart-grid { grid-template-columns:1fr; } .split { grid-template-columns:1fr; } }
+    @media (max-width:800px) { .prediction-controls, .prediction-result { grid-template-columns:1fr 1fr; } .prediction-controls button { grid-column:span 2; } }
+    @media (max-width:480px) { .metric { grid-column:span 12; } .section { padding:17px; } }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div><p class="eyebrow">Green Building Assistant / Phase 1</p><h1>Energy prediction, measured honestly.</h1><p class="hero-copy">A compact readout of Model 2 performance on the Building Data Genome Project 2 hourly electricity task.</p></div>
+      <div class="status"><small>Evaluation status</small><strong>Baseline → XGBoost</strong><span id="updated">Loading results…</span></div>
+    </header>
+    <section class="grid">
+      <div class="card metric"><div class="label">Test observations</div><div class="value" id="testRows">—</div><div class="detail">July–December 2017</div></div>
+      <div class="card metric"><div class="label">Test MAE improvement</div><div class="value" id="maeLift">—</div><div class="detail">lower is better</div></div>
+      <div class="card metric"><div class="label">Test RMSE improvement</div><div class="value" id="rmseLift">—</div><div class="detail">lower is better</div></div>
+      <div class="card metric"><div class="label">XGBoost test R²</div><div class="value" id="testR2">—</div><div class="detail">Proportion of variance explained by the model</div></div>
+
+      <section class="card section"><div class="section-head"><h2>Model scorecard</h2><p>Reported directly from the existing Model 2 results</p></div><div class="table-wrap"><table><thead><tr><th>Split / metric</th><th>DummyRegressor</th><th>XGBoost</th><th>Direction</th></tr></thead><tbody id="scorecard"></tbody></table></div></section>
+      <section class="card section"><div class="section-head"><h2>Where the lift comes from</h2><p>Side-by-side comparison of the same metric scales</p></div><div class="chart-grid"><div class="card"><h3 class="chart-title">Validation metrics</h3><div class="chart-wrap"><canvas id="validationChart"></canvas></div></div><div class="card"><h3 class="chart-title">Test metrics</h3><div class="chart-wrap"><canvas id="testChart"></canvas></div></div></div></section>
+      <section class="card section"><div class="section-head"><h2>Evaluation design</h2><p>Chronological boundaries are identical across buildings</p></div><div class="split"><div><b>Training</b><span id="trainSplit">—</span></div><div><b>Validation</b><span id="validationSplit">—</span></div><div><b>Testing</b><span id="testSplit">—</span></div></div><p class="section-head" style="margin:16px 0 0;color:var(--muted);font-size:13px;">Training used a deterministic sample of 1,000,000 rows from 2016.</p></section>
+      <section class="card section"><div class="section-head"><h2>Live Energy Prediction</h2><p>Saved XGBoost model · one hour ahead</p></div><div class="prediction-controls"><div><label for="buildingSelect">Building</label><select id="buildingSelect"><option>Loading buildings…</option></select></div><div><label for="timestampSelect">Prediction timestamp</label><select id="timestampSelect" disabled><option>Select a building first</option></select></div><button id="predictButton" type="button" disabled>Run prediction</button></div><p id="predictionStatus" class="prediction-status">Loading local prediction service…</p><div id="predictionResult" class="prediction-result" hidden><div><b>Selected point</b><strong id="selectedPoint">—</strong></div><div><b>XGBoost next hour</b><strong id="xgbPrediction">—</strong></div><div><b>Actual next hour</b><strong id="actualPrediction">—</strong></div><div><b>Absolute error</b><strong id="absoluteError">—</strong></div></div><p class="prediction-status">Energy values use the dataset’s original units; standardization has not been confirmed. The demo uses only features available at the selected prediction time.</p></section>
+      <section class="card section"><div class="note"><b>Units</b><span id="unitNote">Metrics use the dataset’s original energy units; standardization has not been confirmed.</span></div></section>
+      <section class="card section conclusion"><div class="section-head"><h2>Conclusion</h2><p>Phase 1 readout</p></div><p id="conclusion">—</p></section>
+    </section>
+    <footer>Source: reports/model2_results.json · No retraining or data mutation performed</footer>
+  </main>
+  <script>
+    const fmt = new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 });
+    const pct = value => `${fmt.format(value)}%`;
+    const metricValue = (value, metric) => Number(value).toFixed(metric === 'r2' ? 3 : 2);
+    const colors = { dummy:'#d96c4f', xgb:'#176b53' };
+    const apiBase = 'http://127.0.0.1:8000';
+    function chart(id, split, data) {
+      new Chart(document.getElementById(id), { type:'bar', data:{ labels:['MAE','RMSE','R²'], datasets:[{ label:'DummyRegressor', data:[data.dummy[split].mae,data.dummy[split].rmse,data.dummy[split].r2], backgroundColor:colors.dummy, borderRadius:5 },{ label:'XGBoost', data:[data.xgboost[split].mae,data.xgboost[split].rmse,data.xgboost[split].r2], backgroundColor:colors.xgb, borderRadius:5 }] }, options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ position:'bottom' }, tooltip:{ callbacks:{ label:ctx => `${ctx.dataset.label}: ${metricValue(ctx.raw, ctx.label === 'R²' ? 'r2' : ctx.label.toLowerCase())}` } } }, scales:{ y:{ beginAtZero:false, grid:{ color:'#e8eee9' }, ticks:{ callback:value => Number(value).toFixed(1) } }, x:{ grid:{ display:false } } } } });
+    }
+    function row(label, dummy, xgb, direction, metric) { return `<tr><td>${label}</td><td>${metricValue(dummy, metric)}</td><td class="best">${metricValue(xgb, metric)}</td><td>${direction}</td></tr>`; }
+    fetch('model2_dashboard_data.json').then(response => { if (!response.ok) throw new Error('Could not load dashboard data'); return response.json(); }).then(data => {
+      const d = data.models; const test = d.xgboost.test; const maeGain = (1 - test.mae / d.dummy.test.mae) * 100; const rmseGain = (1 - test.rmse / d.dummy.test.rmse) * 100;
+      document.getElementById('updated').textContent = `Updated ${data.generated.slice(0,10)}`; document.getElementById('testRows').textContent = fmt.format(test.rows); document.getElementById('maeLift').textContent = pct(maeGain); document.getElementById('rmseLift').textContent = pct(rmseGain); document.getElementById('testR2').textContent = metricValue(test.r2, 'r2');
+      document.getElementById('scorecard').innerHTML = row('Validation · MAE',d.dummy.validation.mae,d.xgboost.validation.mae,'Lower','mae') + row('Validation · RMSE',d.dummy.validation.rmse,d.xgboost.validation.rmse,'Lower','rmse') + row('Validation · R²',d.dummy.validation.r2,d.xgboost.validation.r2,'Higher','r2') + row('Test · MAE',d.dummy.test.mae,d.xgboost.test.mae,'Lower','mae') + row('Test · RMSE',d.dummy.test.rmse,d.xgboost.test.rmse,'Lower','rmse') + row('Test · R²',d.dummy.test.r2,d.xgboost.test.r2,'Higher','r2');
+      document.getElementById('trainSplit').textContent = data.split.train; document.getElementById('validationSplit').textContent = data.split.validation; document.getElementById('testSplit').textContent = data.split.test; document.getElementById('unitNote').textContent = data.unit_note;
+      document.getElementById('conclusion').textContent = `XGBoost performed better than the DummyRegressor on both validation and test sets. On the test set, its MAE was ${pct(maeGain)} lower and RMSE was ${pct(rmseGain)} lower, while R² reached ${metricValue(test.r2, 'r2')} versus ${metricValue(d.dummy.test.r2, 'r2')} for the baseline. This is a meaningful Phase 1 result, but it should be read with the model’s one-million-row training sample and original, not-yet-standardized energy units in mind.`;
+      chart('validationChart','validation',d); chart('testChart','test',d);
+    }).catch(error => { document.getElementById('conclusion').textContent = `${error.message}. Start a local server from the repository root, then reload this page.`; });
+    const buildingSelect = document.getElementById('buildingSelect');
+    const timestampSelect = document.getElementById('timestampSelect');
+    const predictButton = document.getElementById('predictButton');
+    const predictionStatus = document.getElementById('predictionStatus');
+    const predictionResult = document.getElementById('predictionResult');
+    const predictionFetch = path => fetch(`${apiBase}${path}`).then(response => response.ok ? response.json() : response.json().then(body => Promise.reject(new Error(body.detail || 'Prediction service request failed'))));
+    predictionFetch('/buildings').then(body => {
+      buildingSelect.innerHTML = body.buildings.map(id => `<option value="${id}">${id}</option>`).join('');
+      buildingSelect.dispatchEvent(new Event('change'));
+    }).catch(error => { predictionStatus.textContent = `${error.message}. Start the local API, then reload the dashboard.`; });
+    buildingSelect.addEventListener('change', () => {
+      timestampSelect.disabled = true; predictButton.disabled = true; predictionStatus.textContent = 'Loading timestamps…';
+      predictionFetch(`/timestamps?building_id=${encodeURIComponent(buildingSelect.value)}`).then(body => {
+        timestampSelect.innerHTML = body.timestamps.map(value => `<option value="${value}">${value}</option>`).join('');
+        timestampSelect.disabled = false; predictButton.disabled = false; predictionStatus.textContent = 'Ready. Select a timestamp and run the saved model.';
+      }).catch(error => { predictionStatus.textContent = error.message; });
+    });
+    predictButton.addEventListener('click', () => {
+      predictButton.disabled = true; predictionStatus.textContent = 'Loading features and predicting…';
+      predictionFetch(`/predict?building_id=${encodeURIComponent(buildingSelect.value)}&timestamp=${encodeURIComponent(timestampSelect.value)}`).then(body => {
+        predictionResult.hidden = false;
+        document.getElementById('selectedPoint').textContent = `${body.building_id} · ${body.prediction_timestamp}`;
+        document.getElementById('xgbPrediction').textContent = Number(body.xgboost_prediction).toFixed(3);
+        document.getElementById('actualPrediction').textContent = body.actual_next_hour == null ? 'Unavailable' : Number(body.actual_next_hour).toFixed(3);
+        document.getElementById('absoluteError').textContent = body.absolute_error == null ? 'Unavailable' : Number(body.absolute_error).toFixed(3);
+        predictionStatus.textContent = `Target timestamp: ${body.target_timestamp}. Schema match: ${body.feature_schema_matches_training ? 'yes' : 'no'}. Dummy baseline: ${Number(body.dummy_prediction).toFixed(3)}.`;
+      }).catch(error => { predictionStatus.textContent = error.message; }).finally(() => { predictButton.disabled = false; });
+    });
+  </script>
+</body>
+</html>

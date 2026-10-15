@@ -1,0 +1,20 @@
+[
+  "hour",
+  "day_of_week",
+  "month",
+  "is_weekend",
+  "electricity_lag_1h",
+  "electricity_lag_24h",
+  "electricity_rolling_mean_24h",
+  "electricity_rolling_std_24h",
+  "sqm",
+  "airTemperature",
+  "cloudCoverage",
+  "dewTemperature",
+  "precipDepth1HR",
+  "seaLvlPressure",
+  "windDirection",
+  "windSpeed",
+  "primaryspaceusage_Education",
+  "primaryspaceusage_Entertainment/public assembly"
+]

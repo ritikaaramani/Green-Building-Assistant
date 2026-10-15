@@ -1,0 +1,220 @@
+{
+  "evaluation_split": "test",
+  "test_boundaries": {
+    "start": "2017-07-01 00:00:00",
+    "end": "2017-12-31 23:59:59"
+  },
+  "validation_rows_evaluated": 0,
+  "model": "models\\energy_prediction\\xgboost_model.json",
+  "test_rows": 6457408,
+  "test_metrics": {
+    "mae": 23.78853592141558,
+    "rmse": 152.92734284241325,
+    "r2": 0.6946293582281926
+  },
+  "training_sample_coverage": {
+    "rows": 1000000,
+    "unique_buildings": 156,
+    "time_start": "2016-01-01 00:00:00",
+    "time_end": "2016-12-31 23:00:00",
+    "months": {
+      "1": 39103,
+      "2": 36547,
+      "3": 38263,
+      "4": 36776,
+      "5": 64619,
+      "6": 108570,
+      "7": 113490,
+      "8": 113903,
+      "9": 110469,
+      "10": 114081,
+      "11": 110295,
+      "12": 113884
+    },
+    "building_coverage_pct": 9.886
+  },
+  "top_buildings_by_total_absolute_error": [
+    {
+      "building_id": "Hog_education_Janell",
+      "absolute_error_sum": 5032525.0,
+      "squared_error_sum": 10325920768.0,
+      "rows": 4415.0,
+      "mae": 1139.8697621744054,
+      "rmse": 1529.3223666118442
+    },
+    {
+      "building_id": "Moose_education_Maria",
+      "absolute_error_sum": 4363879.5,
+      "squared_error_sum": 4559373824.0,
+      "rows": 4326.0,
+      "mae": 1008.756241331484,
+      "rmse": 1026.61910776
+    },
+    {
+      "building_id": "Bull_education_Barry",
+      "absolute_error_sum": 4334651.5,
+      "squared_error_sum": 4401473024.0,
+      "rows": 4330.0,
+      "mae": 1001.0742494226328,
+      "rmse": 1008.2194562968061
+    },
+    {
+      "building_id": "Fox_education_Claude",
+      "absolute_error_sum": 4273744.0,
+      "squared_error_sum": 4200512000.0,
+      "rows": 4402.0,
+      "mae": 970.8641526578828,
+      "rmse": 976.8459848647059
+    },
+    {
+      "building_id": "Fox_education_Otilia",
+      "absolute_error_sum": 4174844.5,
+      "squared_error_sum": 4252446464.0,
+      "rows": 4400.0,
+      "mae": 948.8282954545455,
+      "rmse": 983.0895714300633
+    },
+    {
+      "building_id": "Peacock_education_Gilberto",
+      "absolute_error_sum": 4029258.25,
+      "squared_error_sum": 3800049920.0,
+      "rows": 4415.0,
+      "mae": 912.629275198188,
+      "rmse": 927.7464409328912
+    },
+    {
+      "building_id": "Hog_public_Brad",
+      "absolute_error_sum": 3594136.5,
+      "squared_error_sum": 3426684928.0,
+      "rows": 4414.0,
+      "mae": 814.2583824195741,
+      "rmse": 881.0913198473161
+    },
+    {
+      "building_id": "Moose_education_Abbie",
+      "absolute_error_sum": 3536399.0,
+      "squared_error_sum": 3109443072.0,
+      "rows": 4389.0,
+      "mae": 805.7413989519252,
+      "rmse": 841.7023014006705
+    },
+    {
+      "building_id": "Bear_education_Chad",
+      "absolute_error_sum": 3411343.5,
+      "squared_error_sum": 2971529216.0,
+      "rows": 4414.0,
+      "mae": 772.8462845491617,
+      "rmse": 820.4910307192342
+    },
+    {
+      "building_id": "Bull_education_Dottie",
+      "absolute_error_sum": 3316125.25,
+      "squared_error_sum": 55989338112.0,
+      "rows": 4129.0,
+      "mae": 803.1303584403004,
+      "rmse": 3682.393754297011
+    },
+    {
+      "building_id": "Cockatoo_education_Janet",
+      "absolute_error_sum": 3139654.75,
+      "squared_error_sum": 2883784192.0,
+      "rows": 4331.0,
+      "mae": 724.9260563380282,
+      "rmse": 815.9946034111506
+    },
+    {
+      "building_id": "Rat_health_Shane",
+      "absolute_error_sum": 3097044.25,
+      "squared_error_sum": 2619876352.0,
+      "rows": 4288.0,
+      "mae": 722.2584538246268,
+      "rmse": 781.6512181693773
+    },
+    {
+      "building_id": "Hog_office_Joey",
+      "absolute_error_sum": 2826825.0,
+      "squared_error_sum": 2347745280.0,
+      "rows": 4415.0,
+      "mae": 640.277463193658,
+      "rmse": 729.2226239867276
+    },
+    {
+      "building_id": "Hog_office_Nia",
+      "absolute_error_sum": 2790098.25,
+      "squared_error_sum": 2328213760.0,
+      "rows": 4415.0,
+      "mae": 631.9588335220838,
+      "rmse": 726.1829900199656
+    },
+    {
+      "building_id": "Rat_health_Guy",
+      "absolute_error_sum": 2542586.25,
+      "squared_error_sum": 2030432448.0,
+      "rows": 4288.0,
+      "mae": 592.9538829291045,
+      "rmse": 688.1242837240568
+    }
+  ],
+  "top_periods_by_total_absolute_error": [
+    {
+      "period": "2017-07",
+      "absolute_error_sum": 27032820.07836914,
+      "squared_error_sum": 17708987807.476562,
+      "rows": 1087142.0,
+      "mae": 24.8659513461619,
+      "rmse": 127.6302830226856
+    },
+    {
+      "period": "2017-09",
+      "absolute_error_sum": 25712279.03125,
+      "squared_error_sum": 64297325721.36514,
+      "rows": 1060464.0,
+      "mae": 24.246253556226332,
+      "rmse": 246.2342664099065
+    },
+    {
+      "period": "2017-11",
+      "absolute_error_sum": 25470536.998413086,
+      "squared_error_sum": 23916781151.957123,
+      "rows": 1047339.0,
+      "mae": 24.319286304064956,
+      "rmse": 151.1150526902445
+    },
+    {
+      "period": "2017-12",
+      "absolute_error_sum": 25300296.37399292,
+      "squared_error_sum": 16562972045.120377,
+      "rows": 1079142.0,
+      "mae": 23.44482595802306,
+      "rmse": 123.888169659634
+    },
+    {
+      "period": "2017-10",
+      "absolute_error_sum": 25080405.614105225,
+      "squared_error_sum": 14105799880.901947,
+      "rows": 1089239.0,
+      "mae": 23.025622121596108,
+      "rmse": 113.7986913191025
+    },
+    {
+      "period": "2017-08",
+      "absolute_error_sum": 25015942.536010742,
+      "squared_error_sum": 14426070788.927734,
+      "rows": 1094082.0,
+      "mae": 22.864778449888348,
+      "rmse": 114.8283416960332
+    }
+  ],
+  "plots": [
+    "reports\\evaluation\\model2_actual_vs_predicted.png",
+    "reports\\evaluation\\model2_residual_distribution.png",
+    "reports\\evaluation\\model2_error_by_hour.png",
+    "reports\\evaluation\\model2_top_building_errors.png"
+  ],
+  "findings": [
+    "The training sample is a deterministic first 1,000,000-row sample from the chronological training split and covers all training months but only 156 of 1,578 buildings (9.886%); retraining with stratified building coverage is recommended before production use.",
+    "Test predictions were generated in batches; actual-versus-predicted and residual plots use a deterministic diagnostic sample.",
+    "Buildings with larger total error may contribute more because they have more rows; compare MAE as well as total error.",
+    "Residual concentrations by month and hour identify periods for later investigation, not automatic data removal."
+  ]
+}

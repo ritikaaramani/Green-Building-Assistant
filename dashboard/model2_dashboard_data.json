@@ -1,0 +1,53 @@
+{
+  "generated": "2026-10-15T13:53:04.274957+00:00",
+  "source": "reports/model2_results.json",
+  "training": {
+    "train_rows": 1000000,
+    "missing_train_targets": 0
+  },
+  "parameters": {
+    "n_estimators": 300,
+    "max_depth": 8,
+    "learning_rate": 0.08,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "tree_method": "hist",
+    "random_state": 42
+  },
+  "models": {
+    "dummy": {
+      "validation": {
+        "rows": 6327178,
+        "mae": 148.66336059570312,
+        "rmse": 258.7500150966179,
+        "r2": -0.002335190773010254
+      },
+      "test": {
+        "rows": 6457408,
+        "mae": 149.41969299316406,
+        "rmse": 276.9903258689733,
+        "r2": -0.0018124580383300781
+      }
+    },
+    "xgboost": {
+      "validation": {
+        "rows": 6327178,
+        "mae": 24.906089782714844,
+        "rmse": 140.05616200519347,
+        "r2": 0.7063319683074951
+      },
+      "test": {
+        "rows": 6457408,
+        "mae": 23.78852653503418,
+        "rmse": 152.92735331073052,
+        "r2": 0.6946291923522949
+      }
+    }
+  },
+  "split": {
+    "train": "2016-01-01 to 2016-12-31",
+    "validation": "2017-01-01 to 2017-06-30",
+    "test": "2017-07-01 to 2017-12-31"
+  },
+  "unit_note": "Metrics use the dataset's original energy units; standardization has not been confirmed."
+}
