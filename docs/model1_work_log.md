@@ -200,5 +200,45 @@
   3. WLCNS, RFCNS confirmed as building characteristics → valid features (corrects Step 5 suffix-based leakage flag).
   4. Final leakage list will be built from codebook labels (consumption/expenditure), not name patterns.
   5. 79 buildings with MFBTU = "Not applicable" → excluded (target cannot be computed).
-- **Git commit hash:** <fill in next step>
+- **Git commit hash:** a2fb3d6 
 - **Next step:** Exploratory Data Analysis (EDA).
+
+---
+
+## Step 7 — Exploratory Data Analysis (EDA)
+
+- **Date:** 2026-10-14
+- **Status:** Done
+- **Objective:** Understand EUI distribution, differences across building types and climates, peer-group sizes, outliers and feature relationships before cleaning and labelling.
+- **Script:** src/green_building/data/model1_eda.py (read-only; EUI computed in memory only)
+- **Commands executed:**
+  pip install matplotlib
+  pip install scipy
+  python src/green_building/data/model1_eda.py
+- **Error encountered:** ModuleNotFoundError: No module named 'scipy' (needed by pandas for Spearman correlation).
+- **Resolution:** pip install scipy; re-ran successfully.
+- **Outputs:**
+  - reports/model1/eda/eda_summary.txt
+  - reports/model1/eda/eui_by_building_type.csv
+  - reports/model1/eda/peer_group_sizes.csv
+  - reports/model1/figures/fig1_building_types.png … fig6_eui_vs_hours.png
+- **EUI definition used:** EUI = MFBTU (kBtu) / SQFT (sq ft) → kBtu/sq ft/year.
+- **Observed results:**
+  1. 79 buildings with missing MFBTU: Warehouse 41, Vacant 32, Other 4, Retail 1, Service 1.
+  2. EUI over 6,357 buildings: min 0.01, 1st pct 3.37, 25th 37.78, median 64.18, 75th 104.58, 99th 454.72, max 1,710.84. Weighted median (FINALWT) = 47.46. Strongly right-skewed.
+  3. Median EUI by type ranges from 19.5 (Vacant) and 25.8 (Warehouse) to 216.4 (Food sales) and 245.4 (Food service) — ~10× difference.
+  4. Median EUI by climate: Cold 66.4, Mixed mild 65.2, Cool 63.5, Hot 52.8, Warm 51.4, Withheld 97.3.
+  5. Peer groups (type × climate): 101 groups; 46 have < 30 buildings (607 buildings). By type only, 1 type has < 30 buildings (Refrigerated warehouse, n = 23).
+  6. WKHRS = 0: Vacant 58, Warehouse 14, Service 7, Public assembly 6, Other 5, Public order/safety 2.
+  7. 64 buildings below 1st pct (3.4) and 64 above 99th pct (454.7). Highest EUIs are small food-service buildings and large 24/7 "Other" buildings — plausible, not errors.
+  8. Spearman correlation with EUI: WKHRS +0.463, NWKER +0.291, NFLOOR_ORD +0.192, SQFT +0.134, YRCONC +0.025.
+- **Interpretation:**
+  - EUI depends strongly on building type → efficiency must be benchmarked within building type (same principle as ENERGY STAR).
+  - Climate effect is smaller than type effect; type × climate groups are too small → climate used as a model feature, not a peer-group dimension.
+  - Weighted and unweighted medians differ → label thresholds should use survey weights (FINALWT).
+  - Building characteristics correlate with EUI → predicting efficiency tiers without energy data is feasible. Correlations are across all types and partly reflect type differences.
+  - "Withheld" climate has high EUI → kept as its own category.
+- **Proposed cleaning decisions (to confirm in Step 8):**
+  D1 exclude 79 buildings without MFBTU; D2 exclude Vacant buildings; D3 peer group = building type only; D4 exclude Refrigerated warehouse (n=23, too small, cannot be merged with non-refrigerated warehouse); D5 keep extreme high EUI; D6 inspect extremely low EUI.
+- **Git commit hash:** <fill in next step>
+- **Next step:** Data cleaning.

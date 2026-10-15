@@ -1,0 +1,102 @@
+============================================================
+MODEL 1 - EDA (CBECS 2018)
+============================================================
+Buildings loaded: 6436
+
+--- 1. Buildings with missing MFBTU, by type ---
+Total missing: 79
+TYPE
+Warehouse (non-refrig.)    41
+Vacant                     32
+Other                       4
+Retail (non-mall)           1
+Service                     1
+
+--- 2. EUI (kBtu per sq ft per year), buildings with energy data ---
+Buildings: 6357
+    0th percentile:       0.01
+    1th percentile:       3.37
+   25th percentile:      37.78
+   50th percentile:      64.18
+   75th percentile:     104.58
+   99th percentile:     454.72
+  100th percentile:    1710.84
+  Weighted median (all U.S. buildings): 47.46
+
+--- 3. EUI by building type ---
+                            n  median_EUI  weighted_median_EUI    p25    p75
+TYPE                                                                        
+Vacant                     85        19.5                 14.1    8.6   41.2
+Warehouse (non-refrig.)   712        25.8                 23.9   13.3   44.0
+Religious worship         271        34.0                 32.9   19.2   48.1
+Enclosed mall              35        41.8                 40.9   32.7   58.6
+Service                   349        44.2                 37.6   21.0   76.6
+Office                   1329        59.2                 53.4   41.9   81.7
+Education                 936        61.2                 49.0   43.4   81.0
+Other                      82        63.1                 53.4   29.8  134.7
+Retail (non-mall)         338        72.7                 41.0   38.4  107.8
+Public order/safety       105        75.8                 76.4   55.3   96.9
+Lodging                   418        78.1                 78.7   54.8  103.2
+Public assembly           481        79.9                 53.2   43.3  125.7
+Outpatient health         217        80.0                 59.0   52.2  120.8
+Refrigerated warehouse     23        93.6                108.6   72.3  130.9
+Nursing                   114       114.9                122.9   74.2  161.7
+Strip shopping center     208       124.7                111.6   90.9  148.3
+Laboratory                 69       187.0                 83.0  125.7  263.3
+Inpatient health          276       198.9                204.8  147.1  247.9
+Food sales                 91       216.4                216.4  154.0  275.8
+Food service              218       245.4                232.1  152.9  409.0
+
+--- 4. EUI by climate zone ---
+                count  median
+CLIMATE                      
+Cold/very cold    415    66.4
+Cool             1407    63.5
+Hot/very hot      762    52.8
+Mixed mild       1468    65.2
+Warm             1453    51.4
+Withheld          852    97.3
+
+--- 5. Peer groups (type x climate); small = fewer than 30 buildings ---
+Total peer groups: 101
+Small groups: 46 covering 607 buildings
+Building types with < 30 buildings in total: 1
+
+--- 6. Buildings with WKHRS = 0 (not open), by type ---
+TYPE
+Vacant                     58
+Warehouse (non-refrig.)    14
+Service                     7
+Public assembly             6
+Other                       5
+Public order/safety         2
+
+--- 7. Extreme EUI (below 1st pct 3.4 or above 99th pct 454.7) ---
+Below 1st percentile: 64   Above 99th percentile: 64
+Top 10 highest EUI:
+ PUBID         TYPE   SQFT  WKHRS    EUI
+  2434      Service   1500    126 1710.8
+  3530 Food service   7000    140 1376.0
+  4416 Food service   6400     14  997.6
+   192        Other  15000    168  980.2
+   560        Other 230000    168  923.3
+  5169 Food service   2000    105  874.7
+  1551 Food service   2750    112  858.7
+  2122        Other 455000    168  789.9
+  4469 Food service   1001     69  739.7
+  6314 Food service   2700    112  732.8
+
+--- 8. Spearman correlation with EUI ---
+  WKHRS      : +0.463
+  NWKER      : +0.291
+  SQFT       : +0.134
+  YRCONC     : +0.025
+  NFLOOR_ORD : +0.192
+
+--- Figures ---
+  saved figure: reports/model1/figures/fig1_building_types.png
+  saved figure: reports/model1/figures/fig2_floor_area.png
+  saved figure: reports/model1/figures/fig3_eui_distribution.png
+  saved figure: reports/model1/figures/fig4_eui_by_type.png
+  saved figure: reports/model1/figures/fig5_eui_by_climate.png
+  saved figure: reports/model1/figures/fig6_eui_vs_hours.png

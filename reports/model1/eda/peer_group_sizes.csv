@@ -1,0 +1,102 @@
+TYPE,CLIMATE,n
+Education,Cold/very cold,80
+Education,Cool,226
+Education,Hot/very hot,106
+Education,Mixed mild,232
+Education,Warm,138
+Education,Withheld,154
+Enclosed mall,Withheld,35
+Food sales,Cold/very cold,11
+Food sales,Cool,26
+Food sales,Hot/very hot,14
+Food sales,Mixed mild,18
+Food sales,Warm,22
+Food service,Cold/very cold,21
+Food service,Cool,56
+Food service,Hot/very hot,36
+Food service,Mixed mild,52
+Food service,Warm,53
+Inpatient health,Withheld,276
+Laboratory,Cold/very cold,1
+Laboratory,Cool,18
+Laboratory,Hot/very hot,4
+Laboratory,Mixed mild,23
+Laboratory,Warm,23
+Lodging,Cold/very cold,5
+Lodging,Cool,31
+Lodging,Hot/very hot,17
+Lodging,Mixed mild,43
+Lodging,Warm,49
+Lodging,Withheld,273
+Nursing,Cold/very cold,19
+Nursing,Cool,36
+Nursing,Hot/very hot,7
+Nursing,Mixed mild,32
+Nursing,Warm,20
+Office,Cold/very cold,84
+Office,Cool,282
+Office,Hot/very hot,184
+Office,Mixed mild,410
+Office,Warm,326
+Office,Withheld,43
+Other,Cold/very cold,6
+Other,Cool,24
+Other,Hot/very hot,5
+Other,Mixed mild,21
+Other,Warm,25
+Other,Withheld,1
+Outpatient health,Cold/very cold,16
+Outpatient health,Cool,52
+Outpatient health,Hot/very hot,22
+Outpatient health,Mixed mild,69
+Outpatient health,Warm,58
+Public assembly,Cold/very cold,31
+Public assembly,Cool,139
+Public assembly,Hot/very hot,73
+Public assembly,Mixed mild,109
+Public assembly,Warm,120
+Public assembly,Withheld,9
+Public order/safety,Cold/very cold,4
+Public order/safety,Cool,15
+Public order/safety,Hot/very hot,7
+Public order/safety,Mixed mild,15
+Public order/safety,Warm,17
+Public order/safety,Withheld,47
+Refrigerated warehouse,Cold/very cold,1
+Refrigerated warehouse,Cool,5
+Refrigerated warehouse,Hot/very hot,4
+Refrigerated warehouse,Mixed mild,5
+Refrigerated warehouse,Warm,8
+Religious worship,Cold/very cold,15
+Religious worship,Cool,60
+Religious worship,Hot/very hot,38
+Religious worship,Mixed mild,63
+Religious worship,Warm,95
+Retail (non-mall),Cold/very cold,26
+Retail (non-mall),Cool,84
+Retail (non-mall),Hot/very hot,65
+Retail (non-mall),Mixed mild,71
+Retail (non-mall),Warm,92
+Service,Cold/very cold,39
+Service,Cool,118
+Service,Hot/very hot,38
+Service,Mixed mild,67
+Service,Warm,86
+Service,Withheld,1
+Strip shopping center,Cold/very cold,9
+Strip shopping center,Cool,53
+Strip shopping center,Hot/very hot,39
+Strip shopping center,Mixed mild,34
+Strip shopping center,Warm,73
+Vacant,Cold/very cold,1
+Vacant,Cool,24
+Vacant,Hot/very hot,15
+Vacant,Mixed mild,24
+Vacant,Warm,20
+Vacant,Withheld,1
+Warehouse (non-refrig.),Cold/very cold,46
+Warehouse (non-refrig.),Cool,158
+Warehouse (non-refrig.),Hot/very hot,88
+Warehouse (non-refrig.),Mixed mild,180
+Warehouse (non-refrig.),Warm,228
+Warehouse (non-refrig.),Withheld,12
