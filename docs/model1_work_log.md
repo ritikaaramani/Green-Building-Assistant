@@ -430,4 +430,4 @@ Top features (permutation importance): PBA 0.060, WKHRS 0.050, MAINHT 0.040, WOR
 
 **Outputs:** `reports/model1/models/xgboost_metrics.json`, `xgboost_classification_report.txt`, `xgboost_feature_importance.csv`, `reports/model1/figures/fig8_confusion_xgboost.png`, `fig9_xgboost_feature_importance.png`. Model saved at `artifacts/models/model1/xgboost.joblib` (not in Git; versioned with DVC in Step 13).
 
-**Commit:** <fill in after committing>
+**Commit:** ded6942
