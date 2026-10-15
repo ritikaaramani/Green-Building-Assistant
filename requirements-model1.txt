@@ -1,0 +1,13 @@
+# Model 1 — Building Efficiency Assessment
+# Exact versions used to produce the results in docs/model1_README.md (Python 3.14, macOS arm64).
+# macOS: XGBoost also needs the OpenMP runtime ->  brew install libomp
+pandas==3.0.6
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+xgboost==3.4.1
+matplotlib==3.11.2
+openpyxl==3.1.5
+joblib==1.6.0
+dvc==3.67.1
+mlflow==3.17.1
