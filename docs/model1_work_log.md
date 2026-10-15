@@ -591,3 +591,30 @@ Exploration on training buildings only (5-fold CV), run on a copy of the process
 - Port 5001 used because macOS AirPlay Receiver occupies port 5000 (gave HTTP 403).
 
 **Commit:** 4259172
+
+## Step 15 — Documentation, requirements, merge with main, reproducibility check
+**Date:** 2026-10-16
+
+**Documentation:** `docs/model1_README.md` — overview, data, label, features, results, how to run each step, MLOps practices, how to use the saved model. Kept in its own file so the team README is not modified. `requirements-model1.txt` pins the exact versions used (Python 3.14; pandas 3.0.6, numpy 2.5.4, scikit-learn 1.9.1, xgboost 3.4.1, dvc 3.67.1, mlflow 3.17.1, …). Commit 73e6bbc.
+
+**Merge with main:** merged `origin/main` (0ae5f37 — teammate commit adding the DagsHub DVC remote and BDG2 tracking). One add/add conflict in `data/raw/.gitignore`, resolved by keeping both entries (`/model1_cbecs2018`, `/bdg2`). Branch is 0 commits behind main. Commit 0d47c45.
+
+**DVC:** final model re-saved by the MLflow-tracked run → `artifacts/models/model1` re-versioned (commit 2367c6e). `dvc status` for all four Model 1 `.dvc` files: up to date.
+
+**Reproducibility check** — fresh environment created from `requirements-model1.txt` (Linux, Python 3.14.8), pipeline re-run from the raw CBECS file:
+
+| Output | Result |
+|---|---|
+| Cleaned data (`cbecs2018_clean.csv`) | Byte-for-byte identical |
+| Labels (3-class and High/Low) | Identical |
+| Features | Identical except LOG_SQFT in 119 rows, max difference 8.9e-16 (OS math-library rounding of log10) |
+| Baseline (test) | Identical: accuracy 0.7936, macro-F1 0.7798, same confusion matrix |
+| Final ensemble (test, all) | 0.811 / macro-F1 0.795 vs original 0.808 / 0.793 — 2 of 814 predictions differ |
+| Final ensemble (confident) | 0.873 on 630 buildings vs 0.873 on 632 |
+| Re-run on the original Mac | Exactly identical (0.808 / 0.873) |
+
+**Conclusion:** fully reproducible on the same machine; across operating systems, XGBoost's multi-threaded training and floating-point rounding shift ±2 test predictions (±0.002), which does not change any conclusion.
+
+**Pending (needs the owner's accounts):** `git push`, `dvc push` of Model 1 data/models to the team's DagsHub remote (collaborator access + token), Pull Request into `main`.
+
+**Commit:** <fill in after committing>
