@@ -572,3 +572,22 @@ Exploration on training buildings only (5-fold CV), run on a copy of the process
 **Model versioning:** `dvc add artifacts/models/model1` → `artifacts/models/model1.dvc` (3 files, 2.2 MB: `baseline_logreg.joblib`, `xgboost.joblib`, `final_ensemble.joblib`). Model files are in the DVC cache, not in Git. No DVC remote configured yet (to decide with the team).
 
 **Commit:** 5f220b8
+
+## Step 14 — Experiment tracking with MLflow
+**Date:** 2026-10-16
+**Scripts:** `src/green_building/models/efficiency/model1_mlflow_utils.py`, `model1_mlflow_log_history.py`; MLflow logging added to `model1_train_final.py`
+**Tool:** MLflow 3.17.1, local SQLite store in `artifacts/mlflow/` (ignored by Git via its own `.gitignore`)
+
+**What was done**
+- Experiment `model1-building-efficiency` created.
+- History logged from saved result files (no retraining, no new test-set access), each run tagged with the Git commit that produced it:
+  - `exp1_baseline_logreg` (6c94c73), `exp1_xgboost` (ded6942) — Experiment 1, 3 classes
+  - `label_options_cv` + 6 child runs (9834fa5) — label comparison on training CV
+  - `optionC_baseline_logreg`, `optionC_xgboost`, `final_ensemble` (5c7dc52)
+- `model1_train_final.py` now logs every run automatically (parameters, CV + test metrics, confident-mode metrics, figures, report and the model file). Live run `final_ensemble_train` (commit d22f97f) reproduced the same results: test accuracy 0.808, macro-F1 0.793, confident accuracy 0.873 at 77.6% coverage.
+- Total: 13 runs. Re-running the history script replaces the old history runs (no duplicates).
+
+**Dashboard:** `mlflow ui --backend-store-uri sqlite:///artifacts/mlflow/mlflow.db --port 5001` → http://127.0.0.1:5001 → switch to **Model training** view.
+- Port 5001 used because macOS AirPlay Receiver occupies port 5000 (gave HTTP 403).
+
+**Commit:** <fill in after committing>

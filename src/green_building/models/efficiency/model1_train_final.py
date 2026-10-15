@@ -18,6 +18,7 @@ Steps:
   3. Evaluate ONCE on the TEST set: all buildings (threshold 0.5) and
      confident-only (threshold 0.65, with coverage).
   4. Save model, metrics, report, figures.
+  5. Log the run to MLflow (Step 14) if MLflow is installed.
 
 Run from the repo root:
     python src/green_building/models/efficiency/model1_train_final.py
@@ -209,6 +210,40 @@ def main():
     print("Saved report: reports/model1/models/final_metrics.json, final_classification_report.txt,"
           " final_confidence_table_cv.csv")
     print("Saved figures: fig11_confusion_final.png, fig12_confidence_coverage.png")
+
+    # ---------- 5. MLflow tracking (Step 14) ----------
+    try:
+        import mlflow
+        from model1_mlflow_utils import git_commit, log_files, setup_mlflow
+    except ImportError:
+        print("\n(MLflow not installed - run not tracked)")
+        return
+    setup_mlflow()
+    tags = {"source": "training_script", "git_commit": git_commit(), "stage": "final"}
+    with mlflow.start_run(run_name="final_ensemble_train", tags=tags) as run:
+        mlflow.log_params({"label": spec["label_method"], "model": "soft-vote LogisticRegression + XGBoost",
+                           "n_features": len(cat + num), "n_peer_relative_features": len(peer),
+                           "train_buildings": len(train), "test_buildings": len(test),
+                           "confidence_threshold": CONFIDENCE,
+                           **{f"xgb_{k}": v for k, v in XGB_PARAMS.items()}})
+        mlflow.log_metrics({"test_accuracy": metrics["accuracy"],
+                            "test_balanced_accuracy": metrics["balanced_accuracy"],
+                            "test_macro_f1": metrics["macro_f1"],
+                            "cv_accuracy_mean": cv_summary["accuracy_mean"],
+                            "cv_accuracy_std": cv_summary["accuracy_std"],
+                            "cv_macro_f1_mean": cv_summary["macro_f1_mean"],
+                            "cv_macro_f1_std": cv_summary["macro_f1_std"],
+                            "confident_coverage": test_conf["coverage"],
+                            "confident_accuracy": test_conf["accuracy"],
+                            "confident_balanced_accuracy": test_conf["balanced_accuracy"],
+                            "confident_macro_f1": test_conf["macro_f1"],
+                            "moderate_marked_uncertain": moderate_uncertain})
+        log_files([REPORT_DIR / "final_metrics.json", REPORT_DIR / "final_classification_report.txt",
+                   REPORT_DIR / "final_confidence_table_cv.csv", FIG_DIR / "fig11_confusion_final.png",
+                   FIG_DIR / "fig12_confidence_coverage.png"])
+        log_files([MODEL_DIR / "final_ensemble.joblib"], folder="model")
+    print(f"\nLogged to MLflow: run 'final_ensemble_train' ({run.info.run_id[:8]}), "
+          f"commit {tags['git_commit']}")
 
 
 if __name__ == "__main__":
