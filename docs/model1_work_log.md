@@ -387,5 +387,47 @@
   - reports/model1/models/baseline_classification_report.txt
   - reports/model1/models/train_test_split.csv
   - reports/model1/figures/fig7_confusion_baseline.png
-- **Git commit hash:** <fill in next step>
+- **Git commit hash:** 6c94c73i
 - **Next step:** Train XGBoost Classifier on the same split; target to beat = macro-F1 0.528.
+
+ ## Step 12 — Main model: XGBoost Classifier (Experiment 1).
+**Date:** 2026-10-15
+**Script:** `src/green_building/models/efficiency/model1_train_xgboost.py`
+
+**Setup**
+- Same features (26), same saved train/test split (4,999 / 1,250), same metrics as the baseline (shared `model1_common.py`).
+- Numeric features passed through unchanged (XGBoost handles NaN natively; trees need no scaling). Categorical: missing → -1, then one-hot.
+- Class imbalance: balanced sample weights.
+- Tuning: RandomizedSearchCV, 20 settings × 5-fold stratified CV on TRAIN only, scoring = macro-F1. Test set used once at the end.
+- Feature importance: permutation importance on the test set (drop in macro-F1 when a feature is shuffled, 10 repeats).
+
+**Issue + fix**
+- `XGBoostError: libomp.dylib could not be loaded` on macOS → fixed with `brew install libomp` (23.1.3).
+- Earlier gain-based importance summed over one-hot columns and inflated multi-level categoricals → replaced with permutation importance on the original 26 features.
+
+**Best settings:** max_depth 3, n_estimators 500, learning_rate 0.1, subsample 0.7, colsample_bytree 0.8, min_child_weight 1, reg_lambda 1.
+
+**Results (test set)**
+| Metric | Baseline (LogReg) | XGBoost |
+|---|---|---|
+| CV macro-F1 (train) | 0.519 ± 0.009 | 0.526 ± 0.014 |
+| Accuracy | 0.541 | 0.543 |
+| Balanced accuracy | 0.538 | 0.534 |
+| Macro-F1 | 0.528 | 0.530 |
+| F1 High / Moderate / Low | 0.496 / 0.428 / 0.659 | 0.479 / 0.440 / 0.670 |
+| Severe errors (High↔Low) | 119 | 100 |
+
+Confusion matrix (rows = actual High/Moderate/Low): [155, 99, 42], [138, 185, 113], [58, 121, 339]
+
+Top features (permutation importance): PBA 0.060, WKHRS 0.050, MAINHT 0.040, WORKERS_PER_1000SQFT 0.029, LTOHRP 0.010.
+
+**Interpretation**
+- XGBoost ≈ baseline: the +0.002 macro-F1 gain is far smaller than the CV std (±0.014), so it is not a meaningful improvement. The only real gain is 19 fewer severe High↔Low errors.
+- Tuning chose the shallowest trees (depth 3), which suggests simple relationships and that deeper trees overfit.
+- Likely performance ceiling: features describe the building, not its equipment condition, controls or occupant behaviour. Moderate is the hardest class (it borders both others).
+- Feature importance is consistent with the EDA (operating hours strongest), and the engineered occupancy-density feature ranked 4th.
+- Formal comparison and final model choice in Step 13.
+
+**Outputs:** `reports/model1/models/xgboost_metrics.json`, `xgboost_classification_report.txt`, `xgboost_feature_importance.csv`, `reports/model1/figures/fig8_confusion_xgboost.png`, `fig9_xgboost_feature_importance.png`. Model saved at `artifacts/models/model1/xgboost.joblib` (not in Git; versioned with DVC in Step 13).
+
+**Commit:** <fill in after committing>

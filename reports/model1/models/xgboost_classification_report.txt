@@ -1,0 +1,9 @@
+                     precision    recall  f1-score   support
+
+    High efficiency      0.442     0.524     0.479       296
+Moderate efficiency      0.457     0.424     0.440       436
+     Low efficiency      0.686     0.654     0.670       518
+
+           accuracy                          0.543      1250
+          macro avg      0.528     0.534     0.530      1250
+       weighted avg      0.548     0.543     0.545      1250
